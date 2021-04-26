@@ -23,9 +23,34 @@ OStrap will load any .Json file in \Data\OStrapData\OStrapCompat\ and try and ad
   
 Compatibility patches should be formatted like so:
   
-Put codeblock here later.
+```Json
+{
+  "Example Strapon": {
+    "Enabled": 0,
+    "Form": "__formData|Example.esp|0x5e61",
+    "OptID": 0
+  },
+    "Another Example Strapon": {
+    "Enabled": 0,
+    "Form": "__formData|Example.esp|0x5e62",
+    "OptID": 0
+  }
+}
+```
+Breaking down what a record looks like:
 
-Also put other info about how to make patches here.
+  ``"Example Strapon"`` <-- This is the name of the strap-on for the MCM. This can be whatever you want.  
+  ``"Enabled": 0`` <-- This is whether the strap-on will be enabled by defualt or not.  
+  ``"Form": "__formData|Example.esp|0x5e61"`` <-- This is the formData for the armor record. Further info below.  
+  ``"OptID": 0`` <-- This is the optionID for its location in the MCM. Just leave this zero and it'll be sorted out automatically.  
+
+### Understanding formData records.
+1. Starting at the begining, all formData records start with ``__formData|``
+2. The middle section is the name of the mod file you are pulling the strap-on from.
+3. The last section is the FormID of the specific Armor record, with the first two bits removed and then all preceeding zeros dropped.
+4. So for example, the FormID ``03005E63`` will lose the first two bits and become ``005E63``.
+5. Then the preceeding zeros are droped and it becomes ``5E63``
+6. Finally add ``0x`` to the begining of the record ``0x5E63`` to indicate that it's in Hex, and you've converted the FormID to a formData record.
 
 ## Intended Features / Future Plans
 - Full SOS support.
