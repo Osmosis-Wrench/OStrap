@@ -14,12 +14,18 @@ Int SetNPCEnabled
 Bool Property EnableForStraightSex Auto
 string PageName
 
+Bool Property OCumIntEnabled Auto  
+int setOcumIntEnabled
+int EnabledOCumIntFlag
+
 ; mcm save/load settings
 Int ExportSettings
 Int ImportSettings
 Int ReloadStraponSettings
 Int CheckForCompats
 
+Bool SOSInstalled = false
+Bool OcumInstalled = false
 ; TODO: Add options for:
     ; TODO: Exporting and Importing settings.
 ; TODO: Convert to using JDB to lighten file i/o loading.
@@ -34,9 +40,9 @@ Event OnConfigInit()
     EnabledStrapons = True
     PlayerEnabledStrapons = True
     NPCEnabledStrapons = False
+    OCumIntEnabled = false
     ; Load the settings file included with the mod
     LoadPrototypeFile()
-    WriteLog("Compats")
     LoadCompatFiles()
 EndEvent
 
@@ -47,15 +53,22 @@ Event OnPageReset(string page)
     Else
         EnabledStraponsFlag = OPTION_FLAG_DISABLED
     endIf
+    if (SOSInstalled && OcumInstalled)
+        EnabledOCumIntFlag = OPTION_FLAG_NONE
+    Else
+        EnabledOCumIntFlag = OPTION_FLAG_DISABLED
+    endIF
     SetCursorPosition(0)
     SetCursorFillMode(TOP_TO_BOTTOM)
     AddColoredHeader("Main settings")
     SetEnabledStrapons = AddToggleOption("Enable Mod", EnabledStrapons)
     SetPlayerEnabled = AddToggleOption("Enable Player Strapons", PlayerEnabledStrapons, EnabledStraponsFlag)
     SetNPCEnabled = AddToggleOption("Enable NPC Strapons", NPCEnabledStrapons, EnabledStraponsFlag)
+    AddColoredHeader("Intergrations","Blue")
+    SetOcumIntEnabled = AddToggleOption("Enable OCum support.", OCumIntEnabled, EnabledOCumIntFlag)
     AddColoredHeader("Misc Settings")
-    CheckForCompats = AddTextOption("Load Compat plugins", "Done")
-    ReloadStraponSettings = AddTextOption("Reset strapon info to defualt", "Done")
+    CheckForCompats = AddTextOption("Load Compat plugins", "Click")
+    ReloadStraponSettings = AddTextOption("Reset strapon info to defualt", "Click")
 
     SetCursorPosition(1)
     AddColoredHeader("Enabled Strapons", "Blue")
@@ -97,6 +110,9 @@ Event OnOptionSelect(int Option)
         EnabledStrapons = !EnabledStrapons
         SetToggleOptionValue(Option, EnabledStrapons)
         ForcePageReset()
+    ElseIf (Option == SetOcumIntEnabled)
+        OCumIntEnabled = !OCumIntEnabled
+        SetToggleOptionValue(Option, OCumIntEnabled)
     ElseIf (Option == SetPlayerEnabled)
         PlayerEnabledStrapons = !PlayerEnabledStrapons
         SetToggleOptionValue(Option, PlayerEnabledStrapons)
@@ -118,6 +134,8 @@ EndEvent
 Event OnOptionHighlight(Int Option)
     If (Option == SetEnabledStrapons)
         SetInfoText("Enables the strapon system.")
+    ElseIf (Option == SetOcumIntEnabled)
+        SetInfoText("Enables actor with strapon to cum using OCum. Use if you have equiped a SOS Schlong for example.")
     ElseIf (Option == SetPlayerEnabled)
         SetInfoText("Enables strapons for player.")
     ElseIf (Option == SetNPCEnabled)
@@ -191,6 +209,7 @@ endFunction
 
 ; Loads any file .json file in Data/OstrapData/OstrapCompat/ folder and appeneds any valid strapons to the strapon list.
 Function LoadCompatFiles()
+    WriteLog("Checking for compats.", true)
     int compats = JValue.readFromDirectory("Data/OStrapData/OstrapCompat", ".json")
     int existing = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
     Jvalue.Retain(Compats)
@@ -251,3 +270,13 @@ Function LoadPrototypeFile()
         Writelog("This will be used instead, but strangeness may occur.", true)
     endIf
 endFunction
+
+Function SetSoftRecs(bool Sos = false, bool Ocum = false)
+    SoSInstalled = Sos
+    OcumInstalled = Ocum
+    if (SOSInstalled && OcumInstalled)
+        WriteLog("OCum & SOS detected, OCum intergration enabled.")
+    endIf
+EndFunction
+
+
