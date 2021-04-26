@@ -7,9 +7,9 @@
  - Supports modular, JSON based compatibility patches to allow for easily adding more options.
 ### Requirements
  - Skyrim: Special Edition (1.5.39+)
- - Ostim SE (and all its requirements.)
+ - [Ostim SE](https://github.com/Sairion350/OStim) (and all its requirements.)
 ### Downloading
- Most recent version will be in the Releases section of the GitHub page.
+ Most recent version will be in the [Releases](https://github.com/Osmosis-Wrench/OStrap/releases) section of the GitHub page.
  Eventually it will be posted to LoversLab and ?Nexus?
 
 ## Intended Features / Future Plans
