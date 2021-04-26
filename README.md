@@ -5,14 +5,23 @@
  - Strap-on Randomization.
  - Can apply strap-ons to both NPC's and and the Player.
  - Supports modular, JSON based compatibility patches to allow for easily adding more options.
- ### Downloading
- Most recent version will be in the Releases section of the GitHub page.
- Eventually it will be posted to LoversLab and ?Nexus?
- ### Requirements
+### Requirements
  - Skyrim: Special Edition (1.5.39+)
  - Ostim SE (and all its requirements.)
+### Downloading
+ Most recent version will be in the Releases section of the GitHub page.
+ Eventually it will be posted to LoversLab and ?Nexus?
+
+## Intended Features / Future Plans
+- Full SOS support.
+- OCum Support.
+- MCM Saving.
+- Rewrite current JContainers logic to use JDB rather than raw file loads.
+- Work out how to implement F/M scenes.
+
 ## Contributing
 Feel free to fork and make a PR if you feel you have something to add or improve.
+
 ## Issues and Suggestions
 If you notice any bugs, or have any feature suggestions, create an Issue and outline the problem and I'll take a look.  
   
@@ -51,10 +60,3 @@ Breaking down what a record looks like:
 4. So for example, the FormID ``03005E63`` will lose the first two bits and become ``005E63``.
 5. Then the preceeding zeros are droped and it becomes ``5E63``
 6. Finally add ``0x`` to the begining of the record ``0x5E63`` to indicate that it's in Hex, and you've converted the FormID to a formData record.
-
-## Intended Features / Future Plans
-- Full SOS support.
-- OCum Support.
-- MCM Saving.
-- Rewrite current JContainers logic to use JDB rather than raw file loads.
-- Work out how to implement F/M scenes.
