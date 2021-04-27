@@ -15,9 +15,11 @@
 
 ## Intended Features / Future Plans
 - MCM Saving.
-- Trim bad strapons.
 - Rewrite current JContainers logic to use JDB rather than raw file loads.
 - Work out how to implement F/M scenes.
+
+## Known Issues:
+Some SOS based schlong strapons (CBBE Futa Schlong SE, for example) don't seem to sucessfully equip unless they have been manually equiped at least once during that play session.
 
 ## Contributing
 Feel free to fork and make a PR if you feel you have something to add or improve.
