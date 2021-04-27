@@ -7,16 +7,8 @@ Form Property StrapOn Auto
 
 form strap
 
-faction SoSFaction
-Bool SoSInstalled
-
-bool OcumInstalled
-OCumScript Property OCum Auto Hidden
-
 Function OnInit()
     RegisterForModEvent("ostim_start", "OnOstimStart")
-    RegisterForKey(42)
-    GetSoftRecs()
 EndFunction
 
 ; Triggers when Ostim starts a scene, and runs the main logic of OStrap
@@ -26,6 +18,7 @@ Event OnOstimStart(string eventName, string strArg, float numArg, Form sender)
         WriteLog("Scene start detected")
         WriteLog("Getting random Strapon")
         strap = ReturnRandomValidStrapon()
+        WriteLog(Strap)
         ; If Player but not NPC is enabled, equip to player.
         If(OStrapMCM.PlayerEnabledStrapons && !OStrapMCM.NPCEnabledStrapons)
             Equipper(PlayerRef, strap)
@@ -59,10 +52,9 @@ EndEvent
 Function Equipper(Actor target, form randStrap = none)
     ; Only equip to females who are part of the scene.
     If(Ostim.IsFemale(target) && Ostim.IsActorActive(target) && AllFemale())
-        If (SOSInstalled && OcumInstalled && OStrapMCM.OCumIntEnabled)
-            WriteLog("Adding " + Target + " to SoS faction.")
-            Target.AddToFaction(SoSFaction)
-            OCum.AdjustStoredCumAmount(target, 25)
+        If (OStrapMCM.OCumIntEnabled)
+            Target.AddToFaction(OStrapMCM.SosFaction)
+            OStrapMCM.OCum.AdjustStoredCumAmount(target, 25)
         endIf
         EquipStrapon(target, strap)
         if ostim.IsInFreeCam() && target == PlayerRef
@@ -98,31 +90,13 @@ Function UnEquipStrapon(Actor target, form randStrap = None)
     if (randStrap == None)
         Target.RemoveItem(StrapOn, 1, true)
     else
-        ;Target.UnEquipItem(randStrap, true, True)
         Target.RemoveItem(randStrap, 1, true)
     endIf
-    If (SOSInstalled && OcumInstalled && OStrapMCM.OCumIntEnabled)
+    If (OStrapMCM.SOSInstalled && OStrapMCM.OcumInstalled && OStrapMCM.OCumIntEnabled)
         WriteLog("Removing " + Target + " from SoS faction.")
-        Target.RemoveFromFaction(SoSFaction)
+        Target.RemoveFromFaction(OStrapMCM.SosFaction)
     endIf
 EndFunction
-
-; This just makes life easier sometimes.
-Function WriteLog(String OutputLog, bool error = false)
-    MiscUtil.PrintConsole("OStrap: " + OutputLog)
-    Debug.Trace("OStrap: " + OutputLog)
-    if (error == true)
-        Debug.Notification("Ostrap: " + OutputLog)
-    endIF
-EndFunction
-
-Event OnKeyDown(int KeyCode)
-    if KeyCode == 42
-        form poo = ReturnRandomValidStrapon()
-        writelog(poo.getName())
-        PlayerRef.Additem(Poo)
-    endif
-endEvent
 
 ; Returns a randomly chosen enabled strapon.
 form Function ReturnRandomValidStrapon()
@@ -141,38 +115,17 @@ form Function ReturnRandomValidStrapon()
         endIf
         StraponNameKey = Jmap.NextKey(Data, StraponNameKey)
     endWhile
-    JValue.zeroLifetime(data)
     int Len = JValue.Count(EnabledStrapons)
-    writelog(Len)
     int rand = Utility.RandomInt(0, (Len - 1))
     writelog(rand)
     return JArray.GetForm(EnabledStrapons, rand)
 endFunction
 
-Function GetSoftRecs()
-    ; easy rip from Ostim.
-	If (Game.GetModByName("Schlongs of Skyrim.esp") != 255)
-		SoSFaction = (Game.GetFormFromFile(0x0000AFF8, "Schlongs of Skyrim.esp")) as Faction
-        Utility.Wait(1.0)
-		If (SoSFaction)
-			SoSInstalled = true
-		Else
-			SoSInstalled = false
-		Endif
-	Else
-		SoSInstalled = false
-	EndIf
-    ; This should work? I hope.
-    If (Game.GetModByName("OCum.esp") != 255)
-        OCum = (Game.GetFormFromFile(0x800, "OCum.esp") as OCumScript)
-        Utility.Wait(1.0)
-        if (OCum)
-            OcumInstalled = True
-        Else
-            OcumInstalled = False
-        endIf
-    Else
-        OcumInstalled = False
-    endIf
-    OStrapMCM.SetSoftRecs(SoSInstalled, OcumInstalled)
-endFunction
+; This just makes life easier sometimes.
+Function WriteLog(String OutputLog, bool error = false)
+        MiscUtil.PrintConsole("OStrap: " + OutputLog)
+        Debug.Trace("OStrap: " + OutputLog)
+        if (error == true)
+            Debug.Notification("Ostrap: " + OutputLog)
+        endIF
+EndFunction
