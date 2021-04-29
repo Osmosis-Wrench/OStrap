@@ -74,6 +74,8 @@ Event OnPageReset(string page)
     PurgeInvalidStrapons = AddTextOption("Purge invalid strapons", "Click")
     CheckForCompats = AddTextOption("Load Compat plugins", "Click")
     ReloadStraponSettings = AddTextOption("Reset strapon info to defualt", "Click")
+    ExportSettings = AddTextOption("Reset strapon info to defualt", "Click")
+    ImportSettings = AddTextOption("Reset strapon info to defualt", "Click")
 
     SetCursorPosition(1)
     AddColoredHeader("Enabled Strapons", "Blue")
@@ -136,6 +138,10 @@ Event OnOptionSelect(int Option)
         ReloadSettingsFile()
         Debug.MessageBox("Reloading from default, wait a second before clicking OK.")
         ForcePageReset()
+    ElseIf (Option == ExportSettings)
+        ExportMCM()
+    ElseIf (Option == ImportSettings)
+        ImportMCM()
     Else
         ; if not any of the above options, checks if the option is one of the strapon options.
         GetStraponOptions(Option)
@@ -157,6 +163,10 @@ Event OnOptionHighlight(Int Option)
         SetInfoText("Will check for any existing compatibility files and load them.")
     ElseIf (Option == ReloadStraponSettings)
         SetInfoText("Reloads default strapon settings, removing all strapons not packaged with OStap.")
+    ElseIf (Option == ExportSettings)
+        SetInfoText("Exports OStrap MCM settings (Excluding strapon selections) to /My Games/Skyrim Special Edition/JCUser/OStrapMCMSettings.json")
+    ElseIf (Option == ImportSettings)
+        SetInfoText("Imports OStrap MCM settings (Excluding strapon selections) from either Data folder or /My Games/Skyrim Special Edition/JCUser/OStrapMCMSettings.json")
     Else
         ; if not any of the above, assumes it's a strapon option.
         SetInfoText("OStrap will randomly select one of the enabled strapons each time it starts.")
@@ -328,3 +338,40 @@ Function WriteLog(String OutputLog, bool error = false)
         Debug.Notification("Ostrap: " + OutputLog)
     endIF
 EndFunction
+
+Function ExportMCM()
+    int data = JMap.Object()
+    Debug.MessageBox("Exporting to file, wait a second or two before clicking OK.")
+
+    JMap.SetInt(data, "EnabledStrapons", EnabledStrapons as Int)
+    JMap.SetInt(data, "PlayerEnabledStrapons", PlayerEnabledStrapons as Int)
+    JMap.SetInt(data, "NPCEnabledStrapons", NPCEnabledStrapons as Int)
+    JMap.SetInt(data, "EnableForStraightSex", EnableForStraightSex as Int)
+    JMap.SetInt(data, "OCumIntEnabled", OCumIntEnabled as Int)
+
+    Jvalue.WriteToFile(Data, JContainers.UserDirectory() + "OStrapMCMSettings.json")
+EndFunction
+
+Function ImportMCM()
+    int data = JValue.readFromFile(JContainers.UserDirectory() + "OstimMCMSettings.json")
+    int modlistData = JValue.readFromFile(".\\Data\\OstimMCMSettings.json")
+
+    If (data == false && modlistData == false)
+        Debug.MessageBox("Tried to import from file, but no file was found.")
+        return
+    ElseIf (data == false && modlistData == true)
+        Debug.Messagebox("Found MCM settings in Data folder, loading from there.")
+        data = modlistData
+    Else
+        Debug.MessageBox("Found MCM settings in JCUser folder, loading from there.")
+    EndIf
+    
+    EnabledStrapons = JMap.GetInt(data, "EnabledStrapons")
+    PlayerEnabledStrapons = JMap.GetInt(data, "PlayerEnabledStrapons")
+    NPCEnabledStrapons = JMap.GetInt(data, "NPCEnabledStrapons")
+    EnableForStraightSex = JMap.GetInt(data, "EnableForStraightSex")
+    OCumIntEnabled = JMap.GetInt(data, "OCumIntEnabled")
+    
+    ForcePageReset()
+EndFunction
+
