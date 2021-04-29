@@ -20,7 +20,7 @@
 - Work out how to implement F/M scenes.
 
 ## Known Issues:
-Some SOS based schlong strapons (CBBE Futa Schlong SE, for example) don't seem to sucessfully equip unless they have been manually equiped at least once during that play session.
+Some SOS based schlong strapons (CBBE Futa Schlong SE, for example) don't seem to sucessfully equip unless they have been manually equiped at least once during that play session.  
 Will equip a strapon in all F/F scenes, even ones that don't make a heap of sense like kissing or fingering.
 
 ## Contributing
