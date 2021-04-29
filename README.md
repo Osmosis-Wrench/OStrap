@@ -6,6 +6,7 @@
  - Can apply strap-ons to both NPC's and and the Player.
  - Supports modular, JSON based compatibility patches to allow for easily adding more options.
  - OCum support.
+ - MCM Setting saving, and extra loading functionality for Modlist authors.
 ### Requirements
  - Skyrim: Special Edition (1.5.39+)
  - [Ostim SE](https://github.com/Sairion350/OStim) (and all its requirements.)
@@ -14,7 +15,6 @@
  Eventually it will be posted to LoversLab and ?Nexus?
 
 ## Intended Features / Future Plans
-- MCM Saving.
 - Rewrite current JContainers logic to use JDB rather than raw file loads.
 - Work out how to implement F/M scenes.
 
