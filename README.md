@@ -1,6 +1,7 @@
 # OStrap
  An OStim Addon that adds modular Strap-on support.
 ## Features
+ - Includes several pre-packaged strapons, pulling from leito's Skyrim Strapons.
  - Automatic detection of Ostim scenes.
  - Strap-on Randomization.
  - Can apply strap-ons to both NPC's and and the Player.
