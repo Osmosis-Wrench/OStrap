@@ -25,9 +25,14 @@ int EnabledOCumIntFlag
 ; mcm save/load settings
 Int ExportSettings
 Int ImportSettings
+
 Int ReloadStraponSettings
 Int CheckForCompats
 int PurgeInvalidStrapons
+
+string[] bodyMods
+int SetBodyMods
+int BodyModsIndex = 0
 
 Bool property SOSInstalled Auto
 Bool property OcumInstalled Auto
@@ -37,10 +42,11 @@ Event OnConfigInit()
     PlayerEnabledStrapons = True
     NPCEnabledStrapons = False
     OCumIntEnabled = false
-    ; Load the strapon settings file included with the mod
+    ; Body mods setup.
+    SetupBodyMods()
+    ; Load the strapon settings file included with the mod.
     LoadPrototypeFile()
     LoadCompatFiles()
-    PurgeBadForms()
     GetSoftRecs()
     If (OcumInstalled && SOSInstalled)
         Writelog("OCum & SOS detected, OCum integration will be available in the MCM.")
@@ -64,6 +70,7 @@ Event OnPageReset(string page)
     SetCursorFillMode(TOP_TO_BOTTOM)
     AddColoredHeader("Main settings")
     SetEnabledStrapons = AddToggleOption("Enable Mod", EnabledStrapons)
+    SetBodyMods = AddMenuOption("Current Body Mod:", BodyMods[BodyModsIndex])
     SetPlayerEnabled = AddToggleOption("Enable Player Strapons", PlayerEnabledStrapons, EnabledStraponsFlag)
     SetNPCEnabled = AddToggleOption("Enable NPC Strapons", NPCEnabledStrapons, EnabledStraponsFlag)
     AddColoredHeader("Integrations","Blue")
@@ -132,7 +139,7 @@ Event OnOptionSelect(int Option)
         Debug.MessageBox("Checking for compat files, wait a second before clicking OK.")
         ForcePageReset()
     ElseIf (Option == ReloadStraponSettings)
-        ReloadSettingsFile()
+        ReloadSettingsFile(BodyMods[BodyModsIndex])
         Debug.MessageBox("Reloading from default, wait a second before clicking OK.")
         ForcePageReset()
     ElseIf (Option == ExportSettings)
@@ -148,6 +155,8 @@ EndEvent
 Event OnOptionHighlight(Int Option)
     If (Option == SetEnabledStrapons)
         SetInfoText("Enables the strapon system.")
+    ElseIf (Option == SetBodyMods)
+        SetInfoText("Change what strapon type you are using, note this only applies to strapons included with OStrap.")
     ElseIf (Option == SetOcumIntEnabled)
         SetInfoText("Enables actor with strapon to cum using OCum. Use if you have equipped a SOS Schlong for example.")
     ElseIf (Option == SetPlayerEnabled)
@@ -169,6 +178,35 @@ Event OnOptionHighlight(Int Option)
         SetInfoText("OStrap will randomly select one of the enabled strapons each time it starts.")
     EndIf
 EndEvent
+
+Event OnOptionMenuOpen(int option)
+    if (option == SetBodyMods)
+        SetMenuDialogOptions(BodyMods)
+		SetMenuDialogStartIndex(BodyModsIndex)
+		SetMenuDialogDefaultIndex(0)
+    endif
+EndEvent
+
+event OnOptionMenuAccept(int option, int index)
+	if (option == SetBodyMods)
+        string old = BodyMods[BodyModsIndex]
+		BodyModsIndex = index
+		SetMenuOptionValue(SetBodyMods, bodyMods[BodyModsIndex])
+        if (old != BodyMods[BodyModsIndex])
+            WriteLog("Body mod updated, loading " + BodyMods[BodyModsIndex])
+            ReloadSettingsFile(BodyMods[BodyModsIndex])
+            LoadCompatFiles()
+            ForcePageReset()
+        endif
+	endIf
+endEvent
+
+Function SetupBodyMods()
+    BodyMods = new string[2]
+    BodyMods[0] = "CBBE"
+    BodyMods[1] = "UNP"
+    ;BodyMods[2] = "BHUNP" ; This might be needed in future? Not sure.
+EndFunction
 
 ; Checks if Option is equal to and of the optionID's stored in StraponsAll.json and if it is, toggles that option.
 function GetStraponOptions(int Option)
@@ -214,9 +252,9 @@ Function LoadPrototypeFile()
     endIf
 endFunction
 
-Function ReloadSettingsFile()
+Function ReloadSettingsFile(string BodyMod = "CBBE")
     Writelog("Reloading strapon settings file from prototype.")
-    int prototype = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFileCBBE.json")
+    int prototype = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFile"+ BodyMod +".json")
     if (prototype == false)
         Debug.MessageBox("Defaults file could not be found.")
     else
