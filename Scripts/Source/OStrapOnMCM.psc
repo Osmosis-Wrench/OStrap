@@ -32,21 +32,20 @@ int PurgeInvalidStrapons
 Bool property SOSInstalled Auto
 Bool property OcumInstalled Auto
 
-; TODO: Add options for:
-    ; TODO: Exporting and Importing settings.
-; TODO: Convert to using JDB to lighten file i/o loading.
-; TODO: Work out a way to deal with f/m scenes where female is dom (I.e Pegging.)
-
 Event OnConfigInit()
     EnabledStrapons = True
     PlayerEnabledStrapons = True
     NPCEnabledStrapons = False
     OCumIntEnabled = false
-    ; Load the settings file included with the mod
+    ; Load the strapon settings file included with the mod
     LoadPrototypeFile()
     LoadCompatFiles()
     PurgeBadForms()
     GetSoftRecs()
+    If (OcumInstalled && SOSInstalled)
+        Writelog("OCum & SOS detected, OCum integration will be available in the MCM.")
+    endif
+    WriteLog("First time setup complete.")
 EndEvent
 
 Event OnPageReset(string page)
@@ -67,14 +66,14 @@ Event OnPageReset(string page)
     SetEnabledStrapons = AddToggleOption("Enable Mod", EnabledStrapons)
     SetPlayerEnabled = AddToggleOption("Enable Player Strapons", PlayerEnabledStrapons, EnabledStraponsFlag)
     SetNPCEnabled = AddToggleOption("Enable NPC Strapons", NPCEnabledStrapons, EnabledStraponsFlag)
-    AddColoredHeader("Intergrations","Blue")
+    AddColoredHeader("Integrations","Blue")
     SetOcumIntEnabled = AddToggleOption("Enable OCum support.", OCumIntEnabled, EnabledOCumIntFlag)
-    AddColoredHeader("Misc Settings")
+    AddColoredHeader("Misc. Settings")
     PurgeInvalidStrapons = AddTextOption("Purge invalid strapons", "Click")
     CheckForCompats = AddTextOption("Load Compat plugins", "Click")
-    ReloadStraponSettings = AddTextOption("Reset strapon info to defualt", "Click")
-    ExportSettings = AddTextOption("Reset strapon info to defualt", "Click")
-    ImportSettings = AddTextOption("Reset strapon info to defualt", "Click")
+    ReloadStraponSettings = AddTextOption("Reset strapon info to default", "Click")
+    ExportSettings = AddTextOption("Export MCM settings", "Click")
+    ImportSettings = AddTextOption("Import MCM settings", "Click")
     SetCursorPosition(1)
     AddColoredHeader("Enabled Strapons", "Blue")
     PopulateStraponsPage()
@@ -150,7 +149,7 @@ Event OnOptionHighlight(Int Option)
     If (Option == SetEnabledStrapons)
         SetInfoText("Enables the strapon system.")
     ElseIf (Option == SetOcumIntEnabled)
-        SetInfoText("Enables actor with strapon to cum using OCum. Use if you have equiped a SOS Schlong for example.")
+        SetInfoText("Enables actor with strapon to cum using OCum. Use if you have equipped a SOS Schlong for example.")
     ElseIf (Option == SetPlayerEnabled)
         SetInfoText("Enables strapons for player.")
     ElseIf (Option == SetNPCEnabled)
@@ -160,7 +159,7 @@ Event OnOptionHighlight(Int Option)
     ElseIf (Option == CheckForCompats)
         SetInfoText("Will check for any existing compatibility files and load them.")
     ElseIf (Option == ReloadStraponSettings)
-        SetInfoText("Reloads default strapon settings, removing all strapons not packaged with OStap.")
+        SetInfoText("Reloads default strapon settings, removing all strapons not packaged with OStrap.")
     ElseIf (Option == ExportSettings)
         SetInfoText("Exports OStrap MCM settings (Excluding strapon selections) to /My Games/Skyrim Special Edition/JCUser/OStrapMCMSettings.json")
     ElseIf (Option == ImportSettings)
@@ -289,7 +288,16 @@ int Function BuildStraponObject(Form Formid, Bool Enabled)
     return StraponObject
 endFunction
 
+Function CheckForSoftRecs()
+    GetSoftRecs()
+    If ((!OcumInstalled || !SOSInstalled) && !OCumIntEnabled)
+        WriteLog("Either OCum or SOS are not detected, so OCum integration has been disabled.", true)
+        OCumIntEnabled = false
+    endIf
+endFunction
+
 Function GetSoftRecs()
+    ; Check for SOS
 	If (Game.GetModByName("Schlongs of Skyrim.esp") != 255)
 		SoSFaction = (Game.GetFormFromFile(0x0000AFF8, "Schlongs of Skyrim.esp")) as Faction
         Utility.Wait(1.0)
@@ -301,7 +309,8 @@ Function GetSoftRecs()
 	Else
 		SoSInstalled = false
 	EndIf
-    	If (Game.GetModByName("OCum.esp") != 255)
+    ; Check for OCum
+    If (Game.GetModByName("OCum.esp") != 255)
         	OCum = (Game.GetFormFromFile(0x800, "OCum.esp") as OCumScript)
         Utility.Wait(1.0)
         if (OCum)
@@ -311,7 +320,7 @@ Function GetSoftRecs()
         endIf
     Else
         OcumInstalled = False
-    endIf
+    EndIf
 endFunction
 
 ; Modified version of the same function from Ostim, just with manual control.

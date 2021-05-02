@@ -71,7 +71,7 @@ endFunction
 Function EquipStrapon(Actor target, form randStrap = None)
     if (RandStrap == None)
         Target.EquipItem(StrapOn, true, True)
-        WriteLog("Was unable to get random stapon, falling back to defualt.")
+        WriteLog("Was unable to get random strapon, falling back to default.")
     else
         Target.EquipItem(randStrap, true, True)
     endIf
