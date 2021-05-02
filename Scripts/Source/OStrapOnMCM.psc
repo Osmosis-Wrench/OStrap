@@ -47,7 +47,6 @@ Event OnConfigInit()
     LoadCompatFiles()
     PurgeBadForms()
     GetSoftRecs()
-    WriteLog("OStrap install finished.")
 EndEvent
 
 Event OnPageReset(string page)
@@ -76,7 +75,6 @@ Event OnPageReset(string page)
     ReloadStraponSettings = AddTextOption("Reset strapon info to defualt", "Click")
     ExportSettings = AddTextOption("Reset strapon info to defualt", "Click")
     ImportSettings = AddTextOption("Reset strapon info to defualt", "Click")
-
     SetCursorPosition(1)
     AddColoredHeader("Enabled Strapons", "Blue")
     PopulateStraponsPage()
@@ -197,7 +195,7 @@ endFunction
 
 ; On first config load, looks for Prototype file in data folder and tries to load it.
 Function LoadPrototypeFile()
-    WriteLog("Installing OStrap", true)
+    WriteLog("Installing OStrap")
     int prototype = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFile.json")
     int standard = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
     if (Prototype == False)
@@ -229,7 +227,7 @@ endFunction
 
 ; Loads any file .json file in Data/OstrapData/OstrapCompat/ folder and appeneds any valid strapons to the strapon list.
 Function LoadCompatFiles()
-    WriteLog("Checking for compats.", true)
+    WriteLog("Checking for compats.")
     int compats = JValue.readFromDirectory("Data/OStrapData/OstrapCompat", ".json")
     int existing = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
     Jvalue.Retain(Compats)
@@ -303,8 +301,8 @@ Function GetSoftRecs()
 	Else
 		SoSInstalled = false
 	EndIf
-    If (Game.GetModByName("OCum.esp") != 255)
-        OCum = (Game.GetFormFromFile(0x800, "OCum.esp") as OCumScript)
+    	If (Game.GetModByName("OCum.esp") != 255)
+        	OCum = (Game.GetFormFromFile(0x800, "OCum.esp") as OCumScript)
         Utility.Wait(1.0)
         if (OCum)
             OcumInstalled = True
