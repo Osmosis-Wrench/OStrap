@@ -1,0 +1,42 @@
+{
+  "Black Soul Gem Strapon UNP": {
+    "Enabled": 0,
+    "Form": "__formData|OStrapOn.esp|0x285E",
+    "OptID": 3
+  },
+  "Canine Strapon UNP": {
+    "Enabled": 0,
+    "Form": "__formData|OStrapOn.esp|0xD65",
+    "OptID": 5
+  },
+  "Common Soul Gem Strapon UNP": {
+    "Enabled": 0,
+    "Form": "__formData|OStrapOn.esp|0x285F",
+    "OptID": 7
+  },
+  "Dwemer Strapon UNP": {
+    "Enabled": 1,
+    "Form": "__formData|OStrapOn.esp|0x2859",
+    "OptID": 9
+  },
+  "Giant Toe Strapon UNP": {
+    "Enabled": 0,
+    "Form": "__formData|OStrapOn.esp|0x285A",
+    "OptID": 11
+  },
+  "Hagraven Fingers Strapon UNP": {
+    "Enabled": 0,
+    "Form": "__formData|OStrapOn.esp|0x285B",
+    "OptID": 13
+  },
+  "Horker Tusk Strapon UNP": {
+    "Enabled": 0,
+    "Form": "__formData|OStrapOn.esp|0x285C",
+    "OptID": 15
+  },
+  "Stallion Strapon UNP": {
+    "Enabled": 0,
+    "Form": "__formData|OStrapOn.esp|0x285D",
+    "OptID": 19
+  }
+}

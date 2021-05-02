@@ -195,7 +195,7 @@ endFunction
 ; On first config load, looks for Prototype file in data folder and tries to load it.
 Function LoadPrototypeFile()
     WriteLog("Installing OStrap")
-    int prototype = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFile.json")
+    int prototype = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFileCBBE.json")
     int standard = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
     if (Prototype == False)
         Writelog(("Something went wrong during installation, Strapon Prototype file was not found in data folder."), true)
@@ -216,7 +216,7 @@ endFunction
 
 Function ReloadSettingsFile()
     Writelog("Reloading strapon settings file from prototype.")
-    int prototype = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFile.json")
+    int prototype = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFileCBBE.json")
     if (prototype == false)
         Debug.MessageBox("Defaults file could not be found.")
     else
