@@ -37,6 +37,24 @@ int BodyModsIndex = 0
 Bool property SOSInstalled Auto
 Bool property OcumInstalled Auto
 
+int Function GetVersion()
+    return 101
+    ; 1.0 = none
+    ; 1.1 = 101
+endFunction
+
+event OnVersionUpdate(int new_Version)
+    if(new_Version >= 101 && CurrentVersion < 101)
+        WriteLog("Updating to version 1.1", true)
+        Writelog("Adding UNP support.")
+        SetupBodyMods()
+        Writelog("Updating records to new formID's.")
+        ReloadSettingsFile(BodyMods[BodyModsIndex])
+        LoadCompatFiles()
+        GetSoftRecs()
+    endIF
+endEvent
+
 Event OnConfigInit()
     EnabledStrapons = True
     PlayerEnabledStrapons = True
@@ -298,7 +316,7 @@ endFunction
 
 ; Purges invalid forms from the Strapons list.
 Function PurgeBadForms()
-    Writelog("Checking for bad forms")
+    Writelog("Checking for invalid strapons in list. This could be either because the mod that provides this strapon is uninstalled, or because the compat file for it is setup incorrectly.")
     int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
     int fixed = Jmap.Object()
     string nameKey = JMap.NextKey(data)
@@ -307,7 +325,7 @@ Function PurgeBadForms()
     while nameKey
         checkForm = JValue.SolveForm(Data, "." + nameKey + ".Form")
         if (checkForm == false)
-            Writelog("Bad form detected in compat file: " + NameKey)
+            Writelog("Invalid strapon detected in compat file: " + NameKey)
         Else
             enabled = JValue.SolveInt(Data, "." + nameKey + ".Enabled") as Bool
             JMap.SetObj(fixed, NameKey, BuildStraponObject(checkForm, Enabled))
@@ -393,13 +411,14 @@ Function ExportMCM()
     JMap.SetInt(data, "NPCEnabledStrapons", NPCEnabledStrapons as Int)
     JMap.SetInt(data, "EnableForStraightSex", EnableForStraightSex as Int)
     JMap.SetInt(data, "OCumIntEnabled", OCumIntEnabled as Int)
+    JMap.SetInt(Data, "SelectedBodyMod", BodyModsIndex)
 
     Jvalue.WriteToFile(Data, JContainers.UserDirectory() + "OStrapMCMSettings.json")
 EndFunction
 
 Function ImportMCM()
-    int data = JValue.readFromFile(JContainers.UserDirectory() + "OstimMCMSettings.json")
-    int modlistData = JValue.readFromFile(".\\Data\\OstimMCMSettings.json")
+    int data = JValue.readFromFile(JContainers.UserDirectory() + "OStrapMCMSettings.json")
+    int modlistData = JValue.readFromFile(".\\Data\\OStrapMCMSettings.json")
 
     If (data == false && modlistData == false)
         Debug.MessageBox("Tried to import from file, but no file was found.")
@@ -416,7 +435,9 @@ Function ImportMCM()
     NPCEnabledStrapons = JMap.GetInt(data, "NPCEnabledStrapons")
     EnableForStraightSex = JMap.GetInt(data, "EnableForStraightSex")
     OCumIntEnabled = JMap.GetInt(data, "OCumIntEnabled")
-    
+    BodyModsIndex = JMap.GetInt(Data, "SelectedBodyMod")
+    ReloadSettingsFile(BodyMods[BodyModsIndex])
+    LoadCompatFiles()
     ForcePageReset()
 EndFunction
 
