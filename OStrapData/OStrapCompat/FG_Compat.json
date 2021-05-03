@@ -1,7 +1,12 @@
 {
-  "UNP StrapOn FlowerGirls": {
-    "Enabled": 1,
+  "Strapon FlowerGirls UNP": {
+    "Enabled": 0,
     "Form": "__formData|FlowerGirls SE.esm|0xf576a",
+    "OptID": 0
+  },
+  "Strapon FlowerGirls CBBE": {
+    "Enabled": 0,
+    "Form": "__formData|FlowerGirls SE.esm|0xf5769",
     "OptID": 0
   }
 }
