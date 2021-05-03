@@ -1,0 +1,12 @@
+{
+  "SOS Horse Cock": {
+    "Enabled": 0,
+    "Form": "__formData|SOS_Ho.esp|0xd62",
+    "OptID": 0
+  },
+  "SOS Horse Cock Flared": {
+    "Enabled": 0,
+    "Form": "__formData|SOS_Ho.esp|0x68f3",
+    "OptID": 0
+  }
+}

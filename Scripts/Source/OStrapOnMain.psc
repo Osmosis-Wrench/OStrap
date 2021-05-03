@@ -15,28 +15,20 @@ EndFunction
 Event OnOstimStart(string eventName, string strArg, float numArg, Form sender)
     If (OStrapMCM.EnabledStrapons)
         ; Cache these to speed it up.
-        WriteLog("Scene start detected")
-        WriteLog("Getting random Strapon")
         strap = ReturnRandomValidStrapon()
-        WriteLog(Strap)
         ; If Player but not NPC is enabled, equip to player.
         If(OStrapMCM.PlayerEnabledStrapons && !OStrapMCM.NPCEnabledStrapons)
             Equipper(PlayerRef, strap)
-            WriteLog("Equipping to player.")
         ;If NPC but not Player is enabled, then equip to NPC. Prioritising DomActor in case of f/f scenes with no player actor.
         ElseIf(OStrapMCM.NPCEnabledStrapons && !OStrapMCM.PlayerEnabledStrapons)
             If(Ostim.GetDomActor() != PlayerRef)
                 Equipper(Ostim.GetDomActor(), strap)
-                WriteLog("Equipping to Dom actor..")
             ElseIf(Ostim.GetSubActor() != PlayerRef)
                 Equipper(Ostim.GetSubActor(), strap)
-                WriteLog("Equipping to SubActor.")
             EndIf
-            WriteLog("Equipping to NPC.")
         ;If both Player and NPC enabled, equip to actor in Dom position.
         ElseIf(OStrapMCM.PlayerEnabledStrapons && OStrapMCM.NPCEnabledStrapons)
             Equipper(Ostim.GetDomActor(), strap)
-            WriteLog("Equipping to DomActor")
         EndIf
     EndIf
     While(Ostim.AnimationRunning())
@@ -79,7 +71,7 @@ endFunction
 Function EquipStrapon(Actor target, form randStrap = None)
     if (RandStrap == None)
         Target.EquipItem(StrapOn, true, True)
-        WriteLog("Was unabled to get random stapon, falling back to defualt.")
+        WriteLog("Was unable to get random strapon, falling back to default.")
     else
         Target.EquipItem(randStrap, true, True)
     endIf
@@ -93,7 +85,6 @@ Function UnEquipStrapon(Actor target, form randStrap = None)
         Target.RemoveItem(randStrap, 1, true)
     endIf
     If (OStrapMCM.SOSInstalled && OStrapMCM.OcumInstalled && OStrapMCM.OCumIntEnabled)
-        WriteLog("Removing " + Target + " from SoS faction.")
         Target.RemoveFromFaction(OStrapMCM.SosFaction)
     endIf
 EndFunction
