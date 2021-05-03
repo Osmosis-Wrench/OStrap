@@ -316,7 +316,7 @@ endFunction
 
 ; Purges invalid forms from the Strapons list.
 Function PurgeBadForms()
-    Writelog("Checking for invalid strapons in list. This could be either because the mod that provides this strapon is uninstalled, or because the compat file for it is setup incorrectly.")
+    Writelog("Checking for invalid strapons in list.")
     int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
     int fixed = Jmap.Object()
     string nameKey = JMap.NextKey(data)
@@ -332,6 +332,7 @@ Function PurgeBadForms()
         endif
         namekey = JMap.NextKey(Data, namekey)
     endWhile
+    WriteLog("This could be either because the mod that provides this strapon is uninstalled, or because the compat file for it is setup incorrectly.")
     JValue.WriteToFile(fixed, JContainers.UserDirectory() + "StraponsAll.json")
 EndFunction
 
