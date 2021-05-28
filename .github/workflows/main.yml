@@ -32,7 +32,7 @@ jobs:
     - name: Pull papyrus compiler
       uses: actions/checkout@v2
       with:
-        repository: Osmosis-Wrench/nl_mcm
+        repository: Osmosis-Wrench/Papyrus-Compiler
         token: ${{ secrets.PRIVATE_TOKEN }}
         path: ./compiler
 
