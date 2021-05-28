@@ -1,10 +1,11 @@
-name: CI
+name: Build
 
 on:
   workflow_dispatch:
   push:
     branches:
     - main
+    - next-release
 
 jobs:
   build:
@@ -12,7 +13,7 @@ jobs:
     strategy:
       matrix:
         project-path: 
-        - 'ostrap.ppj'
+        - 'ostrap_ci.ppj'
         
     env:
       python-version: 3.x
