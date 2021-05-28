@@ -18,7 +18,7 @@
         <Import>https://github.com/MrOctopus/nl_online/tree/main/jcontainersse/source</Import>
         <Import>https://github.com/schlangster/skyui/tree/master/dist/Data/Scripts/Source</Import>
         <Import>https://github.com/schlangster/skyui/tree/master/dist/Data/Scripts/Source</Import>
-        <Import>https://github.com/MrOctopus/nl_mcm/blob/main/skyui/source/ski_configbase.psc</Import>
+        <Import>https://github.com/MrOctopus/nl_mcm/blob/main/skyui/source/</Import>
         <Import>@MyProject\Scripts\Source</Import>
     </Imports>
     <Folders>
