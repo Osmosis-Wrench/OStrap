@@ -19,14 +19,14 @@
         <Import>F:\My Mods\SDK\SKSE\Data\Scripts\Source</Import>
         <Import>@MyProject\Scripts\Source</Import>
     </Imports>
-    <Scripts>
-        <Script>OStrap_PlayerInit.psc</Script>
-        <Script>OStrapOnMain.psc</Script>
-        <Script>OStrapOnMCM.psc</Script>
-    </Scripts>
+    <Folders>
+        <Folder>.</Folder>
+    </Folders>
     <Packages Output="@MyProject">
         <Package Name="@ModName" RootDir="@MyProject">
         <Include>**/scripts/*.pex</Include>
+        <Include>**/scripts/source/*.psc</Include>
+        <Include>**/meshes/*/*.*</Include>
         <Include>**/strings/*.txt</Include>
         </Package>
     </Packages>
@@ -34,9 +34,9 @@
         <ZipFile Name="@ModName" RootDir="@MyProject" Compression="deflate">
         	<Include NoRecurse="true">*/*.esp</Include>
 	        <Include NoRecurse="true">*.bsa</Include>
-        </ZipFile>
-        <ZipFile Name="@ModName - English" RootDir="@MyProject" Compression="deflate">
-            <Include>**/Strings/*.*</Include>
+	        <Include NoRecurse="true">*/*.pex</Include>
+	        <Include NoRecurse="true">*/*/*.psc</Include>
+            <Include>OStrapData</Include>
         </ZipFile>
     </ZipFiles>
 </PapyrusProject>
