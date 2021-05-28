@@ -1,5 +1,5 @@
 # OStrap
- An OStim Addon that adds modular Strap-on support.
+ An OStim Addon that adds modular Strap-on support.  
  ![OStim Build Status](https://github.com/Osmosis-Wrench/OStrap/actions/workflows/main.yml/badge.svg)
 ## Features
  - Includes several pre-packaged strapons, pulling from leito's Skyrim Strapons.
