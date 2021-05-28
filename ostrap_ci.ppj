@@ -8,11 +8,9 @@
     Package="true" 
     Zip="true">
     <Variables>
-        <Variable Name="Namespace" Value="OStrap"/>
         <Variable Name="ModName" Value="OStrap"/>
-        <Variable Name="MyProject" Value="F:\My Mods\Repos\@ModName"/>
-	    <Variable Name="GameDir" Value="F:\Steam\steamapps\common\Skyrim Special Edition"/>
-	    <Variable Name="ScriptsDir" Value="@GameDir\Data\Scripts\Source"/>
+        <Variable Name="MyProject" Value="."/>
+        <Variable Name="Dist" Value="..\dist"/>
     </Variables>
     <Imports>
         <Import>https://github.com/MrOctopus/nl_online/tree/main/sse/source</Import>
@@ -33,7 +31,7 @@
         <Include>**/strings/*.txt</Include>
         </Package>
     </Packages>
-    <ZipFiles Output="@MyProject">
+    <ZipFiles Output="@Dist">
         <ZipFile Name="@ModName" RootDir="@MyProject" Compression="deflate">
         	<Include NoRecurse="true">*/*.esp</Include>
 	        <Include NoRecurse="true">*.bsa</Include>
