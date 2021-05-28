@@ -15,6 +15,7 @@
     <Imports>
         <Import>@MyProject\Scripts\Source</Import>
         <Import>https://github.com/MrOctopus/nl_online/tree/main/jcontainersse/source</Import>
+        <Import>https://github.com/eeveelo/PapyrusUtil/tree/master/Scripts/Source</Import>
         <Import>https://github.com/Sairion350/OCum/tree/main/scripts/source</Import>
         <Import>https://github.com/Sairion350/OStim/tree/main/Scripts/Source</Import>
         <Import>https://github.com/CE0/OSA-SE/tree/master/Data/Scripts/Source</Import>
