@@ -108,30 +108,6 @@ Event OnPageReset(string page)
     PopulateStraponsPage()
 endEvent
 
-function testBuildJDB()
-    int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
-    if (data == false)
-        WriteLog("StraponsAll.json file not found.", true)
-        return
-    endif
-    oStrapArray.set(data)
-    key = JDB.NextKey(OStrapArray.Get())
-    while key
-        WriteLog(Key)
-        key = NextKey(OstrapArray.get(), key)
-    endwhile
-endFunction
-
-int property oStrapArray
-    int function get()
-        return JDB.SolveObj(".oStrap.Strapons")
-    endFunction
-
-    int function set(int object)
-        JDB.SolveObjSetter(".oStrap.Strapons", object, true)
-    endFunction
-endproperty
-
 ; Populates the strapon options page, dynamically pulling from StraponsAll.Json to build it.
 Function PopulateStraponsPage()
     int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
