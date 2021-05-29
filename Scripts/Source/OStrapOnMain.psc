@@ -9,6 +9,7 @@ form strap
 
 Function OnInit()
     RegisterForModEvent("ostim_start", "OnOstimStart")
+    RegisterForKey(42)
 EndFunction
 
 ; Triggers when Ostim starts a scene, and runs the main logic of OStrap
@@ -120,3 +121,33 @@ Function WriteLog(String OutputLog, bool error = false)
             Debug.Notification("Ostrap: " + OutputLog)
         endIF
 EndFunction
+
+event OnKeyDown(int keycode)
+    if (keycode == 42)
+        testBuildJDB()
+    endif
+endevent
+
+function testBuildJDB()
+    int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
+    if (data == false)
+        WriteLog("StraponsAll.json file not found.", true)
+        return
+    endif
+    oStrapArray.set(data)
+    key = JDB.NextKey(OStrapArray.Get())
+    while key
+        WriteLog(Key)
+        key = NextKey(OstrapArray.get(), key)
+    endwhile
+endFunction
+
+int property oStrapArray
+    int function get()
+        return JDB.SolveObj(".oStrap.Strapons")
+    endFunction
+
+    int function set(int object)
+        JDB.SolveObjSetter(".oStrap.Strapons", object, true)
+    endFunction
+endproperty

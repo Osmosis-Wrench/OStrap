@@ -15,9 +15,10 @@
 	    <Variable Name="ScriptsDir" Value="@GameDir\Data\Scripts\Source"/>
     </Variables>
     <Imports>
-        <Import>F:\Steam\steamapps\common\Skyrim Special Edition\Data\Scripts\Source</Import>
-        <Import>F:\My Mods\SDK\SKSE\Data\Scripts\Source</Import>
         <Import>@MyProject\Scripts\Source</Import>
+        <Import>F:\My Mods\SDK\SKSE\Data\Scripts\Source</Import>
+        <Import>https://github.com/Sairion350/OCum/tree/main/scripts/source</Import>
+        <Import>F:\Steam\steamapps\common\Skyrim Special Edition\Data\Scripts\Source</Import>
     </Imports>
     <Folders>
         <Folder>.</Folder>

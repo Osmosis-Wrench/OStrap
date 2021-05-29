@@ -1,4 +1,4 @@
-Scriptname OStrapOnMCM extends ski_configbase  
+Scriptname OStrapOnMCM extends ski_configbase
 
 Bool Property EnabledStrapons Auto
 Int SetEnabledStrapons
@@ -38,21 +38,25 @@ Bool property SOSInstalled Auto
 Bool property OcumInstalled Auto
 
 int Function GetVersion()
-    return 101
+    return 102
     ; 1.0 = none
     ; 1.1 = 101
+    ; 1.2 = 102
 endFunction
 
 event OnVersionUpdate(int new_Version)
     if(new_Version >= 101 && CurrentVersion < 101)
-        WriteLog("Updating to version 1.1", true)
+        WriteLog("Updating to version 1.1")
         Writelog("Adding UNP support.")
         SetupBodyMods()
         Writelog("Updating records to new formID's.")
         ReloadSettingsFile(BodyMods[BodyModsIndex])
         LoadCompatFiles()
         GetSoftRecs()
-    endIF
+    endif
+    if (new_Version >= 102 && CurrentVersion < 102)
+        WriteLog("Setup Update Code", true)
+    endif
 endEvent
 
 Event OnConfigInit()
@@ -103,6 +107,30 @@ Event OnPageReset(string page)
     AddColoredHeader("Enabled Strapons", "Blue")
     PopulateStraponsPage()
 endEvent
+
+function testBuildJDB()
+    int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
+    if (data == false)
+        WriteLog("StraponsAll.json file not found.", true)
+        return
+    endif
+    oStrapArray.set(data)
+    key = JDB.NextKey(OStrapArray.Get())
+    while key
+        WriteLog(Key)
+        key = NextKey(OstrapArray.get(), key)
+    endwhile
+endFunction
+
+int property oStrapArray
+    int function get()
+        return JDB.SolveObj(".oStrap.Strapons")
+    endFunction
+
+    int function set(int object)
+        JDB.SolveObjSetter(".oStrap.Strapons", object, true)
+    endFunction
+endproperty
 
 ; Populates the strapon options page, dynamically pulling from StraponsAll.Json to build it.
 Function PopulateStraponsPage()
