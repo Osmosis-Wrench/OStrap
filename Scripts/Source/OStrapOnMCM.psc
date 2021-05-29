@@ -1,4 +1,4 @@
-Scriptname OStrapOnMCM extends ski_configbase  
+Scriptname OStrapOnMCM extends ski_configbase
 
 Bool Property EnabledStrapons Auto
 Int SetEnabledStrapons
@@ -87,7 +87,7 @@ Event OnPageReset(string page)
     SetCursorPosition(0)
     SetCursorFillMode(TOP_TO_BOTTOM)
     AddColoredHeader("Main settings")
-    SetEnabledStrapons = AddToggleOption("Enable Mod", EnabledStrapons)
+    SetEnabledStrapons = AddToggleOptionST("Enable Mod", EnabledStrapons)
     SetBodyMods = AddMenuOption("Current Body Mod:", BodyMods[BodyModsIndex])
     SetPlayerEnabled = AddToggleOption("Enable Player Strapons", PlayerEnabledStrapons, EnabledStraponsFlag)
     SetNPCEnabled = AddToggleOption("Enable NPC Strapons", NPCEnabledStrapons, EnabledStraponsFlag)
