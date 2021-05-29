@@ -118,58 +118,71 @@ endstate
     
 state _ostrap_purge_invalid
     event OnSelectST()
-        _ocum_enabled = !_ocum_enabled
-        SetToggleOptionValueST(_ocum_enabled, false, "_ocum_intergration_enabled")
+        purge_list()
     endevent
 
     event OnHighlightST()
-        SetInfoText("Enables any actor with a strapon to cum using OCum.")
+        SetInfoText("Remove all invalid or uninstalled strapons from the list.")
     endEvent
 endstate
 
 state _ostrap_load_compats
     event OnSelectST()
-        _ocum_enabled = !_ocum_enabled
-        SetToggleOptionValueST(_ocum_enabled, false, "_ocum_intergration_enabled")
+        load_compats()
     endevent
 
     event OnHighlightST()
-        SetInfoText("Enables any actor with a strapon to cum using OCum.")
+        SetInfoText("Check for and load any new compatibility files.")
     endEvent
 endstate
 
 state _ostrap_reset
     event OnSelectST()
-        _ocum_enabled = !_ocum_enabled
-        SetToggleOptionValueST(_ocum_enabled, false, "_ocum_intergration_enabled")
+        reset_list()
     endevent
 
     event OnHighlightST()
-        SetInfoText("Enables any actor with a strapon to cum using OCum.")
+        SetInfoText("Reset strapon list to baseline.")
     endEvent
 endstate
 
 state _ostrap_mcm_save
     event OnSelectST()
-        _ocum_enabled = !_ocum_enabled
-        SetToggleOptionValueST(_ocum_enabled, false, "_ocum_intergration_enabled")
+        save_mcm()
     endevent
 
     event OnHighlightST()
-        SetInfoText("Enables any actor with a strapon to cum using OCum.")
+        SetInfoText("Export all MCM settings to a file.")
     endEvent
 endstate
 
 state _ostrap_mcm_load
     event OnSelectST()
-        _ocum_enabled = !_ocum_enabled
-        SetToggleOptionValueST(_ocum_enabled, false, "_ocum_intergration_enabled")
+        load_mcm()
     endevent
 
     event OnHighlightST()
-        SetInfoText("Enables any actor with a strapon to cum using OCum.")
+        SetInfoText("Import all MCM settings from a file.")
     endEvent
 endstate
     
-    
-    
+
+function reset_list()
+
+endFunction
+
+function load_compats()
+
+endFunction
+
+function purge_list()
+
+endFunction
+
+function load_mcm()
+
+endFunction
+
+function save_mcm()
+
+endFunction
