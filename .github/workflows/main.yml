@@ -33,8 +33,7 @@ jobs:
     - name: Pull papyrus compiler
       uses: actions/checkout@v2
       with:
-        repository: Osmosis-Wrench/Papyrus-Compiler
-        token: ${{ secrets.PRIVATE_TOKEN }}
+        repository: Osmosis-Wrench/JContainers-Compiler-Only
         path: ./compiler
 
     - name: Get latest Pyro release
