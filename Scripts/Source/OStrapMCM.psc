@@ -205,6 +205,7 @@ state strapon_toggle_option
         straponEnabled = !straponEnabled
         JValue.SolveIntSetter(Data, "." + state_id + ".Enabled", straponEnabled as int)
         SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + state_id)
+        JValue.WriteToFile(Data, JContainers.UserDirectory() + "StraponsAll.json")
     endevent
 
     event OnHighlightST_EX(string state_id)
