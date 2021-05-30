@@ -74,6 +74,7 @@ function build_strapon_page()
     while straponkey
         bool strapon_enabled = Jvalue.SolveInt(data, "." + straponkey + ".Enabled") as bool
         AddToggleOptionST("strapon_toggle_option___" + straponkey, straponkey, strapon_enabled)
+        writelog("strapon_toggle_option___" + straponkey)
         straponkey = Jmap.nextKey(data, straponkey)
     endwhile
 endFunction
@@ -194,19 +195,16 @@ endstate
 
 state strapon_toggle_option
     event OnSelectST_EX(string state_id)
+        WriteLog(state_id)
         int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
         if (data == false)
             WriteLog("StraponsAll.json file not found.", true)
             return
         endif
-    
-        string straponkey = JMap.GetStr(data, state_id)
-        if (straponKey)
-            bool straponEnabled = JValue.SolveInt(Data, "." + straponkey + ".Enabled") as Bool
-            straponEnabled = !straponEnabled
-            JValue.SolveIntSetter(Data, "." + straponkey + ".Enabled", straponEnabled as int)
-            SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + state_id)
-        endif
+        bool straponEnabled = JValue.SolveInt(Data, "." + state_id + ".Enabled") as Bool
+        straponEnabled = !straponEnabled
+        JValue.SolveIntSetter(Data, "." + state_id + ".Enabled", straponEnabled as int)
+        SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + state_id)
     endevent
 
     event OnHighlightST_EX(string state_id)
