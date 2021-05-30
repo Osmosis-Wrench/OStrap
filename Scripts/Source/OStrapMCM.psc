@@ -194,29 +194,25 @@ endstate
 
 state strapon_toggle_option
     event OnSelectST_EX(string state_id)
-        toggle_strapon(state_id)
+        int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
+        if (data == false)
+            WriteLog("StraponsAll.json file not found.", true)
+            return
+        endif
+    
+        string straponkey = JMap.GetStr(data, state_id)
+        if (straponKey)
+            bool straponEnabled = JValue.SolveInt(Data, "." + straponkey + ".Enabled") as Bool
+            straponEnabled = !straponEnabled
+            JValue.SolveIntSetter(Data, "." + straponkey + ".Enabled", straponEnabled as int)
+            SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + state_id)
+        endif
     endevent
 
     event OnHighlightST_EX(string state_id)
         SetInfoText("Enabled or Disable " + state_id)
     endEvent
 endstate
-
-function toggle_strapon(string straponName)
-    int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
-    if (data == false)
-        WriteLog("StraponsAll.json file not found.", true)
-        return
-    endif
-
-    string straponkey = JMap.GetStr(data, straponName)
-    if (straponKey)
-        bool straponEnabled = JValue.SolveInt(Data, "." + straponkey + ".Enabled") as Bool
-        straponEnabled = !straponEnabled
-        JValue.SolveIntSetter(Data, "." + straponkey + ".Enabled", straponEnabled as int)
-        SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + straponName)
-    endif
-endFunction
 
 function reset_list()
 

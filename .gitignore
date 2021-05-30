@@ -14,3 +14,4 @@ SkyrimSE.code-workspace
 Scripts/OStrapPlayerInit.pex
 Scripts/OStrapMCM.pex
 Scripts/OStrapMain.pex
+*.bsa
