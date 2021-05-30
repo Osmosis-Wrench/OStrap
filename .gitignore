@@ -10,3 +10,7 @@ SkyrimSE.code-workspace
 *.bsa
 *.bsa
 *.bsa
+*.old
+Scripts/OStrapPlayerInit.pex
+Scripts/OStrapMCM.pex
+Scripts/OStrapMain.pex

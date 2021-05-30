@@ -288,8 +288,8 @@ int property ERROR_MCM_NONEQUEST = -10 autoreadonly
 int property ERROR_MCM_NONE = -20 autoreadonly
 
 ; FONTS
-int property FONT_DEFAULT = 0x00 autoreadonly
-int property FONT_PAPER = 0x01 autoreadonly
+int property FONT_TYPE_DEFAULT = 0x00 autoreadonly
+int property FONT_TYPE_PAPER = 0x01 autoreadonly
 
 int property CURRENT_FONT
     int function Get()
@@ -318,6 +318,10 @@ string function FONT_WARNING(string text = "")
 endfunction
 
 string function FONT_INFO(string text = "")
+	Guard()
+endfunction
+
+string function FONT_CUSTOM(string text = "", string color)
 	Guard()
 endfunction
 
@@ -612,6 +616,8 @@ event OnPageDraw()
 	Guard()
 endevent
 
+; BASIC
+
 event OnDefaultST()
 	Guard()
 endevent
@@ -658,6 +664,44 @@ endevent
 
 event OnKeyMapChangeST(int keycode)
 	Guard()
+endevent
+
+; ADVANCED
+
+event OnDefaultST_EX(string state_id)
+endevent
+
+event OnHighlightST_EX(string state_id)
+endevent
+
+event OnSelectST_EX(string state_id)
+endevent
+
+event OnSliderOpenST_EX(string state_id)
+endevent
+
+event OnMenuOpenST_EX(string state_id)
+endevent
+
+event OnColorOpenST_EX(string state_id)
+endevent
+
+event OnSliderAcceptST_EX(string state_id, float f)
+endevent
+
+event OnMenuAcceptST_EX(string state_id, int i)
+endevent
+
+event OnColorAcceptST_EX(string state_id, int col)
+endevent
+
+event OnInputOpenST_EX(string state_id)
+endevent
+
+event OnInputAcceptST_EX(string state_id, string str)
+endevent
+
+event OnKeyMapChangeST_EX(string state_id, int keycode)
 endevent
 
 ;------\

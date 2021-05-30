@@ -1,16 +1,16 @@
 Scriptname OStrapMCM extends nl_mcm_module
 
-bool _ostrap_enabled = true
+bool property _ostrap_enabled auto
 int _ostrap_enabled_flag
-bool _player_enabled = true
-bool _npc_enabled = false
-
-bool _ocum_enabled = false
+bool property _player_enabled auto
+bool property _npc_enabled auto
+bool property _ocum_enabled auto
 int _ocum_flag
+bool property _sos_installed auto
+bool property _ocum_installed auto
 
-bool _sos_installed = false
-bool _ocum_installed = false
-
+Faction Property SoSFaction auto
+OCumScript Property OCum Auto Hidden
 
 event OnInit()
     if RegisterModule("OStrap_Core") != OK
@@ -19,7 +19,17 @@ event OnInit()
 
     SetModName("OStrap")
     SetLandingPage("OStrap_Core")
+    startup()
 endevent
+
+function startup()
+    _ostrap_enabled = true
+    _player_enabled = true
+    _npc_enabled = false  
+    _ocum_enabled = false   
+    _sos_installed = false
+    _ocum_installed = false
+endfunction
 
 event OnPageDraw()
     if (_ostrap_enabled)
@@ -50,7 +60,23 @@ event OnPageDraw()
     AddEmptyOption()
     SetCursorPosition(1)
     AddHeaderOption(FONT_PRIMARY("Enabled Strapons"))
+    build_strapon_page()
 endevent
+
+function build_strapon_page()
+    int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
+    if (!data)
+        WriteLog("StraponsAll.json not found.", true)
+        return
+    endif
+    bool changes = False
+    string straponkey = Jmap.NextKey(data)
+    while straponkey
+        bool strapon_enabled = Jvalue.SolveInt(data, "." + straponkey + ".Enabled") as bool
+        AddToggleOptionST("strapon_toggle_option___" + straponkey, straponkey, strapon_enabled)
+        straponkey = Jmap.nextKey(data, straponkey)
+    endwhile
+endFunction
 
 state _ostrap_enabled_state
     event OnDefaultST()
@@ -165,7 +191,32 @@ state _ostrap_mcm_load
         SetInfoText("Import all MCM settings from a file.")
     endEvent
 endstate
-    
+
+state strapon_toggle_option
+    event OnSelectST_EX(string state_id)
+        toggle_strapon(state_id)
+    endevent
+
+    event OnHighlightST_EX(string state_id)
+        SetInfoText("Enabled or Disable " + state_id)
+    endEvent
+endstate
+
+function toggle_strapon(string straponName)
+    int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
+    if (data == false)
+        WriteLog("StraponsAll.json file not found.", true)
+        return
+    endif
+
+    string straponkey = JMap.GetStr(data, straponName)
+    if (straponKey)
+        bool straponEnabled = JValue.SolveInt(Data, "." + straponkey + ".Enabled") as Bool
+        straponEnabled = !straponEnabled
+        JValue.SolveIntSetter(Data, "." + straponkey + ".Enabled", straponEnabled as int)
+        SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + straponName)
+    endif
+endFunction
 
 function reset_list()
 
@@ -186,3 +237,16 @@ endFunction
 function save_mcm()
 
 endFunction
+
+Function OStrap_OnLoad()
+
+endFunction
+
+; This just makes life easier sometimes.
+Function WriteLog(String OutputLog, bool error = false)
+    MiscUtil.PrintConsole("OStrap: " + OutputLog)
+    Debug.Trace("OStrap: " + OutputLog)
+    if (error == true)
+        Debug.Notification("Ostrap: " + OutputLog)
+    endIF
+EndFunction
