@@ -15,3 +15,5 @@ Scripts/OStrapPlayerInit.pex
 Scripts/OStrapMCM.pex
 Scripts/OStrapMain.pex
 *.bsa
+*.bsa
+OStrap.bsa
