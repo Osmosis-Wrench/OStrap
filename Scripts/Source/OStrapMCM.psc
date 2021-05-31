@@ -70,7 +70,6 @@ event OnPageDraw()
     AddHeaderOption(FONT_CUSTOM("OStrap Misc. Settings", pink))
     AddTextOptionST("_ostrap_purge_invalid", "Purge Invalid Strapons", "Click")
     AddTextOptionST("_ostrap_load_compats", "Load Compatibility Files", "Click")
-    AddTextOptionST("_ostrap_reset", "Reset Strapons to Default", "Click")
     AddTextOptionST("_ostrap_mcm_save", "Save MCM to File", "Click")
     AddTextOptionST("_ostrap_mcm_load", "Load MCM from File", "Click")
     AddEmptyOption()
@@ -79,14 +78,122 @@ event OnPageDraw()
     build_strapon_page()
 endevent
 
-function build_strapon_data()
-    int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
-    if (!data)
-        WriteLog("StraponsAll.json not found.", true)
-        return
-    endif
-    StraponJArray = data
-endfunction
+state _ostrap_enabled_state
+    event OnDefaultST(string state_id)
+        _ostrap_enabled = true
+    endevent
+
+    event OnSelectST(string state_id)
+        _ostrap_enabled = !_ostrap_enabled
+        SetToggleOptionValueST(_ostrap_enabled, false, "_ostrap_enabled_state")
+    endevent
+
+    event OnHighlightST(string state_id)
+        if (_ostrap_enabled)
+            SetInfoText("Disable OStrap")
+        else
+            SetInfoText("Enable OStrap")
+        endif
+    endevent
+endstate
+
+state _strapons_enabled_player
+    event OnDefaultST(string state_id)
+        _player_enabled = true
+    endevent
+
+    event OnSelectST(string state_id)
+        _player_enabled = !_player_enabled
+        SetToggleOptionValueST(_player_enabled, false, "_strapons_enabled_player")
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Enables strapons for the Player.")
+    endEvent
+endstate
+
+state _strapons_enabled_npc
+    event OnDefaultST(string state_id)
+        _npc_enabled = true
+    endevent
+
+    event OnSelectST(string state_id)
+        _npc_enabled = !_npc_enabled
+        SetToggleOptionValueST(_npc_enabled, false, "_npc_enabled_player")
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Enables strapons for NPC's.")
+    endEvent
+endstate
+
+state _ocum_intergration_enabled
+    event OnDefaultST(string state_id)
+        _ocum_enabled = false
+    endevent
+
+    event OnSelectST(string state_id)
+        _ocum_enabled = !_ocum_enabled
+        SetToggleOptionValueST(_ocum_enabled, false, "_ocum_intergration_enabled")
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Enables any actor with a strapon to cum using OCum.")
+    endEvent
+endstate  
+    
+state _ostrap_purge_invalid
+    event OnSelectST(string state_id)
+        purge_list()
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Remove all invalid or uninstalled strapons from the list.")
+    endEvent
+endstate
+
+state _ostrap_load_compats
+    event OnSelectST(string state_id)
+        load_compats()
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Check for and load any new compatibility files.")
+    endEvent
+endstate
+
+state _ostrap_mcm_save
+    event OnSelectST(string state_id)
+        save_mcm()
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Export all MCM settings to a file.")
+    endEvent
+endstate
+
+state _ostrap_mcm_load
+    event OnSelectST(string state_id)
+        load_mcm()
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Import all MCM settings from a file.")
+    endEvent
+endstate
+
+state strapon_toggle_option
+    event OnSelectST(string state_id)
+        bool straponEnabled = JValue.SolveInt(straponJArray, "." + state_id + ".Enabled") as bool
+        straponEnabled = !straponEnabled
+        SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + state_id)
+        JValue.SolveIntSetter(straponJArray, "." + state_id + ".Enabled", straponEnabled as int)
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Enabled or Disable " + state_id)
+    endEvent
+endstate
 
 function build_strapon_page()
     string straponkey = JMap.NextKey(straponJArray)
@@ -97,143 +204,57 @@ function build_strapon_page()
     endwhile
 endFunction
 
-state _ostrap_enabled_state
-    event OnDefaultST()
-        _ostrap_enabled = true
-    endevent
-
-    event OnSelectST()
-        _ostrap_enabled = !_ostrap_enabled
-        SetToggleOptionValueST(_ostrap_enabled, false, "_ostrap_enabled_state")
-    endevent
-
-    event OnHighlightST()
-        if (_ostrap_enabled)
-            SetInfoText("Disable OStrap")
-        else
-            SetInfoText("Enable OStrap")
-        endif
-    endevent
-endstate
-
-state _strapons_enabled_player
-    event OnDefaultST()
-        _player_enabled = true
-    endevent
-
-    event OnSelectST()
-        _player_enabled = !_player_enabled
-        SetToggleOptionValueST(_player_enabled, false, "_strapons_enabled_player")
-    endevent
-
-    event OnHighlightST()
-        SetInfoText("Enables strapons for the Player.")
-    endEvent
-endstate
-
-state _strapons_enabled_npc
-    event OnDefaultST()
-        _npc_enabled = true
-    endevent
-
-    event OnSelectST()
-        _npc_enabled = !_npc_enabled
-        SetToggleOptionValueST(_npc_enabled, false, "_npc_enabled_player")
-    endevent
-
-    event OnHighlightST()
-        SetInfoText("Enables strapons for NPC's.")
-    endEvent
-endstate
-
-state _ocum_intergration_enabled
-    event OnDefaultST()
-        _ocum_enabled = false
-    endevent
-
-    event OnSelectST()
-        _ocum_enabled = !_ocum_enabled
-        SetToggleOptionValueST(_ocum_enabled, false, "_ocum_intergration_enabled")
-    endevent
-
-    event OnHighlightST()
-        SetInfoText("Enables any actor with a strapon to cum using OCum.")
-    endEvent
-endstate  
-    
-state _ostrap_purge_invalid
-    event OnSelectST()
-        purge_list()
-    endevent
-
-    event OnHighlightST()
-        SetInfoText("Remove all invalid or uninstalled strapons from the list.")
-    endEvent
-endstate
-
-state _ostrap_load_compats
-    event OnSelectST()
-        load_compats()
-    endevent
-
-    event OnHighlightST()
-        SetInfoText("Check for and load any new compatibility files.")
-    endEvent
-endstate
-
-state _ostrap_reset
-    event OnSelectST()
-        reset_list()
-    endevent
-
-    event OnHighlightST()
-        SetInfoText("Reset strapon list to baseline.")
-    endEvent
-endstate
-
-state _ostrap_mcm_save
-    event OnSelectST()
-        save_mcm()
-    endevent
-
-    event OnHighlightST()
-        SetInfoText("Export all MCM settings to a file.")
-    endEvent
-endstate
-
-state _ostrap_mcm_load
-    event OnSelectST()
-        load_mcm()
-    endevent
-
-    event OnHighlightST()
-        SetInfoText("Import all MCM settings from a file.")
-    endEvent
-endstate
-
-state strapon_toggle_option
-    event OnSelectST_EX(string state_id)
-        bool straponEnabled = JValue.SolveInt(straponJArray, "." + state_id + ".Enabled") as bool
-        straponEnabled = !straponEnabled
-        SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + state_id)
-        JValue.SolveIntSetter(straponJArray, "." + state_id + ".Enabled", straponEnabled as int)
-    endevent
-
-    event OnHighlightST_EX(string state_id)
-        SetInfoText("Enabled or Disable " + state_id)
-    endEvent
-endstate
-
-function reset_list()
-
-endFunction
+function build_strapon_data()
+    int data
+    if (JContainers.FileExistsAtPath(".\\Data\\OStrapData\\StraponPrototypeFileCBBE.json"))
+        data = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFileCBBE.json")
+    Else
+        WriteLog("StraponPrototypeFile not found in OStrapData.", true)
+        return
+    endif
+    StraponJArray = data
+    load_compats()
+    purge_list()
+endfunction
 
 function load_compats()
-
+    int compats = JValue.readFromDirectory("Data/OStrapData/OstrapCompat", ".json")
+    JValue.Retain(compats)
+    int compatData
+    string compatkey = JMap.nextKey(compats)
+    while compatkey
+        compatData = JMap.GetObj(compats, compatkey)
+        string compatDataKey = JMap.NextKey(CompatData)
+        while compatDataKey
+            JMap.SetObj(StraponJArray, compatDataKey, compatData)
+            compatDataKey = JMap.NextKey(compatdata, compatdatakey)
+        endwhile
+        compatkey = Jmap.NextKey(compats, compatkey)
+    endwhile
+    writelog("done")
+    JValue.Release(compats)
+    ForcePageReset()
 endFunction
 
 function purge_list()
-
+    string straponkey = JMap.NextKey(StraponJArray)
+    int cleaned = JMap.Object()
+    JValue.Retain(cleaned)
+    while straponkey
+        form checkform = JValue.SolveForm(StraponJArray, "." + straponkey + ".Form")
+        if (checkForm == false)
+            Writelog("Invalid strapon detected in compat file: " + straponkey)
+        else
+            int thing = JValue.SolveObj(StraponJArray, straponkey)
+            writelog(thing)
+            Jmap.setObj(cleaned, straponkey, thing)
+        endif
+        straponKey = JMap.NextKey(StraponJArray, straponKey)
+    endwhile
+    JValue.WriteToFile(cleaned, JContainers.UserDirectory() + "cleaned.json")
+    straponJArray = cleaned
+    JValue.Release(cleaned)
+    ForcePageReset()
 endFunction
 
 function load_mcm()
