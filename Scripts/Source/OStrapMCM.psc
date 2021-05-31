@@ -12,13 +12,28 @@ bool property _ocum_installed auto
 Faction Property SoSFaction auto
 OCumScript Property OCum Auto Hidden
 
+String Blue = "#6699ff"
+String Pink = "#ff3389"
+
+int property straponJArray
+    int function get()
+        return JDB.solveObj(".OStrap.strapons")
+      endfunction
+      function set(int object)
+        JDB.solveObjSetter(".OStrap.strapons", object, true)
+      endfunction
+endproperty
+
 event OnInit()
-    if RegisterModule("OStrap_Core") != OK
+    if RegisterModule("OStrap Core") != OK
         KeepTryingToRegister()
     endif
-
+    
     SetModName("OStrap")
-    SetLandingPage("OStrap_Core")
+    SetLandingPage("OStrap Core")
+endevent
+
+event OnPageInit()
     startup()
 endevent
 
@@ -29,6 +44,7 @@ function startup()
     _ocum_enabled = false   
     _sos_installed = false
     _ocum_installed = false
+    build_strapon_data()
 endfunction
 
 event OnPageDraw()
@@ -45,13 +61,13 @@ event OnPageDraw()
     endif
 
     SetCursorFillMode(TOP_TO_BOTTOM)
-    AddHeaderOption(FONT_PRIMARY("OStrap Core"))
+    AddHeaderOption(FONT_CUSTOM("OStrap Core", pink))
     AddToggleOptionST("_ostrap_enabled_state", "Enable Mod", _ostrap_enabled)
     AddToggleOptionST("_strapons_enabled_player", "Enable for Player", _player_enabled)
     AddToggleOptionST("_strapons_enabled_npc", "Enable for NPC", _npc_enabled)
-    AddHeaderOption(FONT_PRIMARY("OStrap Intergrations"))
+    AddHeaderOption(FONT_CUSTOM("OStrap Intergrations", blue))
     AddToggleOptionST("_ocum_intergration_enabled", "Enable OCum Support", _ocum_enabled, _ocum_flag)
-    AddHeaderOption(FONT_PRIMARY("OStrap Misc. Settings"))
+    AddHeaderOption(FONT_CUSTOM("OStrap Misc. Settings", pink))
     AddTextOptionST("_ostrap_purge_invalid", "Purge Invalid Strapons", "Click")
     AddTextOptionST("_ostrap_load_compats", "Load Compatibility Files", "Click")
     AddTextOptionST("_ostrap_reset", "Reset Strapons to Default", "Click")
@@ -59,23 +75,25 @@ event OnPageDraw()
     AddTextOptionST("_ostrap_mcm_load", "Load MCM from File", "Click")
     AddEmptyOption()
     SetCursorPosition(1)
-    AddHeaderOption(FONT_PRIMARY("Enabled Strapons"))
+    AddHeaderOption(FONT_CUSTOM("Enabled Strapons", blue))
     build_strapon_page()
 endevent
 
-function build_strapon_page()
+function build_strapon_data()
     int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
     if (!data)
         WriteLog("StraponsAll.json not found.", true)
         return
     endif
-    bool changes = False
-    string straponkey = Jmap.NextKey(data)
+    StraponJArray = data
+endfunction
+
+function build_strapon_page()
+    string straponkey = JMap.NextKey(straponJArray)
     while straponkey
-        bool strapon_enabled = Jvalue.SolveInt(data, "." + straponkey + ".Enabled") as bool
+        bool strapon_enabled = Jvalue.SolveInt(straponJArray, "." + straponkey + ".Enabled") as bool
         AddToggleOptionST("strapon_toggle_option___" + straponkey, straponkey, strapon_enabled)
-        writelog("strapon_toggle_option___" + straponkey)
-        straponkey = Jmap.nextKey(data, straponkey)
+        straponkey = Jmap.nextKey(straponJArray, straponkey)
     endwhile
 endFunction
 
@@ -195,17 +213,10 @@ endstate
 
 state strapon_toggle_option
     event OnSelectST_EX(string state_id)
-        WriteLog(state_id)
-        int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
-        if (data == false)
-            WriteLog("StraponsAll.json file not found.", true)
-            return
-        endif
-        bool straponEnabled = JValue.SolveInt(Data, "." + state_id + ".Enabled") as Bool
+        bool straponEnabled = JValue.SolveInt(straponJArray, "." + state_id + ".Enabled") as bool
         straponEnabled = !straponEnabled
-        JValue.SolveIntSetter(Data, "." + state_id + ".Enabled", straponEnabled as int)
         SetToggleOptionValueST(straponEnabled, false, "strapon_toggle_option___" + state_id)
-        JValue.WriteToFile(Data, JContainers.UserDirectory() + "StraponsAll.json")
+        JValue.SolveIntSetter(straponJArray, "." + state_id + ".Enabled", straponEnabled as int)
     endevent
 
     event OnHighlightST_EX(string state_id)
