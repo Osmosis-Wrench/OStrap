@@ -25,12 +25,10 @@ int property straponJArray
 endproperty
 
 event OnInit()
-    if RegisterModule("OStrap Core") != OK
-        KeepTryingToRegister()
-    endif
+    RegisterModule("Core Options")
     
     SetModName("OStrap")
-    SetLandingPage("OStrap Core")
+    SetLandingPage("Core Options")
 endevent
 
 event OnPageInit()
@@ -202,6 +200,7 @@ function build_strapon_page()
         AddToggleOptionST("strapon_toggle_option___" + straponkey, straponkey, strapon_enabled)
         straponkey = Jmap.nextKey(straponJArray, straponkey)
     endwhile
+    jdb.writetofile(JContainers.UserDirectory() + "page.json")
 endFunction
 
 function build_strapon_data()
@@ -213,8 +212,7 @@ function build_strapon_data()
         return
     endif
     StraponJArray = data
-    load_compats()
-    purge_list()
+    jdb.writetofile(JContainers.UserDirectory() + "1.json")
 endfunction
 
 function load_compats()
@@ -226,7 +224,9 @@ function load_compats()
         compatData = JMap.GetObj(compats, compatkey)
         string compatDataKey = JMap.NextKey(CompatData)
         while compatDataKey
-            JMap.SetObj(StraponJArray, compatDataKey, compatData)
+            form straponForm = JValue.SolveForm(CompatData, "." + compatDataKey + ".Form")
+            bool enabled = JValue.SolveInt(compatData, "." + compatDataKey + ".Enabled") as Bool
+            Jmap.SetObj(StraponJArray, compatDataKey, Build_Strapon_Object(straponForm, enabled))
             compatDataKey = JMap.NextKey(compatdata, compatdatakey)
         endwhile
         compatkey = Jmap.NextKey(compats, compatkey)
@@ -234,20 +234,22 @@ function load_compats()
     writelog("done")
     JValue.Release(compats)
     ForcePageReset()
+    jdb.writetofile(JContainers.UserDirectory() + "2.json")
 endFunction
 
 function purge_list()
     string straponkey = JMap.NextKey(StraponJArray)
     int cleaned = JMap.Object()
     JValue.Retain(cleaned)
+    form checkform
+    bool enabled
     while straponkey
-        form checkform = JValue.SolveForm(StraponJArray, "." + straponkey + ".Form")
+        checkform = JValue.SolveForm(StraponJArray, "." + straponkey + ".Form")
         if (checkForm == false)
             Writelog("Invalid strapon detected in compat file: " + straponkey)
         else
-            int thing = JValue.SolveObj(StraponJArray, straponkey)
-            writelog(thing)
-            Jmap.setObj(cleaned, straponkey, thing)
+            enabled = JValue.SolveInt(StraponJArray, "." + straponkey + ".Enabled" ) as bool
+            Jmap.setObj(cleaned, straponkey, Build_Strapon_Object(checkform, enabled))
         endif
         straponKey = JMap.NextKey(StraponJArray, straponKey)
     endwhile
@@ -255,7 +257,16 @@ function purge_list()
     straponJArray = cleaned
     JValue.Release(cleaned)
     ForcePageReset()
+    jdb.writetofile(JContainers.UserDirectory() + "3.json")
 endFunction
+
+int function Build_Strapon_Object(form formid, bool enabled)
+    int straponObject = Jmap.Object()
+    JMap.SetForm(StraponObject, "Form", Formid)
+    Jmap.SetInt(StraponObject, "Enabled", enabled as int)
+    Jmap.SetInt(StraponObject, "OptID", 0)
+    return StraponObject
+endfunction
 
 function load_mcm()
 
