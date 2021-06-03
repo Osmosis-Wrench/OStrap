@@ -5,6 +5,15 @@ OStrapMCM Property O_MCM Auto
 OsexIntegrationMain Property OStim Auto
 Form Property StrapOn Auto
 
+int property straponJArray
+    int function get()
+        return JDB.solveObj(".OStrap.strapons")
+      endfunction
+      function set(int object)
+        JDB.solveObjSetter(".OStrap.strapons", object, true)
+      endfunction
+endproperty
+
 form strap
 
 Function OnInit()
@@ -91,20 +100,15 @@ EndFunction
 
 ; Returns a randomly chosen enabled strapon.
 form Function ReturnRandomValidStrapon()
-    int data = JValue.ReadFromFile(JContainers.UserDirectory() + "StraponsAll.json")
-    if (data == false)
-        WriteLog("StraponsAll.json file not found.", true)
-        return None
-    endif
     int enabledStrapons = JArray.Object()
-    string StraponNameKey = Jmap.NextKey(Data)
+    string StraponNameKey = Jmap.NextKey(StraponJArray)
     while StraponNameKey
-        bool straponEnabled = JValue.SolveInt(Data, "." + StraponNameKey + ".Enabled") as Bool
+        bool straponEnabled = JValue.SolveInt(StraponJArray, "." + StraponNameKey + ".Enabled") as Bool
         if (StraponEnabled == true)
-            Form straponForm = JValue.SolveForm(Data, "." + StraponNameKey + ".Form")
+            Form straponForm = JValue.SolveForm(StraponJArray, "." + StraponNameKey + ".Form")
             Jarray.AddForm(EnabledStrapons, straponForm)
         endIf
-        StraponNameKey = Jmap.NextKey(Data, StraponNameKey)
+        StraponNameKey = Jmap.NextKey(StraponJArray, StraponNameKey)
     endWhile
     int Len = JValue.Count(EnabledStrapons)
     int rand = Utility.RandomInt(0, (Len - 1))

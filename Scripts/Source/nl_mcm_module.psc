@@ -49,6 +49,18 @@ auto state _inactive
 		Guard()
 	endevent
 
+	int function GetMCMID()
+		Guard()
+	endfunction
+	
+	string function GetCommonStore(bool lock)
+		Guard()
+	endfunction
+	
+	function SetCommonStore(string new_value)
+		Guard()
+	endfunction
+
 	function AddParagraph(string text, string format = "", int flags = 0x01)
 		Guard()
 	endfunction
@@ -78,18 +90,6 @@ auto state _inactive
 	endfunction
 	
 	function LoadMCMFromPreset(string preset_path)
-		Guard()
-	endfunction
-
-	int function GetNumMCMSavedPresets(string dir_path = "")
-		Guard()
-	endfunction
-	
-	string[] function GetMCMSavedPresets(string default, string dir_path = "")
-		Guard()
-	endfunction 
-	
-	function DeleteMCMSavedPreset(string preset_path)
 		Guard()
 	endfunction
 
@@ -276,7 +276,7 @@ endfunction
 
 ; NONE POINTER TO STRING ARRAY
 ; will stay undocumented
-string[] property NONE_STRING_PTR
+string[] property NONE_STRING_PTR hidden
 	string[] function Get()
 		Guard()
 	endfunction
@@ -297,12 +297,6 @@ int property ERROR_MCM_NONE = -20 autoreadonly
 ; FONTS
 int property FONT_TYPE_DEFAULT = 0x00 autoreadonly
 int property FONT_TYPE_PAPER = 0x01 autoreadonly
-
-int property CURRENT_FONT
-    int function Get()
-		Guard()
-	endfunction
-endproperty
 
 string function FONT_PRIMARY(string text = "")
 	Guard()
@@ -332,20 +326,18 @@ string function FONT_CUSTOM(string text = "", string color)
 	Guard()
 endfunction
 
+int function GetCurrentFont()
+	Guard()
+endfunction
+
 ; PROPERTIES
-nl_mcm property UNSAFE_RAW_MCM
+nl_mcm property UNSAFE_RAW_MCM hidden
     nl_mcm function Get()
 		Guard()
     endfunction
 endproperty
 
-int property MCM_ID
-	int function Get()
-		Guard()
-	endfunction
-endproperty
-
-int property MCM_QuickHotkey
+int property QuickHotkey hidden
 	int function Get()
 		Guard()
 	endfunction
@@ -354,6 +346,10 @@ int property MCM_QuickHotkey
 		Guard()
 	endfunction
 endproperty
+
+int function GetMCMID()
+	Guard()
+endfunction
 
 string function GetCommonStore(bool lock)
 	Guard()
@@ -408,6 +404,10 @@ function SaveMCMToPreset(string preset_path)
 endfunction
 
 function LoadMCMFromPreset(string preset_path)
+	Guard()
+endfunction
+
+string function GetFullMCMPresetPath(string preset_path)
 	Guard()
 endfunction
 
