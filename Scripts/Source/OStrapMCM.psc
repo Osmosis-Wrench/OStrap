@@ -346,7 +346,7 @@ int function SaveData()
 endFunction
 
 event OnGameReload()
-
+    
 endevent
 
 ; This just makes life easier sometimes.
