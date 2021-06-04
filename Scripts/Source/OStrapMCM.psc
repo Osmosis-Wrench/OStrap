@@ -9,8 +9,9 @@ int _ocum_flag
 bool property _sos_installed auto
 bool property _ocum_installed auto
 
-Faction Property SoSFaction auto
-OCumScript Property OCum Auto Hidden
+Faction Property SoSFaction auto hidden
+OCumScript Property OCum auto hidden
+
 string[] _shown_presets
 string[] _body_mods
 int _body_mods_index
@@ -48,15 +49,20 @@ event OnPageInit()
     _body_mods[0] = "CBBE"
     _body_mods[1] = "UNP"
     _body_mods_Index = 0
-    Utility.WaitMenuMode(2.0)
     build_strapon_data(_Body_Mods[_body_Mods_index])
     load_compats()
     purge_list()
+    Check_For_Soft_Requirements()
 endEvent
 
 event OnVersionUpdate(int a_version)
     ;Nothing for now.
 endEvent
+
+event OnGameReload()
+    Utility.WaitMenuMode(2.0)
+    Check_For_Soft_Requirements()
+endevent
 
 event OnPageDraw()
     if (_ostrap_enabled)
@@ -204,36 +210,24 @@ state _ostrap_load_compats
 endstate
 
 state preset_save
-	event OnInputOpenST(string state_id)
-		SetInputDialogStartText("OStrapMCMSettings")
-	endevent
-	
-	event OnInputAcceptST(string state_id, string str)
-		SaveMCMToPreset(str)
-		ForcePageReset()
-	endevent
+    event OnSelectST(string state_id)
+        SaveMCMToPreset("OStrapMCMSettings")
+        ForcePageReset()
+    endevent
 
     event OnHighlightST(string state_id)
-        SetInfoText("Create a new preset")
+        SetInfoText("Save the MCM to file")
     endEvent
 endstate
 
 state preset_load
-	event OnMenuOpenST(string state_id)
-		_shown_presets = GetMCMSavedPresets("Exit")
-		SetMenuDialog(_shown_presets, 0)
-	endevent
-
-	event OnMenuAcceptST(string state_id, int i)
-		if i != 0
-			LoadMCMFromPreset(_shown_presets[i])
-			ForcePageReset()
-		endif
-		_shown_presets = NONE_STRING_PTR
-	endevent 
+    event OnSelectST(string state_id)
+        LoadMCMFromPreset("OStrapMCMSettings")
+        ForcePageReset()
+    endevent
 
     event OnHighlightST(string state_id)
-        SetInfoText("Load a saved preset")
+        SetInfoText("Load a preset from file")
     endEvent
 endstate
 
@@ -328,10 +322,9 @@ function LoadData(int jObj)
     _ocum_enabled = JMap.GetInt(jObj, "_ocum_enabled")
     _body_mods_Index = JMap.GetInt(jObj, "_body_Mods_Index")
 
-    build_strapon_data (_body_mods[_body_mods_Index])
+    build_strapon_data(_body_mods[_body_mods_Index])
     load_compats()
     purge_list()
-    ForcePageReset()
 endFunction
 
 int function SaveData()
@@ -345,9 +338,42 @@ int function SaveData()
     return jObj
 endFunction
 
-event OnGameReload()
-    
-endevent
+Function Check_For_Soft_Requirements()
+    writelog("1")
+    if (!_ocum_installed || !OCum)
+        writelog("2")
+        if (Game.GetModByName("OCum.esp") != 255)
+            OCum = (Game.GetFormFromFile(0x800, "OCum.esp") as OCumScript)
+            Utility.Wait(1.0)
+            writelog("3")
+        endif
+        if (Ocum)
+            _ocum_installed = true
+            WriteLog("OCum detected.", true)
+        else
+            _ocum_installed = false
+        endif
+    endif
+
+    if (!_sos_installed || !SoSFaction)
+        writelog("4")
+        if (Game.GetModByName("Schlongs of Skyrim.esp") != 255)
+            SoSFaction = (Game.GetFormFromFile(0x0000AFF8, "Schlongs of Skyrim.esp")) as Faction
+            Utility.Wait(1.0)
+            writelog("5")
+        endif
+        if (SoSFaction)
+            _sos_installed = true
+            WriteLog("SOS detected.", true)
+        else
+            _sos_installed = false
+        endif
+    endif
+
+    if ((!_sos_installed || !_ocum_installed) && _ocum_enabled)
+        _ocum_enabled = false
+    endif
+endFunction
 
 ; This just makes life easier sometimes.
 Function WriteLog(String OutputLog, bool error = false)

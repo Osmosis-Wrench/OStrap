@@ -4,7 +4,7 @@ Actor Property PlayerRef  Auto
 OStrapMCM Property O_MCM Auto
 OsexIntegrationMain Property OStim Auto
 Form Property StrapOn Auto
-
+form strap
 int property straponJArray
     int function get()
         return JDB.solveObj(".OStrap.strapons")
@@ -13,8 +13,6 @@ int property straponJArray
         JDB.solveObjSetter(".OStrap.strapons", object, true)
       endfunction
 endproperty
-
-form strap
 
 Function OnInit()
     RegisterForModEvent("ostim_start", "OnOstimStart")
@@ -64,7 +62,7 @@ Function Equipper(Actor target, form randStrap = none)
     EndIf
 EndFunction
 
-; deal with pegging later
+; deal with pegging
 ; Checks if all actors in scene are female.
 bool Function AllFemale()
     If (Ostim.IsFemale(Ostim.GetDomActor()) && Ostim.IsFemale(Ostim.GetSubActor()) && Ostim.IsFemale(Ostim.GetThirdActor()))
