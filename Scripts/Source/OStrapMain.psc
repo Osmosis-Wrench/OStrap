@@ -118,9 +118,9 @@ endFunction
 
 ; This just makes life easier sometimes.
 Function WriteLog(String OutputLog, bool error = false)
-        MiscUtil.PrintConsole("OStrap: " + OutputLog)
-        Debug.Trace("OStrap: " + OutputLog)
-        if (error == true)
-            Debug.Notification("Ostrap: " + OutputLog)
-        endIF
+    ConsoleUtil.PrintMessage("OStrap: " + OutputLog)
+    Debug.Trace("OStrap: " + OutputLog)
+    if (error == true)
+        Debug.Notification("Ostrap: " + OutputLog)
+    endIF
 EndFunction
