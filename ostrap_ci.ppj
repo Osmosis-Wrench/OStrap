@@ -37,6 +37,7 @@
         <Include>**/scripts/*.pex</Include>
         <Include>**/scripts/source/*.psc</Include>
         <Include>**/meshes/*/*.*</Include>
+        <Include>**/textures/*/*.*</Include>
         <Include>**/strings/*.txt</Include>
         </Package>
     </Packages>
