@@ -33,12 +33,11 @@ endFunction
 
 event OnInit()
     RegisterModule("Core Options")
-    
-    SetModName("OStrap")
-    SetLandingPage("Core Options")
 endevent
 
 event OnPageInit()
+    SetModName("OStrap")
+    SetLandingPage("Core Options")
     _ostrap_enabled = true
     _player_enabled = true
     _npc_enabled = false  
@@ -50,9 +49,6 @@ event OnPageInit()
     _body_mods[1] = "UNP"
     _body_mods_Index = 0
     Utility.WaitMenuMode(2.0)
-    if (JContainers.FileExistsAtPath(GetFullMCMPresetPath("ModlistSettings")))
-      LoadMCMFromPreset("ModlistSettings")
-    endif
     build_strapon_data(_Body_Mods[_body_Mods_index])
     load_compats()
     purge_list()
@@ -80,14 +76,14 @@ event OnPageDraw()
     AddToggleOptionST("_ostrap_enabled_state", "Enable Mod", _ostrap_enabled)
     AddToggleOptionST("_strapons_enabled_player", "Enable for Player", _player_enabled)
     AddToggleOptionST("_strapons_enabled_npc", "Enable for NPC", _npc_enabled)
-    AddMenuOptionST("_body_mod_menu", "Change current body mod:", _body_mods [_body_mods_Index])
+    AddMenuOptionST("_body_mods_menu", "Change current body mod:", _body_mods[_body_mods_Index])
     AddHeaderOption(FONT_CUSTOM("OStrap Intergrations", blue))
     AddToggleOptionST("_ocum_intergration_enabled", "Enable OCum Support", _ocum_enabled, _ocum_flag)
     AddHeaderOption(FONT_CUSTOM("OStrap Misc. Settings", pink))
     AddTextOptionST("_ostrap_purge_invalid", "Purge Invalid Strapons", "Click")
     AddTextOptionST("_ostrap_load_compats", "Load Compatibility Files", "Click")
-    AddTextOptionST("_ostrap_mcm_save", "Save MCM to Preset", "Click")
-    AddTextOptionST("_ostrap_mcm_load", "Load MCM from Preset", "Click")
+    AddTextOptionST("preset_save", "Save MCM to Preset", "Click")
+    AddTextOptionST("preset_load", "Load MCM from Preset", "Click")
     AddEmptyOption()
     SetCursorPosition(1)
     AddHeaderOption(FONT_CUSTOM("Enabled Strapons", blue))
@@ -97,11 +93,12 @@ endevent
 state _ostrap_enabled_state
     event OnDefaultST(string state_id)
         _ostrap_enabled = true
+        ForcePageReset()
     endevent
 
     event OnSelectST(string state_id)
         _ostrap_enabled = !_ostrap_enabled
-        SetToggleOptionValueST(_ostrap_enabled, false, "_ostrap_enabled_state")
+        ForcePageReset()
     endevent
 
     event OnHighlightST(string state_id)
@@ -146,19 +143,24 @@ endstate
 state _body_mods_menu
     event OnDefaultST(string state_id)
         _body_mods_Index = 0
-        SetMenuOptionValueST (_body_mods [_body_mods_Index])
-        build_strapon_data (_body_mods [_body_mods_Index])
+        SetMenuOptionValueST(_body_mods[_body_mods_Index])
+        build_strapon_data(_body_mods[_body_mods_Index])
     endEvent
 
     event OnMenuOpenST(string state_id)
-        SetMenuDialogStartIndex (_body_mods_Index)
-        SetMenuDialogDefaultIndex(0)
-        SetMenuDialogOptions (_body_mods)
+        SetMenuDialog(_body_mods, _body_mods_index)
     endevent
 
     event OnMenuAcceptST(string state_id, int i)
-        _body_mods_Index = i
-        SetMenuOptionValueST (_body_mods [_body_mods_Index])
+        if (i == _body_mods_Index)
+            return ; if the same, don't update
+        else
+            _body_mods_Index = i
+            build_strapon_data(_Body_Mods[_body_Mods_index])
+            load_compats()
+            purge_list()
+            SetMenuOptionValueST(_body_mods[_body_mods_Index])
+        endif
     endEvent
 
     event OnHighlightST(string state_id)
@@ -201,7 +203,7 @@ state _ostrap_load_compats
     endEvent
 endstate
 
-state _ostrap_mcm_save
+state preset_save
 	event OnInputOpenST(string state_id)
 		SetInputDialogStartText("OStrapMCMSettings")
 	endevent
@@ -216,29 +218,17 @@ state _ostrap_mcm_save
     endEvent
 endstate
 
-state _ostrap_mcm_load
+state preset_load
 	event OnMenuOpenST(string state_id)
 		_shown_presets = GetMCMSavedPresets("Exit")
 		SetMenuDialog(_shown_presets, 0)
 	endevent
 
 	event OnMenuAcceptST(string state_id, int i)
-		; i = 0 means that the user
-		; has either select the default option
-		; or has exited the list by a button press
 		if i != 0
 			LoadMCMFromPreset(_shown_presets[i])
-
-			; I'm only refreshing pages here, cause my loaded settings
-			; affect the shown pages
-			RefreshPages()
-
-			; Alternatively just refresh the shown page's contents
-			;ForcePageReset()
+			ForcePageReset()
 		endif
-
-		; Set to NONE_STRING_PTR to allow for garbage collection
-		; Not needed, but hey, let's be nice to papyrus
 		_shown_presets = NONE_STRING_PTR
 	endevent 
 
@@ -297,7 +287,6 @@ function load_compats()
         endwhile
         compatkey = Jmap.NextKey(compats, compatkey)
     endwhile
-    writelog("done")
     JValue.Release(compats)
     ForcePageReset()
 endFunction
@@ -332,26 +321,26 @@ int function Build_Strapon_Object(form formid, bool enabled)
     return StraponObject
 endfunction
 
-function load_data(int jObj)
+function LoadData(int jObj)
     _ostrap_enabled = JMap.GetInt(jObj, "_ostrap_enabled")
     _player_enabled = JMap.GetInt(jObj, "_player_enabled")
     _npc_enabled = JMap.GetInt(jObj, "_npc_enabled")
     _ocum_enabled = JMap.GetInt(jObj, "_ocum_enabled")
-    _body_mods_Index = JMap.GetInt(jObj, "body_Mods_Index")
+    _body_mods_Index = JMap.GetInt(jObj, "_body_Mods_Index")
 
-    build_strapon_data (_body_mods [_body_mods_Index])
+    build_strapon_data (_body_mods[_body_mods_Index])
     load_compats()
     purge_list()
     ForcePageReset()
 endFunction
 
-int function save_data()
+int function SaveData()
     int jObj = JMap.Object()
     JMap.SetInt(jObj, "_ostrap_enabled", _ostrap_enabled as Int)
     JMap.SetInt(jObj, "_player_enabled", _player_enabled as Int)
     JMap.SetInt(jObj, "_npc_enabled", _npc_enabled as Int)
     JMap.SetInt(jObj, "_ocum_enabled", _ocum_enabled as Int)
-    JMap.SetInt(jObj, "body_Mods_Index", _body_mods_Index)
+    JMap.SetInt(jObj, "_body_Mods_Index", _body_mods_Index)
 
     return jObj
 endFunction
