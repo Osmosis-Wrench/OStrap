@@ -351,7 +351,7 @@ endevent
 
 ; This just makes life easier sometimes.
 Function WriteLog(String OutputLog, bool error = false)
-    ConsoleUtil.PrintMessage("OStrap: " + OutputLog)
+    MiscUtil.PrintConsole("OStrap: " + OutputLog)
     Debug.Trace("OStrap: " + OutputLog)
     if (error == true)
         Debug.Notification("Ostrap: " + OutputLog)
