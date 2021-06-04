@@ -15,7 +15,7 @@
     <Imports>
         <Import>@MyProject\Scripts\Source</Import>
         <Import>https://github.com/MrOctopus/nl_online/tree/main/jcontainersse/source</Import>
-        <Import>https://github.com/eeveelo/PapyrusUtil/tree/master/Scripts/Source</Import>
+        <Import>https://github.com/Ryan-rsm-McKenzie/ConsoleUtilSSE/tree/master/scripts/source</Import>
         <Import>https://github.com/MrOctopus/nl_mcm/tree/main/main/scripts/source</Import>
         <Import>https://github.com/MrOctopus/nl_util/tree/main/dist/scripts/source</Import>
 	    <Import>https://github.com/MrOctopus/nl_mcm/tree/main/main/scripts/source</Import>
