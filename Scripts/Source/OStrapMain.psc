@@ -50,7 +50,7 @@ EndEvent
 ; Checks if target actor is valid to be equipped with strapon.
 Function Equipper(Actor target, form randStrap = none)
     ; Only equip to females who are part of the scene.
-    If(Ostim.IsFemale(target) && Ostim.IsActorActive(target) && AllFemale())
+    If(Ostim.IsFemale(target) && Ostim.IsActorActive(target) && IsAllowedScene())
         If (O_MCM._ocum_enabled)
             Target.AddToFaction(O_MCM.SosFaction)
             O_MCM.OCum.AdjustStoredCumAmount(target, 25)
@@ -62,17 +62,26 @@ Function Equipper(Actor target, form randStrap = none)
     EndIf
 EndFunction
 
-; deal with pegging
-; Checks if all actors in scene are female.
-bool Function AllFemale()
-    If (Ostim.IsFemale(Ostim.GetDomActor()) && Ostim.IsFemale(Ostim.GetSubActor()) && Ostim.IsFemale(Ostim.GetThirdActor()))
-        Return True
-    ElseIf (Ostim.IsFemale(Ostim.GetDomActor()) && Ostim.IsFemale(Ostim.GetSubActor()))
-        Return True
-    Else
-        Return False
+; Checks if a scene is a valid one for strapons.
+bool Function IsAllowedScene()
+    actor[] act = Ostim.GetActors()
+    int len = act.length
+    int i = 0
+    if (len == 1 || len > 3 || len == 0) ; catch solo and weird edge cases
+        return false
+    endif
+    If (O_MCM._straight_enabled) ; if straight is enabled, all scenes are fine to equip.
+        return true
     EndIf
-endFunction
+    while i <= len
+        if Ostim.IsFemale(act[i])
+            i += 1
+        else
+            return False
+        endif
+    endwhile
+    return true
+endfunction
 
 ; Equips strapon from set actor.
 Function EquipStrapon(Actor target, form randStrap = None)

@@ -5,6 +5,7 @@ int _ostrap_enabled_flag
 bool property _player_enabled auto
 bool property _npc_enabled auto
 bool property _ocum_enabled auto
+bool property _straight_enabled auto
 int _ocum_flag
 bool property _sos_installed auto
 bool property _ocum_installed auto
@@ -42,6 +43,7 @@ event OnPageInit()
     _ostrap_enabled = true
     _player_enabled = true
     _npc_enabled = false  
+    _straight_enabled = false  
     _ocum_enabled = false   
     _sos_installed = false
     _ocum_installed = false
@@ -82,6 +84,7 @@ event OnPageDraw()
     AddToggleOptionST("_ostrap_enabled_state", "Enable Mod", _ostrap_enabled)
     AddToggleOptionST("_strapons_enabled_player", "Enable for Player", _player_enabled)
     AddToggleOptionST("_strapons_enabled_npc", "Enable for NPC", _npc_enabled)
+    AddToggleOptionST("_strapons_enabled_straight", "Enable for Straight Scenes", _straight_enabled)
     AddMenuOptionST("_body_mods_menu", "Change current body mod:", _body_mods[_body_mods_Index])
     AddHeaderOption(FONT_CUSTOM("OStrap Intergrations", blue))
     AddToggleOptionST("_ocum_intergration_enabled", "Enable OCum Support", _ocum_enabled, _ocum_flag)
@@ -133,7 +136,7 @@ endstate
 
 state _strapons_enabled_npc
     event OnDefaultST(string state_id)
-        _npc_enabled = true
+        _npc_enabled = false
     endevent
 
     event OnSelectST(string state_id)
@@ -143,6 +146,21 @@ state _strapons_enabled_npc
 
     event OnHighlightST(string state_id)
         SetInfoText("Enables strapons for NPC's.")
+    endEvent
+endstate
+
+state _strapons_enabled_straight
+    event OnDefaultST(string state_id)
+        _straight_enabled = false
+    endevent
+
+    event OnSelectST(string state_id)
+        _straight_enabled = !_straight_enabled
+        SetToggleOptionValueST(_straight_enabled, false, "_strapons_enabled_straight")
+    endevent
+
+    event OnHighlightST(string state_id)
+        SetInfoText("Enables strapons for straight scenes (Pegging).")
     endEvent
 endstate
 
@@ -339,13 +357,10 @@ int function SaveData()
 endFunction
 
 Function Check_For_Soft_Requirements()
-    writelog("1")
     if (!_ocum_installed || !OCum)
-        writelog("2")
         if (Game.GetModByName("OCum.esp") != 255)
             OCum = (Game.GetFormFromFile(0x800, "OCum.esp") as OCumScript)
             Utility.Wait(1.0)
-            writelog("3")
         endif
         if (Ocum)
             _ocum_installed = true
@@ -356,11 +371,9 @@ Function Check_For_Soft_Requirements()
     endif
 
     if (!_sos_installed || !SoSFaction)
-        writelog("4")
         if (Game.GetModByName("Schlongs of Skyrim.esp") != 255)
             SoSFaction = (Game.GetFormFromFile(0x0000AFF8, "Schlongs of Skyrim.esp")) as Faction
             Utility.Wait(1.0)
-            writelog("5")
         endif
         if (SoSFaction)
             _sos_installed = true
