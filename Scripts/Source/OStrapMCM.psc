@@ -160,7 +160,7 @@ state _strapons_enabled_straight
     endevent
 
     event OnHighlightST(string state_id)
-        SetInfoText("Enables strapons for straight scenes (Pegging).")
+        SetInfoText("Enables strapons for straight scenes (Pegging). \n If you want to see this happen more often, enable Player Always Dom in the Ostim MCM.")
     endEvent
 endstate
 
