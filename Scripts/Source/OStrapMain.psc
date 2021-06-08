@@ -5,6 +5,7 @@ OStrapMCM Property O_MCM Auto
 OsexIntegrationMain Property OStim Auto
 Form Property StrapOn Auto
 form strap
+
 int property straponJArray
     int function get()
         return JDB.solveObj(".OStrap.strapons")
@@ -20,32 +21,30 @@ EndFunction
 
 ; Triggers when Ostim starts a scene, and runs the main logic of OStrap
 Event OnOstimStart(string eventName, string strArg, float numArg, Form sender)
-    If (O_MCM._ostrap_enabled)
-        ; Cache these to speed it up.
+    if (O_MCM._ostrap_enabled)
         strap = ReturnRandomValidStrapon()
-        ; If Player but not NPC is enabled, equip to player.
-        If(O_MCM._player_enabled && !O_MCM._npc_enabled)
-            Equipper(PlayerRef, strap)
-        ;If NPC but not Player is enabled, then equip to NPC. Prioritising DomActor in case of f/f scenes with no player actor.
-        ElseIf(O_MCM._npc_enabled && !O_MCM._player_enabled)
-            If(Ostim.GetDomActor() != PlayerRef)
-                Equipper(Ostim.GetDomActor(), strap)
-            ElseIf(Ostim.GetSubActor() != PlayerRef)
-                Equipper(Ostim.GetSubActor(), strap)
-            EndIf
-        ;If both Player and NPC enabled, equip to actor in Dom position.
-        ElseIf(O_MCM._player_enabled && O_MCM._npc_enabled)
-            Equipper(Ostim.GetDomActor(), strap)
-        EndIf
-    EndIf
-    While(Ostim.AnimationRunning())
-        Utility.Wait(1.0)
-    EndWhile
-    UnEquipStrapon(Ostim.GetDomActor(), strap)
-    UnEquipStrapon(Ostim.GetSubActor(), strap)
-    ; Just in case something weird has happened.
-    UnEquipStrapon(Ostim.GetThirdActor(), strap)
-EndEvent
+        actor[] acts = Ostim.GetRoles()
+        int i = 0
+        if (O_MCM._player_enabled && !O_MCM._npc_enabled)
+            if (acts[0] == PlayerRef)
+                Equipper(acts[0] , strap)
+            endif
+        elseif (!O_MCM._player_enabled && O_MCM._npc_enabled)
+            if (acts[0] != PlayerRef)
+                Equipper(acts[0] , strap)
+            endif
+        elseif (O_MCM._player_enabled && O_MCM._npc_enabled)
+            Equipper(acts[0] , strap)
+        endif
+        while Ostim.AnimationRunning()
+            Utility.Wait(1.0)
+        endwhile
+        while i < acts.length
+            UnEquipStrapon(acts[i], strap)
+            i += 1
+        endwhile
+    endif
+endEvent
 
 ; Checks if target actor is valid to be equipped with strapon.
 Function Equipper(Actor target, form randStrap = none)
@@ -56,7 +55,7 @@ Function Equipper(Actor target, form randStrap = none)
             O_MCM.OCum.AdjustStoredCumAmount(target, 25)
         endIf
         EquipStrapon(target, strap)
-        if ostim.IsInFreeCam() && target == PlayerRef
+        if (ostim.IsInFreeCam() && target == PlayerRef)
             target.QueueNiNodeUpdate()
         endif
     EndIf
@@ -100,7 +99,7 @@ Function UnEquipStrapon(Actor target, form randStrap = None)
     else
         Target.RemoveItem(randStrap, 1, true)
     endIf
-    If (O_MCM._sos_installed && O_MCM._ocum_installed && O_MCM._ocum_enabled)
+    If (O_MCM._sos_installed && O_MCM._ocum_installed && O_MCM._ocum_enabled && Ostim.AppearsFemale(Ostim))
         Target.RemoveFromFaction(O_MCM.SosFaction)
     endIf
 EndFunction
@@ -119,7 +118,6 @@ form Function ReturnRandomValidStrapon()
     endWhile
     int Len = JValue.Count(EnabledStrapons)
     int rand = Utility.RandomInt(0, (Len - 1))
-    writelog(rand)
     return JArray.GetForm(EnabledStrapons, rand)
 endFunction
 
