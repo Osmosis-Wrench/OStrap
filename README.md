@@ -1,15 +1,14 @@
 # OStrap
- An OStim Addon that adds modular Strap-on support.  
- ![OStim Build Status](https://github.com/Osmosis-Wrench/OStrap/actions/workflows/main.yml/badge.svg)
+ An OStim Addon that adds modular Strap-on support. - ![OStrap Build Status](https://github.com/Osmosis-Wrench/OStrap/actions/workflows/main.yml/badge.svg)
 ## Features
  - Includes several pre-packaged strapons, pulling from leito's Skyrim Strapons.
+ - 3BBB (CBBE) & BHUNP (UNP) bodyslide support.
  - Automatic detection of Ostim scenes.
  - Strap-on Randomization.
- - Can apply strap-ons to both NPC's and and the Player.
+ - Can apply strap-ons to both NPC's and the Player.
  - Supports modular, JSON based compatibility patches to allow for easily adding more options.
  - OCum support.
- - MCM Setting saving, and extra loading functionality for Modlist authors.
- - Support includes options for both CBBE and UNP (1.1+)
+ - MCM settings saving, and extra loading functionality for Modlist authors.
 ### Requirements
  - Skyrim: Special Edition (1.5.39+)
  - [Ostim SE](https://github.com/Sairion350/OStim) (and all its requirements.)
@@ -21,10 +20,11 @@ If any of the following mods are installed, they will appear in the OStrap MCM a
  - [Flower Girls SE](https://www.nexusmods.com/skyrimspecialedition/mods/5941)
  - [Futanari CBBE - SSE](https://www.loverslab.com/files/file/11344-sos-addon-futanari-cbbe-sse/)
  - [Equipable Horse Cocks - SSE](https://www.loverslab.com/files/file/9903-sos-equipable-horse-cocks-sse-port/)
+ - [Calyps's adult toys chest SE](https://www.nexusmods.com/skyrimspecialedition/mods/30831) - (Choose the one labeled "Main File")
+ - [Bound Cock SE](https://www.loverslab.com/topic/108139-bound-cock-se-a-sosgender-bender-addon/) - (Choose the one labeled "SoS Addon")
 
 ## Intended Features / Future Plans
-- Rewrite current JContainers logic to use JDB rather than raw file loads.
-- Work out how to implement F/M scenes.
+- Add physics collisions to the strapons.
 
 ## Known Issues:
 Will equip a strapon in all F/F scenes, even ones that don't make a heap of sense like kissing or fingering.
@@ -40,7 +40,7 @@ If you notice any bugs, or have any feature suggestions, create an Issue and out
 ## Compatibility Patches.
 OStrap will load any .Json file in \Data\OStrapData\OStrapCompat\ and try and add the files to the Strap-on list.
   
-Compatibility patches should be formatted like so:
+Compatibility files should be formatted like so:
   
 ```Json
 {
@@ -59,9 +59,9 @@ Compatibility patches should be formatted like so:
 Breaking down what a record looks like:
 
   ``"Example Strapon"`` <-- This is the name of the strap-on for the MCM. This can be whatever you want.  
-  ``"Enabled": 0`` <-- This is whether the strap-on will be enabled by defualt or not.  
+  ``"Enabled": 0`` <-- This is whether the strap-on will be enabled by default or not.  
   ``"Form": "__formData|Example.esp|0x5e61"`` <-- This is the formData for the armor record. Further info below.  
-  ``"OptID": 0`` <-- This is the optionID for its location in the MCM. Just leave this zero and it'll be sorted out automatically.  
+  ``"OptID": 0`` <-- This is redundant now, but kept in to preserve backwards compatibility.
 
 ### Understanding formData records.
 1. Starting at the begining, all formData records start with ``__formData|``
