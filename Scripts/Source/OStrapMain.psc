@@ -23,26 +23,26 @@ EndFunction
 Event OnOstimStart(string eventName, string strArg, float numArg, Form sender)
     if (O_MCM._ostrap_enabled)
         strap = ReturnRandomValidStrapon()
-        actor[] acts = Ostim.GetRoles()
-        int i = 0
+        actor[] acts = Ostim.GetActors()
+        actor unequipTarget
         if (O_MCM._player_enabled && !O_MCM._npc_enabled)
             if (acts[0] == PlayerRef)
                 Equipper(acts[0] , strap)
+                unequipTarget = acts[0]
             endif
         elseif (!O_MCM._player_enabled && O_MCM._npc_enabled)
             if (acts[0] != PlayerRef)
                 Equipper(acts[0] , strap)
+                unequipTarget = acts[0]
             endif
         elseif (O_MCM._player_enabled && O_MCM._npc_enabled)
             Equipper(acts[0] , strap)
+            unequipTarget = acts[0]
         endif
         while Ostim.AnimationRunning()
             Utility.Wait(1.0)
         endwhile
-        while i < acts.length
-            UnEquipStrapon(acts[i], strap)
-            i += 1
-        endwhile
+        UnEquipStrapon(unequipTarget, strap)
     endif
 endEvent
 
@@ -99,7 +99,7 @@ Function UnEquipStrapon(Actor target, form randStrap = None)
     else
         Target.RemoveItem(randStrap, 1, true)
     endIf
-    If (O_MCM._sos_installed && O_MCM._ocum_installed && O_MCM._ocum_enabled && Ostim.AppearsFemale(Ostim))
+    If (O_MCM._sos_installed && O_MCM._ocum_installed && O_MCM._ocum_enabled && Ostim.AppearsFemale(target))
         Target.RemoveFromFaction(O_MCM.SosFaction)
     endIf
 EndFunction

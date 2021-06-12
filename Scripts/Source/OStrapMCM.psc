@@ -14,8 +14,6 @@ Faction Property SoSFaction auto hidden
 OCumScript Property OCum auto hidden
 
 string[] _shown_presets
-string[] _body_mods
-int _body_mods_index
 
 String Blue = "#6699ff"
 String Pink = "#ff3389"
@@ -47,11 +45,7 @@ event OnPageInit()
     _ocum_enabled = false   
     _sos_installed = false
     _ocum_installed = false
-    _body_mods = new string[2]
-    _body_mods[0] = "CBBE"
-    _body_mods[1] = "UNP"
-    _body_mods_Index = 0
-    build_strapon_data(_Body_Mods[_body_Mods_index])
+    build_strapon_data()
     load_compats()
     purge_list()
     Check_For_Soft_Requirements()
@@ -85,7 +79,6 @@ event OnPageDraw()
     AddToggleOptionST("_strapons_enabled_player", "Enable for Player", _player_enabled)
     AddToggleOptionST("_strapons_enabled_npc", "Enable for NPC", _npc_enabled)
     AddToggleOptionST("_strapons_enabled_straight", "Enable for Straight Scenes", _straight_enabled)
-    AddMenuOptionST("_body_mods_menu", "Change current body mod:", _body_mods[_body_mods_Index])
     AddHeaderOption(FONT_CUSTOM("OStrap Intergrations", blue))
     AddToggleOptionST("_ocum_intergration_enabled", "Enable OCum Support", _ocum_enabled, _ocum_flag)
     AddHeaderOption(FONT_CUSTOM("OStrap Misc. Settings", pink))
@@ -161,34 +154,6 @@ state _strapons_enabled_straight
 
     event OnHighlightST(string state_id)
         SetInfoText("Enables strapons for straight scenes (Pegging). \n If you want to see this happen more often, enable Player Always Dom in the Ostim MCM.")
-    endEvent
-endstate
-
-state _body_mods_menu
-    event OnDefaultST(string state_id)
-        _body_mods_Index = 0
-        SetMenuOptionValueST(_body_mods[_body_mods_Index])
-        build_strapon_data(_body_mods[_body_mods_Index])
-    endEvent
-
-    event OnMenuOpenST(string state_id)
-        SetMenuDialog(_body_mods, _body_mods_index)
-    endevent
-
-    event OnMenuAcceptST(string state_id, int i)
-        if (i == _body_mods_Index)
-            return ; if the same, don't update
-        else
-            _body_mods_Index = i
-            build_strapon_data(_Body_Mods[_body_Mods_index])
-            load_compats()
-            purge_list()
-            SetMenuOptionValueST(_body_mods[_body_mods_Index])
-        endif
-    endEvent
-
-    event OnHighlightST(string state_id)
-        SetInfoText("Change what strapon type you are using, note this only applies to strapons included with OStrap.")
     endEvent
 endstate
 
@@ -272,12 +237,12 @@ function build_strapon_page()
     jdb.writetofile(JContainers.UserDirectory() + "page.json")
 endFunction
 
-function build_strapon_data(string BodyMod = "CBBE")
+function build_strapon_data()
     int data
-    if JContainers.FileExistsAtPath(".\\Data\\OStrapData\\StraponPrototypeFile" + BodyMod + ".json")
-        data = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFile" + BodyMod + ".json")
+    if JContainers.FileExistsAtPath(".\\Data\\OStrapData\\StraponPrototypeFile.json")
+        data = JValue.ReadFromFile(".\\Data\\OStrapData\\StraponPrototypeFile.json")
     else
-        WriteLog("StraponPrototypeFile" + BodyMod +" not found in OStrapData.", true)
+        WriteLog("StraponPrototypeFile not found in OStrapData.", true)
         return
     endif
     StraponJArray = data
@@ -338,9 +303,10 @@ function LoadData(int jObj)
     _player_enabled = JMap.GetInt(jObj, "_player_enabled")
     _npc_enabled = JMap.GetInt(jObj, "_npc_enabled")
     _ocum_enabled = JMap.GetInt(jObj, "_ocum_enabled")
-    _body_mods_Index = JMap.GetInt(jObj, "_body_Mods_Index")
+    _straight_enabled = JMap.GetInt(jObj, "_straight_enabled")
+    
 
-    build_strapon_data(_body_mods[_body_mods_Index])
+    build_strapon_data()
     load_compats()
     purge_list()
 endFunction
@@ -351,7 +317,7 @@ int function SaveData()
     JMap.SetInt(jObj, "_player_enabled", _player_enabled as Int)
     JMap.SetInt(jObj, "_npc_enabled", _npc_enabled as Int)
     JMap.SetInt(jObj, "_ocum_enabled", _ocum_enabled as Int)
-    JMap.SetInt(jObj, "_body_Mods_Index", _body_mods_Index)
+    JMap.SetInt(jObj, "_straight_enabled", _straight_enabled as Int)
 
     return jObj
 endFunction
