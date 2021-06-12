@@ -134,7 +134,7 @@ state _strapons_enabled_npc
 
     event OnSelectST(string state_id)
         _npc_enabled = !_npc_enabled
-        SetToggleOptionValueST(_npc_enabled, false, "_npc_enabled_player")
+        SetToggleOptionValueST(_npc_enabled, false, "_strapons_enabled_npc")
     endevent
 
     event OnHighlightST(string state_id)
@@ -265,7 +265,7 @@ function load_compats()
         compatkey = Jmap.NextKey(compats, compatkey)
     endwhile
     JValue.Release(compats)
-    ForcePageReset()
+    purge_list()
 endFunction
 
 function purge_list()

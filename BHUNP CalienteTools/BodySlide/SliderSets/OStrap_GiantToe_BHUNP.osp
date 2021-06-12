@@ -4,7 +4,7 @@
         <DataFolder>OStrap_GiantToe_BHUNP</DataFolder>
         <SourceFile>OStrap_GiantToe_BHUNP.nif</SourceFile>
         <OutputPath>meshes\armor\skyrim_strapons</OutputPath>
-        <OutputFile GenWeights="true">gianttoe</OutputFile>
+        <OutputFile GenWeights="true">giantToe</OutputFile>
         <Shape target="BaseShapeFull" DataFolder="BHUNP 3BBB Advanced">BaseShapeFull</Shape>
         <Shape target="giantToe_0">giantToe_0</Shape>
         <Slider name="CBBE SE to BHUNP" invert="false" small="0" big="0">
