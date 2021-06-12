@@ -4,7 +4,7 @@
     Game="sse" 
     Output="Scripts" 
     Optimize="true" 
-    Anonymize="true" 
+    Anonymize="true"
     Zip="true">
     <Variables>
         <Variable Name="ModName" Value="OStrap"/>
@@ -18,6 +18,7 @@
         <Variable Name="SliderSets" Value="CalienteTools\BodySlide\SliderSets\"/>
         <Variable Name="MeshPath" Value="Meshes\armor\skyrim_strapons"/>
         <Variable Name="ArmorPath" Value="armor\skyrim_strapons"/>
+        <Variable Name="TexturePath" Value="textures\armor\skyrim_strapons"/>
         <Variable Name="Version" Value="v1.2"/>
     </Variables>
     <Imports>
@@ -45,6 +46,7 @@
 	        <Include NoRecurse="true">@MyProject/Scripts/*.pex</Include>
 	        <Include NoRecurse="true">@MyProject/Scripts/Source/*.psc</Include>
             <Include>OStrapData</Include>
+            <Include Path="@TexturePath">@Site1 skyrim_strapons</Include>
             <Include Path="@Shapedata\OStrap_Dwemer_@Body1">@Body1 @Shapedata/OStrap_Dwemer_@Body1</Include>
             <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_Dwemer_@Body1.osp</Include>
             <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/Dwemer*</Include>
@@ -76,6 +78,7 @@
 	        <Include NoRecurse="true">@MyProject/Scripts/*.pex</Include>
 	        <Include NoRecurse="true">@MyProject/Scripts/Source/*.psc</Include>
             <Include>OStrapData</Include>
+            <Include Path="@TexturePath">@Site1 skyrim_strapons</Include>
             <Include Path="@Shapedata\OStrap_Dwemer_@Body2">@Body2 @Shapedata/OStrap_Dwemer_@Body2</Include>
             <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_Dwemer_@Body2.osp</Include>
             <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/Dwemer*</Include>
@@ -107,6 +110,7 @@
 	        <Include NoRecurse="true">@MyProject/Scripts/*.pex</Include>
 	        <Include NoRecurse="true">@MyProject/Scripts/Source/*.psc</Include>
             <Include>OStrapData</Include>
+            <Include Path="@TexturePath">@Site2 skyrim_strapons</Include>
             <Include Path="@Shapedata\OStrap_Dwemer_@Body1">@Body1 @Shapedata/OStrap_Dwemer_@Body1</Include>
             <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_Dwemer_@Body1.osp</Include>
             <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/Dwemer*</Include>
@@ -122,6 +126,7 @@
 	        <Include NoRecurse="true">@MyProject/Scripts/*.pex</Include>
 	        <Include NoRecurse="true">@MyProject/Scripts/Source/*.psc</Include>
             <Include>OStrapData</Include>
+            <Include Path="@TexturePath">@Site2 skyrim_strapons</Include>
             <Include Path="@Shapedata\OStrap_Dwemer_@Body2">@Body2 @Shapedata/OStrap_Dwemer_@Body2</Include>
             <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_Dwemer_@Body2.osp</Include>
             <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/Dwemer*</Include>
