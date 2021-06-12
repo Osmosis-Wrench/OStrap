@@ -65,7 +65,7 @@ jobs:
       env: 
         ppj_c: compiler\PapyrusCompiler.exe
         ppj_f: compiler\TESV_Papyrus_Flags.flg
-        ppj_t: ${{ github.token }}
+        ppj_t: ${{ secrets.PRIVATE_TOKEN }}
         ppj_p: ${{ matrix.project-path }}
 
     - name: Prepare upload
