@@ -71,7 +71,7 @@ jobs:
     - name: Prepare upload
       if: success()
       run: |
-        cd repo\${Env:dist-path}
+        cd \${Env:dist-path}
         7z x *zip -o*
         echo "build_paths=$($(Get-ChildItem -Filter *. | % { $_.FullName }) -join ",")" >> ${Env:GITHUB_ENV}
     
