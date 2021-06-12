@@ -1,0 +1,42 @@
+<?xml version='1.0'?><!-- Game is either sse, tesv, or fo4 -->
+<PapyrusProject xmlns="PapyrusProject.xsd" 
+    Flags="TESV_Papyrus_Flags.flg" 
+    Game="sse" 
+    Output="Scripts" 
+    Optimize="true" 
+    Anonymize="true" 
+    Package="true" 
+    Zip="true">
+    <Variables>
+        <Variable Name="Namespace" Value="OStrap"/>
+        <Variable Name="ModName" Value="OStrap"/>
+        <Variable Name="MyProject" Value="F:\My Mods\Repos\@ModName"/>
+	    <Variable Name="GameDir" Value="F:\Steam\steamapps\common\Skyrim Special Edition"/>
+	    <Variable Name="ScriptsDir" Value="@GameDir\Data\Scripts\Source"/>
+    </Variables>
+    <Imports>
+        <Import>F:\Steam\steamapps\common\Skyrim Special Edition\Data\Scripts\Source</Import>
+        <Import>F:\My Mods\SDK\SKSE\Data\Scripts\Source</Import>
+        <Import>@MyProject\Scripts\Source</Import>
+    </Imports>
+    <Folders>
+        <Folder>.</Folder>
+    </Folders>
+    <Packages Output="@MyProject">
+        <Package Name="@ModName" RootDir="@MyProject">
+        <Include>**/scripts/*.pex</Include>
+        <Include>**/scripts/source/*.psc</Include>
+        <Include>**/meshes/*/*.*</Include>
+        <Include>**/strings/*.txt</Include>
+        </Package>
+    </Packages>
+    <ZipFiles Output="@MyProject">
+        <ZipFile Name="@ModName" RootDir="@MyProject" Compression="deflate">
+        	<Include NoRecurse="true">*/*.esp</Include>
+	        <Include NoRecurse="true">*.bsa</Include>
+	        <Include NoRecurse="true">*/*.pex</Include>
+	        <Include NoRecurse="true">*/*/*.psc</Include>
+            <Include>OStrapData</Include>
+        </ZipFile>
+    </ZipFiles>
+</PapyrusProject>

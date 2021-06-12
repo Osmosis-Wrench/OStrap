@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="OStrap_Hagraven_3BBB">
+        <DataFolder>OStrap_Hagraven_3BBB</DataFolder>
+        <SourceFile>OStrap_Hagraven_3BBB.nif</SourceFile>
+        <OutputPath>meshes\armor\skyrim_strapons</OutputPath>
+        <OutputFile GenWeights="true">hagraven</OutputFile>
+        <Shape target="3BBB" DataFolder="SE 3BBB Amazing">3BBB</Shape>
+        <Shape target="hagraven_0">hagraven_0</Shape>
+        <Slider name="AnkleSize" invert="false" small="100" big="0">
+            <Data name="3BBBAnkleSize" target="3BBB">SE 3BBB Body Amazing.osd\3BBBAnkleSize</Data>
+        </Slider>
+        <Slider name="AppleCheeks" invert="false" small="0" big="0">
+            <Data name="3BBBAppleCheeks" target="3BBB">SE 3BBB Body Amazing.osd\3BBBAppleCheeks</Data>
+            <Data name="hagraven_0AppleCheeks" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0AppleCheeks</Data>
+        </Slider>
+        <Slider name="AreolaSize" invert="false" small="0" big="0" uv="true">
+            <Data name="3BBBAreolaSize" target="3BBB">SE 3BBB Body Amazing.osd\3BBBAreolaSize</Data>
+        </Slider>
+        <Slider name="Arms" invert="false" small="0" big="0">
+            <Data name="3BBBArms" target="3BBB">SE 3BBB Body Amazing.osd\3BBBArms</Data>
+        </Slider>
+        <Slider name="Back" invert="false" small="0" big="0">
+            <Data name="3BBBBack" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBack</Data>
+            <Data name="hagraven_0Back" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Back</Data>
+        </Slider>
+        <Slider name="BackArch" invert="false" small="0" big="0">
+            <Data name="3BBBBackArch" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBackArch</Data>
+            <Data name="hagraven_0BackArch" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0BackArch</Data>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <Data name="3BBBBelly" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBelly</Data>
+            <Data name="hagraven_0Belly" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Belly</Data>
+        </Slider>
+        <Slider name="BigBelly" invert="false" small="0" big="0">
+            <Data name="3BBBBigBelly" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBigBelly</Data>
+            <Data name="hagraven_0BigBelly" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0BigBelly</Data>
+        </Slider>
+        <Slider name="BigButt" invert="false" small="0" big="0">
+            <Data name="3BBBBigButt" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBigButt</Data>
+            <Data name="hagraven_0BigButt" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0BigButt</Data>
+        </Slider>
+        <Slider name="BigTorso" invert="false" small="0" big="0">
+            <Data name="3BBBBigTorso" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBigTorso</Data>
+            <Data name="hagraven_0BigTorso" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0BigTorso</Data>
+        </Slider>
+        <Slider name="BreastCenter" invert="false" small="0" big="0">
+            <Data name="3BBBBreastCenter" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastCenter</Data>
+        </Slider>
+        <Slider name="BreastCenterBig" invert="false" small="0" big="0">
+            <Data name="3BBBBreastCenterBig" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastCenterBig</Data>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <Data name="3BBBBreastCleavage" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastCleavage</Data>
+            <Data name="hagraven_0BreastCleavage" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0BreastCleavage</Data>
+        </Slider>
+        <Slider name="BreastFlatness2" invert="false" small="0" big="0">
+            <Data name="3BBBBreastFlatness2" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastFlatness2</Data>
+        </Slider>
+        <Slider name="BreastFlatness" invert="false" small="0" big="0">
+            <Data name="3BBBBreastFlatness" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastFlatness</Data>
+        </Slider>
+        <Slider name="BreastGravity2" invert="false" small="0" big="0">
+            <Data name="3BBBBreastGravity2" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastGravity2</Data>
+        </Slider>
+        <Slider name="BreastHeight" invert="false" small="0" big="0">
+            <Data name="3BBBBreastHeight" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastHeight</Data>
+        </Slider>
+        <Slider name="BreastPerkiness" invert="false" small="0" big="0">
+            <Data name="3BBBBreastPerkiness" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastPerkiness</Data>
+        </Slider>
+        <Slider name="Breasts" invert="false" small="0" big="0">
+            <Data name="3BBBBreasts" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreasts</Data>
+        </Slider>
+        <Slider name="BreastsFantasy" invert="false" small="0" big="0">
+            <Data name="3BBBBreastsFantasy" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastsFantasy</Data>
+        </Slider>
+        <Slider name="BreastsGone" invert="false" small="0" big="0">
+            <Data name="3BBBBreastsGone" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastsGone</Data>
+        </Slider>
+        <Slider name="BreastsNewSH" invert="false" small="0" big="0">
+            <Data name="3BBBBreastsNewSH" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastsNewSH</Data>
+        </Slider>
+        <Slider name="BreastsNewSHSymmetry" invert="false" small="0" big="0">
+            <Data name="3BBBBreastsNewSHSymmetry" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastsNewSHSymmetry</Data>
+        </Slider>
+        <Slider name="BreastsSmall" invert="false" small="0" big="0">
+            <Data name="3BBBBreastsSmall" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastsSmall</Data>
+            <Data name="hagraven_0BreastsSmall" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0BreastsSmall</Data>
+        </Slider>
+        <Slider name="BreastsSmall2" invert="false" small="0" big="0">
+            <Data name="3BBBBreastsSmall2" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastsSmall2</Data>
+            <Data name="hagraven_0BreastsSmall2" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0BreastsSmall2</Data>
+        </Slider>
+        <Slider name="BreastsTogether" invert="false" small="0" big="0">
+            <Data name="3BBBBreastsTogether" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastsTogether</Data>
+        </Slider>
+        <Slider name="BreastTopSlope" invert="false" small="0" big="0">
+            <Data name="3BBBBreastTopSlope" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastTopSlope</Data>
+        </Slider>
+        <Slider name="BreastWidth" invert="false" small="0" big="0">
+            <Data name="3BBBBreastWidth" target="3BBB">SE 3BBB Body Amazing.osd\3BBBBreastWidth</Data>
+        </Slider>
+        <Slider name="Butt" invert="false" small="0" big="0">
+            <Data name="3BBBButt" target="3BBB">SE 3BBB Body Amazing.osd\3BBBButt</Data>
+            <Data name="hagraven_0Butt" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Butt</Data>
+        </Slider>
+        <Slider name="ButtClassic" invert="false" small="0" big="0">
+            <Data name="3BBBButtClassic" target="3BBB">SE 3BBB Body Amazing.osd\3BBBButtClassic</Data>
+            <Data name="hagraven_0ButtClassic" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ButtClassic</Data>
+        </Slider>
+        <Slider name="ButtCrack" invert="false" small="0" big="0">
+            <Data name="3BBBButtCrack" target="3BBB">SE 3BBB Body Amazing.osd\3BBBButtCrack</Data>
+            <Data name="hagraven_0ButtCrack" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ButtCrack</Data>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <Data name="3BBBButtShape2" target="3BBB">SE 3BBB Body Amazing.osd\3BBBButtShape2</Data>
+            <Data name="hagraven_0ButtShape2" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ButtShape2</Data>
+        </Slider>
+        <Slider name="ButtSmall" invert="false" small="0" big="0">
+            <Data name="3BBBButtSmall" target="3BBB">SE 3BBB Body Amazing.osd\3BBBButtSmall</Data>
+            <Data name="hagraven_0ButtSmall" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ButtSmall</Data>
+        </Slider>
+        <Slider name="CalfSize" invert="false" small="0" big="0">
+            <Data name="3BBBCalfSize" target="3BBB">SE 3BBB Body Amazing.osd\3BBBCalfSize</Data>
+        </Slider>
+        <Slider name="CalfSmooth" invert="false" small="0" big="0">
+            <Data name="3BBBCalfSmooth" target="3BBB">SE 3BBB Body Amazing.osd\3BBBCalfSmooth</Data>
+        </Slider>
+        <Slider name="ChestDepth" invert="false" small="0" big="0">
+            <Data name="3BBBChestDepth" target="3BBB">SE 3BBB Body Amazing.osd\3BBBChestDepth</Data>
+            <Data name="hagraven_0ChestDepth" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ChestDepth</Data>
+        </Slider>
+        <Slider name="ChestWidth" invert="false" small="0" big="0">
+            <Data name="3BBBChestWidth" target="3BBB">SE 3BBB Body Amazing.osd\3BBBChestWidth</Data>
+            <Data name="hagraven_0ChestWidth" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ChestWidth</Data>
+        </Slider>
+        <Slider name="ChubbyArms" invert="false" small="0" big="0">
+            <Data name="3BBBChubbyArms" target="3BBB">SE 3BBB Body Amazing.osd\3BBBChubbyArms</Data>
+        </Slider>
+        <Slider name="ChubbyButt" invert="false" small="0" big="0">
+            <Data name="3BBBChubbyButt" target="3BBB">SE 3BBB Body Amazing.osd\3BBBChubbyButt</Data>
+            <Data name="hagraven_0ChubbyButt" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ChubbyButt</Data>
+        </Slider>
+        <Slider name="ChubbyLegs" invert="false" small="0" big="0">
+            <Data name="3BBBChubbyLegs" target="3BBB">SE 3BBB Body Amazing.osd\3BBBChubbyLegs</Data>
+            <Data name="hagraven_0ChubbyLegs" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ChubbyLegs</Data>
+        </Slider>
+        <Slider name="ChubbyWaist" invert="false" small="0" big="0">
+            <Data name="3BBBChubbyWaist" target="3BBB">SE 3BBB Body Amazing.osd\3BBBChubbyWaist</Data>
+            <Data name="hagraven_0ChubbyWaist" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0ChubbyWaist</Data>
+        </Slider>
+        <Slider name="CrotchBack" invert="false" small="0" big="0">
+            <Data name="3BBBCrotchBack" target="3BBB">SE 3BBB Body Amazing.osd\3BBBCrotchBack</Data>
+            <Data name="hagraven_0CrotchBack" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0CrotchBack</Data>
+        </Slider>
+        <Slider name="DoubleMelon" invert="false" small="0" big="0">
+            <Data name="3BBBDoubleMelon" target="3BBB">SE 3BBB Body Amazing.osd\3BBBDoubleMelon</Data>
+        </Slider>
+        <Slider name="ForearmSize" invert="false" small="0" big="0">
+            <Data name="3BBBForearmSize" target="3BBB">SE 3BBB Body Amazing.osd\3BBBForearmSize</Data>
+        </Slider>
+        <Slider name="Groin" invert="false" small="0" big="0">
+            <Data name="3BBBGroin" target="3BBB">SE 3BBB Body Amazing.osd\3BBBGroin</Data>
+            <Data name="hagraven_0Groin" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Groin</Data>
+        </Slider>
+        <Slider name="HipBone" invert="false" small="0" big="0">
+            <Data name="3BBBHipBone" target="3BBB">SE 3BBB Body Amazing.osd\3BBBHipBone</Data>
+            <Data name="hagraven_0HipBone" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0HipBone</Data>
+        </Slider>
+        <Slider name="HipForward" invert="false" small="0" big="0">
+            <Data name="3BBBHipForward" target="3BBB">SE 3BBB Body Amazing.osd\3BBBHipForward</Data>
+            <Data name="hagraven_0HipForward" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0HipForward</Data>
+        </Slider>
+        <Slider name="Hips" invert="false" small="0" big="0">
+            <Data name="3BBBHips" target="3BBB">SE 3BBB Body Amazing.osd\3BBBHips</Data>
+            <Data name="hagraven_0Hips" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Hips</Data>
+        </Slider>
+        <Slider name="HipUpperWidth" invert="false" small="0" big="0">
+            <Data name="3BBBHipUpperWidth" target="3BBB">SE 3BBB Body Amazing.osd\3BBBHipUpperWidth</Data>
+            <Data name="hagraven_0HipUpperWidth" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0HipUpperWidth</Data>
+        </Slider>
+        <Slider name="KneeHeight" invert="false" small="0" big="0">
+            <Data name="3BBBKneeHeight" target="3BBB">SE 3BBB Body Amazing.osd\3BBBKneeHeight</Data>
+        </Slider>
+        <Slider name="KneeShape" invert="false" small="0" big="0">
+            <Data name="3BBBKneeShape" target="3BBB">SE 3BBB Body Amazing.osd\3BBBKneeShape</Data>
+        </Slider>
+        <Slider name="LegShapeClassic" invert="false" small="0" big="0">
+            <Data name="3BBBLegShapeClassic" target="3BBB">SE 3BBB Body Amazing.osd\3BBBLegShapeClassic</Data>
+        </Slider>
+        <Slider name="LegsThin" invert="false" small="0" big="0">
+            <Data name="3BBBLegsThin" target="3BBB">SE 3BBB Body Amazing.osd\3BBBLegsThin</Data>
+            <Data name="hagraven_0LegsThin" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0LegsThin</Data>
+        </Slider>
+        <Slider name="MuscleAbs" invert="false" small="0" big="0">
+            <Data name="3BBBMuscleAbs" target="3BBB">SE 3BBB Body Amazing.osd\3BBBMuscleAbs</Data>
+            <Data name="hagraven_0MuscleAbs" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0MuscleAbs</Data>
+        </Slider>
+        <Slider name="MuscleArms" invert="false" small="0" big="0">
+            <Data name="3BBBMuscleArms" target="3BBB">SE 3BBB Body Amazing.osd\3BBBMuscleArms</Data>
+        </Slider>
+        <Slider name="MuscleButt" invert="false" small="0" big="0">
+            <Data name="3BBBMuscleButt" target="3BBB">SE 3BBB Body Amazing.osd\3BBBMuscleButt</Data>
+            <Data name="hagraven_0MuscleButt" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0MuscleButt</Data>
+        </Slider>
+        <Slider name="MuscleLegs" invert="false" small="0" big="0">
+            <Data name="3BBBMuscleLegs" target="3BBB">SE 3BBB Body Amazing.osd\3BBBMuscleLegs</Data>
+            <Data name="hagraven_0MuscleLegs" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0MuscleLegs</Data>
+        </Slider>
+        <Slider name="MusclePecs" invert="false" small="0" big="0">
+            <Data name="3BBBMusclePecs" target="3BBB">SE 3BBB Body Amazing.osd\3BBBMusclePecs</Data>
+        </Slider>
+        <Slider name="NeckSeam" invert="false" small="100" big="0" hidden="true">
+            <Data name="3BBBNeckSeam" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNeckSeam</Data>
+        </Slider>
+        <Slider name="NipBGone" invert="false" small="0" big="0">
+            <Data name="3BBBNipBGone" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNipBGone</Data>
+        </Slider>
+        <Slider name="NippleDistance" invert="false" small="0" big="0">
+            <Data name="3BBBNippleDistance" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNippleDistance</Data>
+        </Slider>
+        <Slider name="NippleDown" invert="false" small="0" big="0">
+            <Data name="3BBBNippleDown" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNippleDown</Data>
+        </Slider>
+        <Slider name="NippleLength" invert="false" small="0" big="0">
+            <Data name="3BBBNippleLength" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNippleLength</Data>
+        </Slider>
+        <Slider name="NippleManga" invert="false" small="0" big="0">
+            <Data name="3BBBNippleManga" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNippleManga</Data>
+        </Slider>
+        <Slider name="NipplePerkiness" invert="false" small="0" big="0">
+            <Data name="3BBBNipplePerkiness" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNipplePerkiness</Data>
+        </Slider>
+        <Slider name="NipplePerkManga" invert="false" small="0" big="0">
+            <Data name="3BBBNipplePerkManga" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNipplePerkManga</Data>
+        </Slider>
+        <Slider name="NippleSize" invert="false" small="0" big="0">
+            <Data name="3BBBNippleSize" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNippleSize</Data>
+        </Slider>
+        <Slider name="NippleTip" invert="false" small="0" big="0">
+            <Data name="3BBBNippleTip" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNippleTip</Data>
+        </Slider>
+        <Slider name="NippleTipManga" invert="false" small="0" big="0">
+            <Data name="3BBBNippleTipManga" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNippleTipManga</Data>
+        </Slider>
+        <Slider name="NippleUp" invert="false" small="0" big="0">
+            <Data name="3BBBNippleUp" target="3BBB">SE 3BBB Body Amazing.osd\3BBBNippleUp</Data>
+        </Slider>
+        <Slider name="PregnancyBelly" invert="false" small="0" big="0">
+            <Data name="3BBBPregnancyBelly" target="3BBB">SE 3BBB Body Amazing.osd\3BBBPregnancyBelly</Data>
+            <Data name="hagraven_0PregnancyBelly" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0PregnancyBelly</Data>
+        </Slider>
+        <Slider name="PushUp" invert="false" small="0" big="0">
+            <Data name="3BBBPushUp" target="3BBB">SE 3BBB Body Amazing.osd\3BBBPushUp</Data>
+        </Slider>
+        <Slider name="RibsProminance" invert="false" small="0" big="0">
+            <Data name="3BBBRibsProminance" target="3BBB">SE 3BBB Body Amazing.osd\3BBBRibsProminance</Data>
+        </Slider>
+        <Slider name="RoundAss" invert="false" small="0" big="0">
+            <Data name="3BBBRoundAss" target="3BBB">SE 3BBB Body Amazing.osd\3BBBRoundAss</Data>
+            <Data name="hagraven_0RoundAss" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0RoundAss</Data>
+        </Slider>
+        <Slider name="ShoulderSmooth" invert="false" small="0" big="0">
+            <Data name="3BBBShoulderSmooth" target="3BBB">SE 3BBB Body Amazing.osd\3BBBShoulderSmooth</Data>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" small="0" big="0">
+            <Data name="3BBBShoulderTweak" target="3BBB">SE 3BBB Body Amazing.osd\3BBBShoulderTweak</Data>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="false" small="0" big="0">
+            <Data name="3BBBShoulderWidth" target="3BBB">SE 3BBB Body Amazing.osd\3BBBShoulderWidth</Data>
+        </Slider>
+        <Slider name="SlimThighs" invert="false" small="0" big="0">
+            <Data name="3BBBSlimThighs" target="3BBB">SE 3BBB Body Amazing.osd\3BBBSlimThighs</Data>
+            <Data name="hagraven_0SlimThighs" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0SlimThighs</Data>
+        </Slider>
+        <Slider name="SternumDepth" invert="false" small="0" big="0">
+            <Data name="3BBBSternumDepth" target="3BBB">SE 3BBB Body Amazing.osd\3BBBSternumDepth</Data>
+        </Slider>
+        <Slider name="SternumHeight" invert="false" small="0" big="0">
+            <Data name="3BBBSternumHeight" target="3BBB">SE 3BBB Body Amazing.osd\3BBBSternumHeight</Data>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <Data name="3BBBThighs" target="3BBB">SE 3BBB Body Amazing.osd\3BBBThighs</Data>
+            <Data name="hagraven_0Thighs" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Thighs</Data>
+        </Slider>
+        <Slider name="TummyTuck" invert="false" small="0" big="0">
+            <Data name="3BBBTummyTuck" target="3BBB">SE 3BBB Body Amazing.osd\3BBBTummyTuck</Data>
+            <Data name="hagraven_0TummyTuck" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0TummyTuck</Data>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="0">
+            <Data name="3BBBWaist" target="3BBB">SE 3BBB Body Amazing.osd\3BBBWaist</Data>
+            <Data name="hagraven_0Waist" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Waist</Data>
+        </Slider>
+        <Slider name="WaistHeight" invert="false" small="0" big="0">
+            <Data name="3BBBWaistHeight" target="3BBB">SE 3BBB Body Amazing.osd\3BBBWaistHeight</Data>
+            <Data name="hagraven_0WaistHeight" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0WaistHeight</Data>
+        </Slider>
+        <Slider name="WideWaistLine" invert="false" small="0" big="0">
+            <Data name="3BBBWideWaistLine" target="3BBB">SE 3BBB Body Amazing.osd\3BBBWideWaistLine</Data>
+            <Data name="hagraven_0WideWaistLine" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0WideWaistLine</Data>
+        </Slider>
+        <Slider name="WristSize" invert="false" small="100" big="0">
+            <Data name="3BBBWristSize" target="3BBB">SE 3BBB Body Amazing.osd\3BBBWristSize</Data>
+        </Slider>
+        <Slider name="7B Lower" invert="false" small="0" big="0">
+            <Data name="3BBB7B Lower" target="3BBB">SE 3BBB Body Amazing.osd\3BBB7B Lower</Data>
+            <Data name="hagraven_07B Lower" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_07B Lower</Data>
+        </Slider>
+        <Slider name="7B Upper" invert="false" small="0" big="0">
+            <Data name="3BBB7B Upper" target="3BBB">SE 3BBB Body Amazing.osd\3BBB7B Upper</Data>
+        </Slider>
+        <Slider name="VanillaSSEHi" invert="false" small="0" big="0">
+            <Data name="3BBBVanillaSSEHi" target="3BBB">SE 3BBB Body Amazing.osd\3BBBVanillaSSEHi</Data>
+            <Data name="hagraven_0VanillaSSEHi" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0VanillaSSEHi</Data>
+        </Slider>
+        <Slider name="VanillaSSELo" invert="false" small="0" big="0">
+            <Data name="3BBBVanillaSSELo" target="3BBB">SE 3BBB Body Amazing.osd\3BBBVanillaSSELo</Data>
+            <Data name="hagraven_0VanillaSSELo" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0VanillaSSELo</Data>
+        </Slider>
+        <Slider name="OldBaseShape" invert="false" small="0" big="0">
+            <Data name="3BBBOldBaseShape" target="3BBB">SE 3BBB Body Amazing.osd\3BBBOldBaseShape</Data>
+            <Data name="hagraven_0OldBaseShape" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0OldBaseShape</Data>
+        </Slider>
+        <Slider name="Innieoutie" invert="false" small="0" big="0">
+            <Data name="3BBBInnieoutie" target="3BBB">SE 3BBB Body Amazing.osd\3BBBInnieoutie</Data>
+            <Data name="hagraven_0Innieoutie" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Innieoutie</Data>
+        </Slider>
+        <Slider name="Labiapuffyness" invert="false" small="0" big="0">
+            <Data name="3BBBLabiapuffyness" target="3BBB">SE 3BBB Body Amazing.osd\3BBBLabiapuffyness</Data>
+            <Data name="hagraven_0Labiapuffyness" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0Labiapuffyness</Data>
+        </Slider>
+        <Slider name="CBPC" invert="false" small="100" big="100">
+            <Data name="3BBBCBPC" target="3BBB">SE 3BBB Body Amazing.osd\3BBBCBPC</Data>
+            <Data name="hagraven_0CBPC" target="hagraven_0" local="true">OStrap_Hagraven_3BBB.osd\hagraven_0CBPC</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

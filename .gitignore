@@ -1,3 +1,19 @@
 
 Scripts/Source/.vscode/settings.json
 *.7z
+.vscode/launch.json
+.vscode/tasks.json
+SkyrimSE.code-workspace
+*.bat
+*.bsa
+*.zip
+*.bsa
+*.bsa
+*.bsa
+*.old
+Scripts/OStrapPlayerInit.pex
+Scripts/OStrapMCM.pex
+Scripts/OStrapMain.pex
+*.bsa
+*.bsa
+OStrap.bsa

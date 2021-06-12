@@ -1,0 +1,141 @@
+<?xml version='1.0'?><!-- Game is either sse, tesv, or fo4 -->
+<PapyrusProject xmlns="PapyrusProject.xsd" 
+    Flags="TESV_Papyrus_Flags.flg" 
+    Game="sse" 
+    Output="Scripts" 
+    Optimize="true" 
+    Anonymize="true"
+    Zip="true">
+    <Variables>
+        <Variable Name="ModName" Value="OStrap"/>
+        <Variable Name="MyProject" Value="."/>
+        <Variable Name="Dist" Value="..\dist"/>
+        <Variable Name="Body1" Value="3BBB"/>
+        <Variable Name="Body2" Value="BHUNP"/>
+        <Variable Name="Site1" Value="Loverslab"/>
+        <Variable Name="Site2" Value="Nexus"/>
+        <Variable Name="Shapedata" Value="CalienteTools\BodySlide\ShapeData\"/>
+        <Variable Name="SliderSets" Value="CalienteTools\BodySlide\SliderSets\"/>
+        <Variable Name="MeshPath" Value="Meshes\armor\skyrim_strapons"/>
+        <Variable Name="ArmorPath" Value="armor\skyrim_strapons"/>
+        <Variable Name="TexturePath" Value="textures\armor\skyrim_strapons"/>
+        <Variable Name="Version" Value="v1.2"/>
+    </Variables>
+    <Imports>
+        <Import>@MyProject\Scripts\Source</Import>
+        <Import>https://github.com/MrOctopus/nl_online/tree/main/jcontainersse/source</Import>
+        <Import>https://github.com/eeveelo/PapyrusUtil/tree/master/Scripts/Source</Import>
+        <Import>https://github.com/MrOctopus/nl_mcm/tree/main/main/scripts/source</Import>
+        <Import>https://github.com/MrOctopus/nl_util/tree/main/dist/scripts/source</Import>
+	    <Import>https://github.com/MrOctopus/nl_mcm/tree/main/main/scripts/source</Import>
+        <Import>https://github.com/Sairion350/OCum/tree/main/scripts/source</Import>
+        <Import>https://github.com/Sairion350/OStim/tree/main/Scripts/Source</Import>
+        <Import>https://github.com/CE0/OSA-SE/tree/master/Data/Scripts/Source</Import>
+        <Import>https://github.com/Osmosis-Wrench/random-loose-scripts/tree/main/scripts/source</Import>
+        <Import>https://github.com/schlangster/skyui/tree/master/dist/Data/Scripts/Source</Import>
+        <Import>https://github.com/MrOctopus/nl_online/tree/main/skse64/source</Import>
+        <Import>https://github.com/MrOctopus/nl_online/tree/main/sse/source</Import>
+    </Imports>
+    <Scripts>
+        <Script>@MyProject/Scripts/Source/OStrapMCM.psc</Script>
+        <Script>@MyProject/Scripts/Source/OStrapMain.psc</Script>
+    </Scripts>
+    <ZipFiles Output="@Dist">
+        <ZipFile Name="@ModName @Version - @Site1 @Body1" RootDir="@MyProject" Compression="deflate">
+        	<Include Path=".">@Site1/OStrapOn.esp</Include>
+	        <Include NoRecurse="true">@MyProject/Scripts/*.pex</Include>
+	        <Include NoRecurse="true">@MyProject/Scripts/Source/*.psc</Include>
+            <Include>OStrapData</Include>
+            <Include Path="@TexturePath">@Site1 skyrim_strapons</Include>
+            <Include Path="@Shapedata\OStrap_Dwemer_@Body1">@Body1 @Shapedata/OStrap_Dwemer_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_Dwemer_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/Dwemer*</Include>
+            <Include Path="@Shapedata\OStrap_SoulGemBlack_@Body1">@Body1 @Shapedata/OStrap_SoulGemBlack_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_SoulGemBlack_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/soulgemblack*</Include>
+            <Include Path="@Shapedata\OStrap_SoulGemCommon_@Body1">@Body1 @Shapedata/OStrap_SoulGemCommon_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_SoulGemCommon_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/soulgemcommon*</Include>
+
+            <Include Path="@Shapedata\OStrap_GiantToe_@Body1">@Body1 @Shapedata/OStrap_GiantToe_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_GiantToe_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/gianttoe*</Include>
+            <Include Path="@Shapedata\OStrap_Hagraven_@Body1">@Body1 @Shapedata/OStrap_Hagraven_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_Hagraven_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/hagraven*</Include>
+            <Include Path="@Shapedata\OStrap_Horse_@Body1">@Body1 @Shapedata/OStrap_Horse_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_Horse_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/horsecast*</Include>
+            <Include Path="@Shapedata\OStrap_Canine_@Body1">@Body1 @Shapedata/OStrap_Canine_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_Canine_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/caninecast*</Include>
+            <Include Path="@Shapedata\OStrap_Horker_@Body1">@Body1 @Shapedata/OStrap_Horker_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_Horker_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/horker*</Include>
+        </ZipFile>
+        <ZipFile Name="@ModName @Version - @Site1 @Body2" RootDir="@MyProject" Compression="deflate">
+        	<Include Path=".">@Site1/OStrapOn.esp</Include>
+	        <Include NoRecurse="true">@MyProject/Scripts/*.pex</Include>
+	        <Include NoRecurse="true">@MyProject/Scripts/Source/*.psc</Include>
+            <Include>OStrapData</Include>
+            <Include Path="@TexturePath">@Site1 skyrim_strapons</Include>
+            <Include Path="@Shapedata\OStrap_Dwemer_@Body2">@Body2 @Shapedata/OStrap_Dwemer_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_Dwemer_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/Dwemer*</Include>
+            <Include Path="@Shapedata\OStrap_SoulGemBlack_@Body2">@Body2 @Shapedata/OStrap_SoulGemBlack_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_SoulGemBlack_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/soulgemblack*</Include>
+            <Include Path="@Shapedata\OStrap_SoulGemCommon_@Body2">@Body2 @Shapedata/OStrap_SoulGemCommon_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_SoulGemCommon_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/soulgemcommon*</Include>
+
+            <Include Path="@Shapedata\OStrap_GiantToe_@Body2">@Body2 @Shapedata/OStrap_GiantToe_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_GiantToe_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/gianttoe*</Include>
+            <Include Path="@Shapedata\OStrap_Hagraven_@Body2">@Body2 @Shapedata/OStrap_Hagraven_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_Hagraven_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/hagraven*</Include>
+            <Include Path="@Shapedata\OStrap_Horse_@Body2">@Body2 @Shapedata/OStrap_Horse_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_Horse_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/horsecast*</Include>
+            <Include Path="@Shapedata\OStrap_Canine_@Body2">@Body2 @Shapedata/OStrap_Canine_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_Canine_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/caninecast*</Include>
+            <Include Path="@Shapedata\OStrap_Horker_@Body2">@Body2 @Shapedata/OStrap_Horker_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_Horker_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/horker*</Include>
+        </ZipFile>
+        <ZipFile Name="@ModName @Version - @Site2 @Body1" RootDir="@MyProject" Compression="deflate">
+        	<Include Path=".">@Site2/OStrapOn.esp</Include>
+	        <Include NoRecurse="true">@MyProject/Scripts/*.pex</Include>
+	        <Include NoRecurse="true">@MyProject/Scripts/Source/*.psc</Include>
+            <Include>OStrapData</Include>
+            <Include Path="@TexturePath">@Site2 skyrim_strapons</Include>
+            <Include Path="@Shapedata\OStrap_Dwemer_@Body1">@Body1 @Shapedata/OStrap_Dwemer_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_Dwemer_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/Dwemer*</Include>
+            <Include Path="@Shapedata\OStrap_SoulGemBlack_@Body1">@Body1 @Shapedata/OStrap_SoulGemBlack_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_SoulGemBlack_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/soulgemblack*</Include>
+            <Include Path="@Shapedata\OStrap_SoulGemCommon_@Body1">@Body1 @Shapedata/OStrap_SoulGemCommon_@Body1</Include>
+            <Include Path="@SliderSets">@Body1 @SliderSets/OStrap_SoulGemCommon_@Body1.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body1 Meshes/@ArmorPath/soulgemcommon*</Include>
+        </ZipFile>
+        <ZipFile Name="@ModName @Version - @Site2 @Body2" RootDir="@MyProject" Compression="deflate">
+        	<Include Path=".">@Site2/OStrapOn.esp</Include>
+	        <Include NoRecurse="true">@MyProject/Scripts/*.pex</Include>
+	        <Include NoRecurse="true">@MyProject/Scripts/Source/*.psc</Include>
+            <Include>OStrapData</Include>
+            <Include Path="@TexturePath">@Site2 skyrim_strapons</Include>
+            <Include Path="@Shapedata\OStrap_Dwemer_@Body2">@Body2 @Shapedata/OStrap_Dwemer_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_Dwemer_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/Dwemer*</Include>
+            <Include Path="@Shapedata\OStrap_SoulGemBlack_@Body2">@Body2 @Shapedata/OStrap_SoulGemBlack_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_SoulGemBlack_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/soulgemblack*</Include>
+            <Include Path="@Shapedata\OStrap_SoulGemCommon_@Body2">@Body2 @Shapedata/OStrap_SoulGemCommon_@Body2</Include>
+            <Include Path="@SliderSets">@Body2 @SliderSets/OStrap_SoulGemCommon_@Body2.osp</Include>
+            <Include Path="@MeshPath">@MyProject/@Body2 Meshes/@ArmorPath/soulgemcommon*</Include>
+        </ZipFile>
+    </ZipFiles>
+</PapyrusProject>
