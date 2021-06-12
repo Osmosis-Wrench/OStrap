@@ -6,7 +6,6 @@ on:
     branches:
     - main
     - next-release
-    - test-mcm
 
 jobs:
   build:
@@ -16,7 +15,16 @@ jobs:
         project-path: 
         - 'ostrap_ci.ppj'
         
+      # Set the project file paths relative to the current repo
+        project-path:
+        - 'ostrap_ci.ppj'
     env:
+      # Set these
+      dist-path: ..\dist                                # Folder containing the output from the project files
+      compiler-repo: Osmosis-Wrench/Papyrus-Compiler    # Github repository containing the papyrus compiler
+      compiler-token: ${{ secrets.PRIVATE_TOKEN }}        # Just use ${{ github.token }} if the repo is not private
+      pyro-token: ${{ secrets.PRIVATE_TOKEN }}
+      # Ignore these
       python-version: 3.x
       python-arch: x64
 
@@ -34,8 +42,8 @@ jobs:
     - name: Pull papyrus compiler
       uses: actions/checkout@v2
       with:
-        repository: Osmosis-Wrench/Papyrus-Compiler
-        token: ${{ secrets.PRIVATE_TOKEN }}
+        repository: ${{ env.compiler-repo }}
+        token: ${{ env.compiler-token }}
         path: ./compiler
 
     - name: Get latest Pyro release
@@ -57,7 +65,7 @@ jobs:
       env: 
         ppj_c: compiler\PapyrusCompiler.exe
         ppj_f: compiler\TESV_Papyrus_Flags.flg
-        ppj_t: ${{ secrets.PRIVATE_TOKEN }}
+        ppj_t: ${{ env.pyro-token }}
         ppj_p: ${{ matrix.project-path }}
 
     - name: Prepare upload
@@ -73,3 +81,8 @@ jobs:
       with:
         name: ${{ env.build_name }}
         path: ./dist/${{ env.build_name }}
+
+        cd repo\${Env:dist-path}
+        7z x *zip -o*
+        echo "build_names=$(Get-ChildItem -Filter *. -Name)" >> ${Env:GITHUB_ENV}
+        echo "build_paths=$($(Get-ChildItem -Filter *. | % { $_.FullName }) -join ",")" >> ${Env:GITHUB_ENV}
