@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="OStrap_Hagraven_BHUNP">
+        <DataFolder>OStrap_Hagraven_BHUNP</DataFolder>
+        <SourceFile>OStrap_Hagraven_BHUNP.nif</SourceFile>
+        <OutputPath>meshes\armor\skyrim_strapons</OutputPath>
+        <OutputFile GenWeights="true">hagraven</OutputFile>
+        <Shape target="BaseShapeFull" DataFolder="BHUNP 3BBB Advanced">BaseShapeFull</Shape>
+        <Shape target="hagraven_0">hagraven_0</Shape>
+        <Slider name="CBBE SE to BHUNP" invert="false" small="0" big="0">
+            <Data name="hagraven_0CBBE SE to BHUNP" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0CBBE SE to BHUNP</Data>
+        </Slider>
+        <Slider name="7B Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Low</Data>
+            <Data name="hagraven_07B Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Low</Data>
+        </Slider>
+        <Slider name="7B High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B High</Data>
+            <Data name="hagraven_07B High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B High</Data>
+        </Slider>
+        <Slider name="7B Bombshell Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Bombshell Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Bombshell Low</Data>
+            <Data name="hagraven_07B Bombshell Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Bombshell Low</Data>
+        </Slider>
+        <Slider name="7B Bombshell High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Bombshell High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Bombshell High</Data>
+            <Data name="hagraven_07B Bombshell High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Bombshell High</Data>
+        </Slider>
+        <Slider name="7B Natural Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Natural Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Natural Low</Data>
+            <Data name="hagraven_07B Natural Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Natural Low</Data>
+        </Slider>
+        <Slider name="7B Natural High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Natural High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Natural High</Data>
+            <Data name="hagraven_07B Natural High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Natural High</Data>
+        </Slider>
+        <Slider name="7B Cleavage Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Cleavage Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Cleavage Low</Data>
+            <Data name="hagraven_07B Cleavage Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Cleavage Low</Data>
+        </Slider>
+        <Slider name="7B Cleavage High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Cleavage High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Cleavage High</Data>
+            <Data name="hagraven_07B Cleavage High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Cleavage High</Data>
+        </Slider>
+        <Slider name="7B BCup Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B BCup Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B BCup Low</Data>
+            <Data name="hagraven_07B BCup Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B BCup Low</Data>
+        </Slider>
+        <Slider name="7B BCup High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B BCup High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B BCup High</Data>
+            <Data name="hagraven_07B BCup High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B BCup High</Data>
+        </Slider>
+        <Slider name="7B Oppai Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Oppai Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Oppai Low</Data>
+            <Data name="hagraven_07B Oppai Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Oppai Low</Data>
+        </Slider>
+        <Slider name="7B Oppai High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B Oppai High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B Oppai High</Data>
+            <Data name="hagraven_07B Oppai High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B Oppai High</Data>
+        </Slider>
+        <Slider name="7B CH Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B CH Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B CH Low</Data>
+            <Data name="hagraven_07B CH Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B CH Low</Data>
+        </Slider>
+        <Slider name="7B CH High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7B CH High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7B CH High</Data>
+            <Data name="hagraven_07B CH High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07B CH High</Data>
+        </Slider>
+        <Slider name="UNP Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNP Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNP Low</Data>
+            <Data name="hagraven_0UNP Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNP Low</Data>
+        </Slider>
+        <Slider name="UNP High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNP High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNP High</Data>
+            <Data name="hagraven_0UNP High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNP High</Data>
+        </Slider>
+        <Slider name="UNP Pushup Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNP Pushup Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNP Pushup Low</Data>
+            <Data name="hagraven_0UNP Pushup Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNP Pushup Low</Data>
+        </Slider>
+        <Slider name="UNP Pushup High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNP Pushup High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNP Pushup High</Data>
+            <Data name="hagraven_0UNP Pushup High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNP Pushup High</Data>
+        </Slider>
+        <Slider name="UNP Skinny Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNP Skinny Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNP Skinny Low</Data>
+            <Data name="hagraven_0UNP Skinny Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNP Skinny Low</Data>
+        </Slider>
+        <Slider name="UNP Skinny High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNP Skinny High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNP Skinny High</Data>
+            <Data name="hagraven_0UNP Skinny High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNP Skinny High</Data>
+        </Slider>
+        <Slider name="UNP Perky Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNP Perky Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNP Perky Low</Data>
+            <Data name="hagraven_0UNP Perky Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNP Perky Low</Data>
+        </Slider>
+        <Slider name="UNP Perky High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNP Perky High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNP Perky High</Data>
+            <Data name="hagraven_0UNP Perky High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNP Perky High</Data>
+        </Slider>
+        <Slider name="UNPB Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPB Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPB Low</Data>
+            <Data name="hagraven_0UNPB Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPB Low</Data>
+        </Slider>
+        <Slider name="UNPB High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPB High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPB High</Data>
+            <Data name="hagraven_0UNPB High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPB High</Data>
+        </Slider>
+        <Slider name="UNPB Chapi" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPB Chapi" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPB Chapi</Data>
+            <Data name="hagraven_0UNPB Chapi" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPB Chapi</Data>
+        </Slider>
+        <Slider name="UNPB Oppai v1" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPB Oppai v1" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPB Oppai v1</Data>
+            <Data name="hagraven_0UNPB Oppai v1" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPB Oppai v1</Data>
+        </Slider>
+        <Slider name="UNPB Oppai v3.2 Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPB Oppai v3.2 Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPB Oppai v3.2 Low</Data>
+            <Data name="hagraven_0UNPB Oppai v3.2 Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPB Oppai v3.2 Low</Data>
+        </Slider>
+        <Slider name="UNPB Oppai v3.2 High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPB Oppai v3.2 High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPB Oppai v3.2 High</Data>
+            <Data name="hagraven_0UNPB Oppai v3.2 High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPB Oppai v3.2 High</Data>
+        </Slider>
+        <Slider name="UNPetite Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPetite Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPetite Low</Data>
+            <Data name="hagraven_0UNPetite Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPetite Low</Data>
+        </Slider>
+        <Slider name="UNPetite High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPetite High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPetite High</Data>
+            <Data name="hagraven_0UNPetite High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPetite High</Data>
+        </Slider>
+        <Slider name="UNPC Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPC Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPC Low</Data>
+            <Data name="hagraven_0UNPC Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPC Low</Data>
+        </Slider>
+        <Slider name="UNPC High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPC High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPC High</Data>
+            <Data name="hagraven_0UNPC High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPC High</Data>
+        </Slider>
+        <Slider name="UNPCM Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPCM Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPCM Low</Data>
+            <Data name="hagraven_0UNPCM Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPCM Low</Data>
+        </Slider>
+        <Slider name="UNPCM High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPCM High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPCM High</Data>
+            <Data name="hagraven_0UNPCM High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPCM High</Data>
+        </Slider>
+        <Slider name="UNPSH Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPSH Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPSH Low</Data>
+            <Data name="hagraven_0UNPSH Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPSH Low</Data>
+        </Slider>
+        <Slider name="UNPSH High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPSH High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPSH High</Data>
+            <Data name="hagraven_0UNPSH High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPSH High</Data>
+        </Slider>
+        <Slider name="UNPK Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPK Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPK Low</Data>
+            <Data name="hagraven_0UNPK Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPK Low</Data>
+        </Slider>
+        <Slider name="UNPK High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPK High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPK High</Data>
+            <Data name="hagraven_0UNPK High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPK High</Data>
+        </Slider>
+        <Slider name="UNPK Bonus Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPK Bonus Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPK Bonus Low</Data>
+            <Data name="hagraven_0UNPK Bonus Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPK Bonus Low</Data>
+        </Slider>
+        <Slider name="UNPK Bonus High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPK Bonus High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPK Bonus High</Data>
+            <Data name="hagraven_0UNPK Bonus High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPK Bonus High</Data>
+        </Slider>
+        <Slider name="UN7B Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUN7B Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUN7B Low</Data>
+            <Data name="hagraven_0UN7B Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UN7B Low</Data>
+        </Slider>
+        <Slider name="UN7B High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUN7B High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUN7B High</Data>
+            <Data name="hagraven_0UN7B High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UN7B High</Data>
+        </Slider>
+        <Slider name="UNPBB Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPBB Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPBB Low</Data>
+            <Data name="hagraven_0UNPBB Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPBB Low</Data>
+        </Slider>
+        <Slider name="UNPBB High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPBB High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPBB High</Data>
+            <Data name="hagraven_0UNPBB High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPBB High</Data>
+        </Slider>
+        <Slider name="Seraphim Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullSeraphim Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullSeraphim Low</Data>
+            <Data name="hagraven_0Seraphim Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Seraphim Low</Data>
+        </Slider>
+        <Slider name="Seraphim High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullSeraphim High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullSeraphim High</Data>
+            <Data name="hagraven_0Seraphim High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Seraphim High</Data>
+        </Slider>
+        <Slider name="Demonfet Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullDemonfet Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullDemonfet Low</Data>
+            <Data name="hagraven_0Demonfet Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Demonfet Low</Data>
+        </Slider>
+        <Slider name="Demonfet High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullDemonfet High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullDemonfet High</Data>
+            <Data name="hagraven_0Demonfet High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Demonfet High</Data>
+        </Slider>
+        <Slider name="Dream Girl Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullDream Girl Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullDream Girl Low</Data>
+            <Data name="hagraven_0Dream Girl Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Dream Girl Low</Data>
+        </Slider>
+        <Slider name="Dream Girl High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullDream Girl High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullDream Girl High</Data>
+            <Data name="hagraven_0Dream Girl High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Dream Girl High</Data>
+        </Slider>
+        <Slider name="Top Model Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullTop Model Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullTop Model Low</Data>
+            <Data name="hagraven_0Top Model Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Top Model Low</Data>
+        </Slider>
+        <Slider name="Top Model High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullTop Model High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullTop Model High</Data>
+            <Data name="hagraven_0Top Model High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Top Model High</Data>
+        </Slider>
+        <Slider name="Leito Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullLeito Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullLeito Low</Data>
+            <Data name="hagraven_0Leito Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Leito Low</Data>
+        </Slider>
+        <Slider name="Leito High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullLeito High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullLeito High</Data>
+            <Data name="hagraven_0Leito High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Leito High</Data>
+        </Slider>
+        <Slider name="UNPF Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPF Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPF Low</Data>
+            <Data name="hagraven_0UNPF Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPF Low</Data>
+        </Slider>
+        <Slider name="UNPF High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPF High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPF High</Data>
+            <Data name="hagraven_0UNPF High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPF High</Data>
+        </Slider>
+        <Slider name="UNPFx Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPFx Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPFx Low</Data>
+            <Data name="hagraven_0UNPFx Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPFx Low</Data>
+        </Slider>
+        <Slider name="UNPFx High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullUNPFx High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullUNPFx High</Data>
+            <Data name="hagraven_0UNPFx High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0UNPFx High</Data>
+        </Slider>
+        <Slider name="MCBM Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMCBM Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullMCBM Low</Data>
+            <Data name="hagraven_0MCBM Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0MCBM Low</Data>
+        </Slider>
+        <Slider name="MCBM High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMCBM High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullMCBM High</Data>
+            <Data name="hagraven_0MCBM High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0MCBM High</Data>
+        </Slider>
+        <Slider name="Venus Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullVenus Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullVenus Low</Data>
+            <Data name="hagraven_0Venus Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Venus Low</Data>
+        </Slider>
+        <Slider name="Venus High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullVenus High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullVenus High</Data>
+            <Data name="hagraven_0Venus High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Venus High</Data>
+        </Slider>
+        <Slider name="Manga Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullManga Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullManga Low</Data>
+            <Data name="hagraven_0Manga Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Manga Low</Data>
+        </Slider>
+        <Slider name="Manga High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullManga High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullManga High</Data>
+            <Data name="hagraven_0Manga High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Manga High</Data>
+        </Slider>
+        <Slider name="CHSBHC Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCHSBHC Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCHSBHC Low</Data>
+            <Data name="hagraven_0CHSBHC Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0CHSBHC Low</Data>
+        </Slider>
+        <Slider name="CHSBHC High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCHSBHC High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCHSBHC High</Data>
+            <Data name="hagraven_0CHSBHC High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0CHSBHC High</Data>
+        </Slider>
+        <Slider name="7BUNP Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7BUNP Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7BUNP Low</Data>
+            <Data name="hagraven_07BUNP Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07BUNP Low</Data>
+        </Slider>
+        <Slider name="CNHF Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCNHF Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCNHF Low</Data>
+            <Data name="hagraven_0CNHF Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0CNHF Low</Data>
+        </Slider>
+        <Slider name="CNHF High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCNHF High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCNHF High</Data>
+            <Data name="hagraven_0CNHF High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0CNHF High</Data>
+        </Slider>
+        <Slider name="CNHF Bonus Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCNHF Bonus Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCNHF Bonus Low</Data>
+            <Data name="hagraven_0CNHF Bonus Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0CNHF Bonus Low</Data>
+        </Slider>
+        <Slider name="CNHF Bonus High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCNHF Bonus High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCNHF Bonus High</Data>
+            <Data name="hagraven_0CNHF Bonus High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0CNHF Bonus High</Data>
+        </Slider>
+        <Slider name="ZGGB-R2 Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullZGGB-R2 Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullZGGB-R2 Low</Data>
+            <Data name="hagraven_0ZGGB-R2 Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ZGGB-R2 Low</Data>
+        </Slider>
+        <Slider name="HighHeel" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullHighHeel" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullHighHeel</Data>
+        </Slider>
+        <Slider name="7BUNP High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFull7BUNP High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFull7BUNP High</Data>
+            <Data name="hagraven_07BUNP High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_07BUNP High</Data>
+        </Slider>
+        <Slider name="ZGGB-R2 High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullZGGB-R2 High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullZGGB-R2 High</Data>
+            <Data name="hagraven_0ZGGB-R2 High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ZGGB-R2 High</Data>
+        </Slider>
+        <Slider name="Aruru6Duck Low" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullAruru6Duck Low" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullAruru6Duck Low</Data>
+            <Data name="hagraven_0Aruru6Duck Low" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Aruru6Duck Low</Data>
+        </Slider>
+        <Slider name="Aruru6Duck High" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullAruru6Duck High" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullAruru6Duck High</Data>
+            <Data name="hagraven_0Aruru6Duck High" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Aruru6Duck High</Data>
+        </Slider>
+        <Slider name="Arms" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullArms" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullArms</Data>
+        </Slider>
+        <Slider name="AppleCheeks" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullAppleCheeks" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullAppleCheeks</Data>
+            <Data name="hagraven_0AppleCheeks" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0AppleCheeks</Data>
+        </Slider>
+        <Slider name="AnusSpread" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullAnusSpread" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullAnusSpread</Data>
+        </Slider>
+        <Slider name="Back" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBack" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBack</Data>
+            <Data name="hagraven_0Back" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Back</Data>
+        </Slider>
+        <Slider name="BackArch" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBackArch" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBackArch</Data>
+            <Data name="hagraven_0BackArch" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BackArch</Data>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBelly" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBelly</Data>
+            <Data name="hagraven_0Belly" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Belly</Data>
+        </Slider>
+        <Slider name="BigTorso" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBigTorso" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBigTorso</Data>
+            <Data name="hagraven_0BigTorso" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BigTorso</Data>
+        </Slider>
+        <Slider name="Breasts" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullBreasts" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreasts</Data>
+        </Slider>
+        <Slider name="BreastCenter" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastCenter" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastCenter</Data>
+        </Slider>
+        <Slider name="BreastCenterBig" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastCenterBig" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastCenterBig</Data>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullBreastsSmall" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastsSmall</Data>
+            <Data name="hagraven_0BreastsSmall" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BreastsSmall</Data>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsSH" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastsSH</Data>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsSSH" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastsSSH</Data>
+        </Slider>
+        <Slider name="BreastsFantasy" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsFantasy" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastsFantasy</Data>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastCleavage" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastCleavage</Data>
+            <Data name="hagraven_0BreastCleavage" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BreastCleavage</Data>
+        </Slider>
+        <Slider name="BreastFlatness" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastFlatness" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastFlatness</Data>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastGravity" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastGravity</Data>
+        </Slider>
+        <Slider name="PushUp" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPushUp" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPushUp</Data>
+        </Slider>
+        <Slider name="BreastHeight" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastHeight" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastHeight</Data>
+        </Slider>
+        <Slider name="BreastPerkiness" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastPerkiness" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastPerkiness</Data>
+        </Slider>
+        <Slider name="BreastWidth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastWidth" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastWidth</Data>
+        </Slider>
+        <Slider name="BreastConverge" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastConverge" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastConverge</Data>
+            <Data name="hagraven_0BreastConverge" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BreastConverge</Data>
+        </Slider>
+        <Slider name="ButtCrack" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullButtCrack" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullButtCrack</Data>
+            <Data name="hagraven_0ButtCrack" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ButtCrack</Data>
+        </Slider>
+        <Slider name="Butt" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullButt" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullButt</Data>
+            <Data name="hagraven_0Butt" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Butt</Data>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullButtSmall" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullButtSmall</Data>
+            <Data name="hagraven_0ButtSmall" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ButtSmall</Data>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullButtShape2" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullButtShape2</Data>
+            <Data name="hagraven_0ButtShape2" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ButtShape2</Data>
+        </Slider>
+        <Slider name="BigButt" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBigButt" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBigButt</Data>
+            <Data name="hagraven_0BigButt" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BigButt</Data>
+        </Slider>
+        <Slider name="BigBelly" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBigBelly" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBigBelly</Data>
+            <Data name="hagraven_0BigBelly" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BigBelly</Data>
+        </Slider>
+        <Slider name="BotePregnancy" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBotePregnancy" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBotePregnancy</Data>
+            <Data name="hagraven_0BotePregnancy" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BotePregnancy</Data>
+        </Slider>
+        <Slider name="ChubbyArms" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullChubbyArms" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullChubbyArms</Data>
+        </Slider>
+        <Slider name="ChubbyWaist" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullChubbyWaist" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullChubbyWaist</Data>
+            <Data name="hagraven_0ChubbyWaist" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ChubbyWaist</Data>
+        </Slider>
+        <Slider name="ChestDepth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullChestDepth" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullChestDepth</Data>
+            <Data name="hagraven_0ChestDepth" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ChestDepth</Data>
+        </Slider>
+        <Slider name="ChestWidth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullChestWidth" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullChestWidth</Data>
+            <Data name="hagraven_0ChestWidth" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ChestWidth</Data>
+        </Slider>
+        <Slider name="ChubbyLegs" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullChubbyLegs" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullChubbyLegs</Data>
+            <Data name="hagraven_0ChubbyLegs" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ChubbyLegs</Data>
+        </Slider>
+        <Slider name="CrotchBack" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCrotchBack" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCrotchBack</Data>
+            <Data name="hagraven_0CrotchBack" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0CrotchBack</Data>
+        </Slider>
+        <Slider name="CalfSize" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCalfSize" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCalfSize</Data>
+        </Slider>
+        <Slider name="CalfSmooth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCalfSmooth" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullCalfSmooth</Data>
+        </Slider>
+        <Slider name="ClitorisErection" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullClitorisErection" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullClitorisErection</Data>
+            <Data name="hagraven_0ClitorisErection" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ClitorisErection</Data>
+        </Slider>
+        <Slider name="ChubbyButt" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullChubbyButt" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullChubbyButt</Data>
+            <Data name="hagraven_0ChubbyButt" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ChubbyButt</Data>
+        </Slider>
+        <Slider name="DoubleMelon" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullDoubleMelon" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullDoubleMelon</Data>
+        </Slider>
+        <Slider name="ForearmSize" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullForearmSize" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullForearmSize</Data>
+        </Slider>
+        <Slider name="Groin" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullGroin" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullGroin</Data>
+            <Data name="hagraven_0Groin" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Groin</Data>
+        </Slider>
+        <Slider name="HipBone" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullHipBone" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullHipBone</Data>
+            <Data name="hagraven_0HipBone" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0HipBone</Data>
+        </Slider>
+        <Slider name="Hips" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullHips" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullHips</Data>
+            <Data name="hagraven_0Hips" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Hips</Data>
+        </Slider>
+        <Slider name="HipForward" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullHipForward" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullHipForward</Data>
+            <Data name="hagraven_0HipForward" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0HipForward</Data>
+        </Slider>
+        <Slider name="HipUpperWidth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullHipUpperWidth" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullHipUpperWidth</Data>
+            <Data name="hagraven_0HipUpperWidth" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0HipUpperWidth</Data>
+        </Slider>
+        <Slider name="KneeShape" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullKneeShape" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullKneeShape</Data>
+        </Slider>
+        <Slider name="KneeHeight" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullKneeHeight" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullKneeHeight</Data>
+            <Data name="hagraven_0KneeHeight" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0KneeHeight</Data>
+        </Slider>
+        <Slider name="Legs" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullLegs" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullLegs</Data>
+            <Data name="hagraven_0Legs" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Legs</Data>
+        </Slider>
+        <Slider name="LegsThin" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullLegsThin" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullLegsThin</Data>
+            <Data name="hagraven_0LegsThin" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0LegsThin</Data>
+        </Slider>
+        <Slider name="MuscleArms" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMuscleArms" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullMuscleArms</Data>
+        </Slider>
+        <Slider name="MuscleLegs" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMuscleLegs" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullMuscleLegs</Data>
+            <Data name="hagraven_0MuscleLegs" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0MuscleLegs</Data>
+        </Slider>
+        <Slider name="MuscleButt" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMuscleButt" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullMuscleButt</Data>
+            <Data name="hagraven_0MuscleButt" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0MuscleButt</Data>
+        </Slider>
+        <Slider name="MusclePecs" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMusclePecs" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullMusclePecs</Data>
+        </Slider>
+        <Slider name="MuscleAbs" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMuscleAbs" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullMuscleAbs</Data>
+            <Data name="hagraven_0MuscleAbs" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0MuscleAbs</Data>
+        </Slider>
+        <Slider name="NippleDistance" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullNippleDistance" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleDistance</Data>
+        </Slider>
+        <Slider name="NipplePerkiness" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNipplePerkiness" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNipplePerkiness</Data>
+        </Slider>
+        <Slider name="NippleLength" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleLength" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleLength</Data>
+        </Slider>
+        <Slider name="NippleSize" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullNippleSize" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleSize</Data>
+        </Slider>
+        <Slider name="NippleAreola" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleAreola" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleAreola</Data>
+        </Slider>
+        <Slider name="NippleUp" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleUp" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleUp</Data>
+        </Slider>
+        <Slider name="NippleDown" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleDown" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleDown</Data>
+        </Slider>
+        <Slider name="NippleTip" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleTip" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleTip</Data>
+        </Slider>
+        <Slider name="NippleErection" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleErection" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleErection</Data>
+        </Slider>
+        <Slider name="NipplePuffyAreola" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNipplePuffyAreola" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNipplePuffyAreola</Data>
+        </Slider>
+        <Slider name="Neck" invert="false" small="100" big="0" hidden="true">
+            <Data name="BaseShapeFullNeck" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNeck</Data>
+        </Slider>
+        <Slider name="PussyCute" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPussyCute" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPussyCute</Data>
+            <Data name="hagraven_0PussyCute" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0PussyCute</Data>
+        </Slider>
+        <Slider name="PussyMajora" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPussyMajora" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPussyMajora</Data>
+            <Data name="hagraven_0PussyMajora" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0PussyMajora</Data>
+        </Slider>
+        <Slider name="PussyMinora" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPussyMinora" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPussyMinora</Data>
+            <Data name="hagraven_0PussyMinora" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0PussyMinora</Data>
+        </Slider>
+        <Slider name="PussyMajoraBig" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPussyMajoraBig" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPussyMajoraBig</Data>
+            <Data name="hagraven_0PussyMajoraBig" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0PussyMajoraBig</Data>
+        </Slider>
+        <Slider name="PussyHilly" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPussyHilly" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPussyHilly</Data>
+            <Data name="hagraven_0PussyHilly" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0PussyHilly</Data>
+        </Slider>
+        <Slider name="PussyOpen" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPussyOpen" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPussyOpen</Data>
+            <Data name="hagraven_0PussyOpen" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0PussyOpen</Data>
+        </Slider>
+        <Slider name="PregnancyBelly" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPregnancyBelly" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPregnancyBelly</Data>
+            <Data name="hagraven_0PregnancyBelly" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0PregnancyBelly</Data>
+        </Slider>
+        <Slider name="RibsProminance" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullRibsProminance" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullRibsProminance</Data>
+        </Slider>
+        <Slider name="RoundAss" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullRoundAss" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullRoundAss</Data>
+            <Data name="hagraven_0RoundAss" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0RoundAss</Data>
+        </Slider>
+        <Slider name="ShoulderSmooth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullShoulderSmooth" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullShoulderSmooth</Data>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullShoulderWidth" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullShoulderWidth</Data>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullShoulderTweak" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullShoulderTweak</Data>
+        </Slider>
+        <Slider name="SternumDepth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullSternumDepth" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullSternumDepth</Data>
+        </Slider>
+        <Slider name="SternumHeight" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullSternumHeight" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullSternumHeight</Data>
+        </Slider>
+        <Slider name="SlimThighs" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullSlimThighs" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullSlimThighs</Data>
+            <Data name="hagraven_0SlimThighs" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0SlimThighs</Data>
+        </Slider>
+        <Slider name="Top Slope" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullTop Slope" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullTop Slope</Data>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullThighs" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullThighs</Data>
+            <Data name="hagraven_0Thighs" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Thighs</Data>
+        </Slider>
+        <Slider name="TummyTuck" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullTummyTuck" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullTummyTuck</Data>
+            <Data name="hagraven_0TummyTuck" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0TummyTuck</Data>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullWaist" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullWaist</Data>
+            <Data name="hagraven_0Waist" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0Waist</Data>
+        </Slider>
+        <Slider name="WideWaistLine" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullWideWaistLine" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullWideWaistLine</Data>
+            <Data name="hagraven_0WideWaistLine" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0WideWaistLine</Data>
+        </Slider>
+        <Slider name="WaistHeight" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullWaistHeight" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullWaistHeight</Data>
+            <Data name="hagraven_0WaistHeight" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0WaistHeight</Data>
+        </Slider>
+        <Slider name="BreastsGone" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsGone" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastsGone</Data>
+        </Slider>
+        <Slider name="NipBGone" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNipBGone" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNipBGone</Data>
+        </Slider>
+        <Slider name="PussyPressed" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPussyPressed" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullPussyPressed</Data>
+            <Data name="hagraven_0PussyPressed" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0PussyPressed</Data>
+        </Slider>
+        <Slider name="BellyPressed" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyPressed" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyPressed</Data>
+            <Data name="hagraven_0BellyPressed" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BellyPressed</Data>
+        </Slider>
+        <Slider name="BreastsPressed" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsPressed" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBreastsPressed</Data>
+        </Slider>
+        <Slider name="KneeSlim" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullKneeSlim" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullKneeSlim</Data>
+        </Slider>
+        <Slider name="ClitSpread" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullClitSpread" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullClitSpread</Data>
+            <Data name="hagraven_0ClitSpread" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0ClitSpread</Data>
+        </Slider>
+        <Slider name="BellyObesity" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyObesity" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyObesity</Data>
+            <Data name="hagraven_0BellyObesity" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BellyObesity</Data>
+        </Slider>
+        <Slider name="NippleInverted" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleInverted" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleInverted</Data>
+        </Slider>
+        <Slider name="BellyLowerSwell1" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyLowerSwell1" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyLowerSwell1</Data>
+            <Data name="hagraven_0BellyLowerSwell1" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BellyLowerSwell1</Data>
+        </Slider>
+        <Slider name="BellyLowerSwell2" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyLowerSwell2" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyLowerSwell2</Data>
+            <Data name="hagraven_0BellyLowerSwell2" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BellyLowerSwell2</Data>
+        </Slider>
+        <Slider name="BellyLowerSwell3" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyLowerSwell3" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyLowerSwell3</Data>
+            <Data name="hagraven_0BellyLowerSwell3" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BellyLowerSwell3</Data>
+        </Slider>
+        <Slider name="BellyCenterProtrude" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyCenterProtrude" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyCenterProtrude</Data>
+            <Data name="hagraven_0BellyCenterProtrude" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BellyCenterProtrude</Data>
+        </Slider>
+        <Slider name="BellyBalls" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyBalls" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyBalls</Data>
+            <Data name="hagraven_0BellyBalls" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BellyBalls</Data>
+        </Slider>
+        <Slider name="BellyCenterUpperProtrude" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyCenterUpperProtrude" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyCenterUpperProtrude</Data>
+        </Slider>
+        <Slider name="NippleRightPinch" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleRightPinch" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleRightPinch</Data>
+        </Slider>
+        <Slider name="NippleLeftPinch" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleLeftPinch" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleLeftPinch</Data>
+        </Slider>
+        <Slider name="NippleRightPressed" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleRightPressed" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleRightPressed</Data>
+        </Slider>
+        <Slider name="NippleLeftPressed" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleLeftPressed" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullNippleLeftPressed</Data>
+        </Slider>
+        <Slider name="BellyFatLower" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyFatLower" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyFatLower</Data>
+            <Data name="hagraven_0BellyFatLower" target="hagraven_0" local="true">OStrap_Hagraven_BHUNP.osd\hagraven_0BellyFatLower</Data>
+        </Slider>
+        <Slider name="BellyFatUpper" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyFatUpper" target="BaseShapeFull" local="true">OStrap_Hagraven_BHUNP.osd\BaseShapeFullBellyFatUpper</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>
