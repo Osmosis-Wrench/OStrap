@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="OStrap_Dwemer_BHUNP">
+        <DataFolder>OStrap_Dwemer_BHUNP</DataFolder>
+        <SourceFile>OStrap_Dwemer_BHUNP.nif</SourceFile>
+        <OutputPath>meshes\armor\skyrim_strapons</OutputPath>
+        <OutputFile GenWeights="true">dwemer</OutputFile>
+        <Shape target="BaseShapeFull" DataFolder="BHUNP 3BBB Advanced">BaseShapeFull</Shape>
+        <Shape target="dwemer_0">dwemer_0</Shape>
+        <Slider name="HighHeel" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullHighHeel" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullHighHeel</Data>
+        </Slider>
+        <Slider name="Arms" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullArms" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullArms</Data>
+        </Slider>
+        <Slider name="AppleCheeks" invert="false" small="0" big="0">
+            <Data name="dwemer_0AppleCheeks" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0AppleCheeks</Data>
+            <Data name="BaseShapeFullAppleCheeks" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullAppleCheeks</Data>
+        </Slider>
+        <Slider name="AnusSpread" invert="false" small="0" big="0">
+            <Data name="dwemer_0AnusSpread" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0AnusSpread</Data>
+            <Data name="BaseShapeFullAnusSpread" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullAnusSpread</Data>
+        </Slider>
+        <Slider name="Back" invert="false" small="0" big="0">
+            <Data name="dwemer_0Back" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0Back</Data>
+            <Data name="BaseShapeFullBack" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBack</Data>
+        </Slider>
+        <Slider name="BackArch" invert="false" small="0" big="0">
+            <Data name="dwemer_0BackArch" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BackArch</Data>
+            <Data name="BaseShapeFullBackArch" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBackArch</Data>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <Data name="dwemer_0Belly" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0Belly</Data>
+            <Data name="BaseShapeFullBelly" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBelly</Data>
+        </Slider>
+        <Slider name="BigTorso" invert="false" small="0" big="0">
+            <Data name="dwemer_0BigTorso" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BigTorso</Data>
+            <Data name="BaseShapeFullBigTorso" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBigTorso</Data>
+        </Slider>
+        <Slider name="Breasts" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullBreasts" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreasts</Data>
+        </Slider>
+        <Slider name="BreastCenter" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastCenter" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastCenter</Data>
+        </Slider>
+        <Slider name="BreastCenterBig" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastCenterBig" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastCenterBig</Data>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <Data name="dwemer_0BreastsSmall" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BreastsSmall</Data>
+            <Data name="BaseShapeFullBreastsSmall" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastsSmall</Data>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsSH" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastsSH</Data>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsSSH" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastsSSH</Data>
+        </Slider>
+        <Slider name="BreastsFantasy" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsFantasy" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastsFantasy</Data>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <Data name="dwemer_0BreastCleavage" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BreastCleavage</Data>
+            <Data name="BaseShapeFullBreastCleavage" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastCleavage</Data>
+        </Slider>
+        <Slider name="BreastFlatness" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastFlatness" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastFlatness</Data>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastGravity" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastGravity</Data>
+        </Slider>
+        <Slider name="PushUp" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullPushUp" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPushUp</Data>
+        </Slider>
+        <Slider name="BreastHeight" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastHeight" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastHeight</Data>
+        </Slider>
+        <Slider name="BreastPerkiness" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastPerkiness" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastPerkiness</Data>
+        </Slider>
+        <Slider name="BreastWidth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastWidth" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastWidth</Data>
+        </Slider>
+        <Slider name="BreastConverge" invert="false" small="0" big="0">
+            <Data name="dwemer_0BreastConverge" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BreastConverge</Data>
+            <Data name="BaseShapeFullBreastConverge" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastConverge</Data>
+        </Slider>
+        <Slider name="ButtCrack" invert="true" small="100" big="100">
+            <Data name="dwemer_0ButtCrack" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ButtCrack</Data>
+            <Data name="BaseShapeFullButtCrack" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullButtCrack</Data>
+        </Slider>
+        <Slider name="Butt" invert="true" small="100" big="100">
+            <Data name="dwemer_0Butt" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0Butt</Data>
+            <Data name="BaseShapeFullButt" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullButt</Data>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <Data name="dwemer_0ButtSmall" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ButtSmall</Data>
+            <Data name="BaseShapeFullButtSmall" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullButtSmall</Data>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <Data name="dwemer_0ButtShape2" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ButtShape2</Data>
+            <Data name="BaseShapeFullButtShape2" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullButtShape2</Data>
+        </Slider>
+        <Slider name="BigButt" invert="false" small="0" big="0">
+            <Data name="dwemer_0BigButt" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BigButt</Data>
+            <Data name="BaseShapeFullBigButt" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBigButt</Data>
+        </Slider>
+        <Slider name="BigBelly" invert="false" small="0" big="0">
+            <Data name="dwemer_0BigBelly" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BigBelly</Data>
+            <Data name="BaseShapeFullBigBelly" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBigBelly</Data>
+        </Slider>
+        <Slider name="BotePregnancy" invert="false" small="0" big="0">
+            <Data name="dwemer_0BotePregnancy" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BotePregnancy</Data>
+            <Data name="BaseShapeFullBotePregnancy" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBotePregnancy</Data>
+        </Slider>
+        <Slider name="ChubbyArms" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullChubbyArms" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullChubbyArms</Data>
+        </Slider>
+        <Slider name="ChubbyWaist" invert="false" small="0" big="0">
+            <Data name="dwemer_0ChubbyWaist" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ChubbyWaist</Data>
+            <Data name="BaseShapeFullChubbyWaist" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullChubbyWaist</Data>
+        </Slider>
+        <Slider name="ChestDepth" invert="false" small="0" big="0">
+            <Data name="dwemer_0ChestDepth" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ChestDepth</Data>
+            <Data name="BaseShapeFullChestDepth" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullChestDepth</Data>
+        </Slider>
+        <Slider name="ChestWidth" invert="false" small="0" big="0">
+            <Data name="dwemer_0ChestWidth" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ChestWidth</Data>
+            <Data name="BaseShapeFullChestWidth" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullChestWidth</Data>
+        </Slider>
+        <Slider name="ChubbyLegs" invert="false" small="0" big="0">
+            <Data name="dwemer_0ChubbyLegs" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ChubbyLegs</Data>
+            <Data name="BaseShapeFullChubbyLegs" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullChubbyLegs</Data>
+        </Slider>
+        <Slider name="CrotchBack" invert="false" small="0" big="0">
+            <Data name="dwemer_0CrotchBack" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0CrotchBack</Data>
+            <Data name="BaseShapeFullCrotchBack" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullCrotchBack</Data>
+        </Slider>
+        <Slider name="CalfSize" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCalfSize" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullCalfSize</Data>
+        </Slider>
+        <Slider name="CalfSmooth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullCalfSmooth" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullCalfSmooth</Data>
+        </Slider>
+        <Slider name="ClitorisErection" invert="false" small="0" big="0">
+            <Data name="dwemer_0ClitorisErection" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ClitorisErection</Data>
+            <Data name="BaseShapeFullClitorisErection" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullClitorisErection</Data>
+        </Slider>
+        <Slider name="ChubbyButt" invert="false" small="0" big="0">
+            <Data name="dwemer_0ChubbyButt" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ChubbyButt</Data>
+            <Data name="BaseShapeFullChubbyButt" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullChubbyButt</Data>
+        </Slider>
+        <Slider name="DoubleMelon" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullDoubleMelon" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullDoubleMelon</Data>
+        </Slider>
+        <Slider name="ForearmSize" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullForearmSize" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullForearmSize</Data>
+        </Slider>
+        <Slider name="Groin" invert="false" small="0" big="0">
+            <Data name="dwemer_0Groin" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0Groin</Data>
+            <Data name="BaseShapeFullGroin" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullGroin</Data>
+        </Slider>
+        <Slider name="HipBone" invert="false" small="0" big="0">
+            <Data name="dwemer_0HipBone" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0HipBone</Data>
+            <Data name="BaseShapeFullHipBone" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullHipBone</Data>
+        </Slider>
+        <Slider name="Hips" invert="false" small="0" big="0">
+            <Data name="dwemer_0Hips" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0Hips</Data>
+            <Data name="BaseShapeFullHips" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullHips</Data>
+        </Slider>
+        <Slider name="HipForward" invert="false" small="0" big="0">
+            <Data name="dwemer_0HipForward" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0HipForward</Data>
+            <Data name="BaseShapeFullHipForward" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullHipForward</Data>
+        </Slider>
+        <Slider name="HipUpperWidth" invert="false" small="0" big="0">
+            <Data name="dwemer_0HipUpperWidth" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0HipUpperWidth</Data>
+            <Data name="BaseShapeFullHipUpperWidth" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullHipUpperWidth</Data>
+        </Slider>
+        <Slider name="KneeShape" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullKneeShape" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullKneeShape</Data>
+        </Slider>
+        <Slider name="KneeHeight" invert="false" small="0" big="0">
+            <Data name="dwemer_0KneeHeight" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0KneeHeight</Data>
+            <Data name="BaseShapeFullKneeHeight" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullKneeHeight</Data>
+        </Slider>
+        <Slider name="Legs" invert="true" small="100" big="100">
+            <Data name="dwemer_0Legs" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0Legs</Data>
+            <Data name="BaseShapeFullLegs" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullLegs</Data>
+        </Slider>
+        <Slider name="LegsThin" invert="false" small="0" big="0">
+            <Data name="dwemer_0LegsThin" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0LegsThin</Data>
+            <Data name="BaseShapeFullLegsThin" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullLegsThin</Data>
+        </Slider>
+        <Slider name="MuscleArms" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMuscleArms" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullMuscleArms</Data>
+        </Slider>
+        <Slider name="MuscleLegs" invert="false" small="0" big="0">
+            <Data name="dwemer_0MuscleLegs" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0MuscleLegs</Data>
+            <Data name="BaseShapeFullMuscleLegs" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullMuscleLegs</Data>
+        </Slider>
+        <Slider name="MuscleButt" invert="false" small="0" big="0">
+            <Data name="dwemer_0MuscleButt" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0MuscleButt</Data>
+            <Data name="BaseShapeFullMuscleButt" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullMuscleButt</Data>
+        </Slider>
+        <Slider name="MusclePecs" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullMusclePecs" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullMusclePecs</Data>
+        </Slider>
+        <Slider name="MuscleAbs" invert="false" small="0" big="0">
+            <Data name="dwemer_0MuscleAbs" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0MuscleAbs</Data>
+            <Data name="BaseShapeFullMuscleAbs" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullMuscleAbs</Data>
+        </Slider>
+        <Slider name="NippleDistance" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullNippleDistance" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleDistance</Data>
+        </Slider>
+        <Slider name="NipplePerkiness" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNipplePerkiness" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNipplePerkiness</Data>
+        </Slider>
+        <Slider name="NippleLength" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleLength" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleLength</Data>
+        </Slider>
+        <Slider name="NippleSize" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullNippleSize" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleSize</Data>
+        </Slider>
+        <Slider name="NippleAreola" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleAreola" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleAreola</Data>
+        </Slider>
+        <Slider name="NippleUp" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleUp" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleUp</Data>
+        </Slider>
+        <Slider name="NippleDown" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleDown" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleDown</Data>
+        </Slider>
+        <Slider name="NippleTip" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleTip" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleTip</Data>
+        </Slider>
+        <Slider name="NippleErection" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleErection" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleErection</Data>
+        </Slider>
+        <Slider name="NipplePuffyAreola" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNipplePuffyAreola" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNipplePuffyAreola</Data>
+        </Slider>
+        <Slider name="Neck" invert="false" small="100" big="0" hidden="true">
+            <Data name="BaseShapeFullNeck" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNeck</Data>
+        </Slider>
+        <Slider name="PussyCute" invert="false" small="0" big="0">
+            <Data name="dwemer_0PussyCute" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0PussyCute</Data>
+            <Data name="BaseShapeFullPussyCute" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPussyCute</Data>
+        </Slider>
+        <Slider name="PussyMajora" invert="false" small="0" big="0">
+            <Data name="dwemer_0PussyMajora" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0PussyMajora</Data>
+            <Data name="BaseShapeFullPussyMajora" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPussyMajora</Data>
+        </Slider>
+        <Slider name="PussyMinora" invert="false" small="0" big="0">
+            <Data name="dwemer_0PussyMinora" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0PussyMinora</Data>
+            <Data name="BaseShapeFullPussyMinora" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPussyMinora</Data>
+        </Slider>
+        <Slider name="PussyMajoraBig" invert="false" small="0" big="0">
+            <Data name="dwemer_0PussyMajoraBig" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0PussyMajoraBig</Data>
+            <Data name="BaseShapeFullPussyMajoraBig" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPussyMajoraBig</Data>
+        </Slider>
+        <Slider name="PussyHilly" invert="false" small="0" big="0">
+            <Data name="dwemer_0PussyHilly" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0PussyHilly</Data>
+            <Data name="BaseShapeFullPussyHilly" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPussyHilly</Data>
+        </Slider>
+        <Slider name="PussyOpen" invert="false" small="0" big="0">
+            <Data name="dwemer_0PussyOpen" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0PussyOpen</Data>
+            <Data name="BaseShapeFullPussyOpen" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPussyOpen</Data>
+        </Slider>
+        <Slider name="PregnancyBelly" invert="false" small="0" big="0">
+            <Data name="dwemer_0PregnancyBelly" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0PregnancyBelly</Data>
+            <Data name="BaseShapeFullPregnancyBelly" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPregnancyBelly</Data>
+        </Slider>
+        <Slider name="RibsProminance" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullRibsProminance" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullRibsProminance</Data>
+        </Slider>
+        <Slider name="RoundAss" invert="false" small="0" big="0">
+            <Data name="dwemer_0RoundAss" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0RoundAss</Data>
+            <Data name="BaseShapeFullRoundAss" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullRoundAss</Data>
+        </Slider>
+        <Slider name="ShoulderSmooth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullShoulderSmooth" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullShoulderSmooth</Data>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <Data name="BaseShapeFullShoulderWidth" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullShoulderWidth</Data>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullShoulderTweak" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullShoulderTweak</Data>
+        </Slider>
+        <Slider name="SternumDepth" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullSternumDepth" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullSternumDepth</Data>
+        </Slider>
+        <Slider name="SternumHeight" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullSternumHeight" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullSternumHeight</Data>
+        </Slider>
+        <Slider name="SlimThighs" invert="false" small="0" big="0">
+            <Data name="dwemer_0SlimThighs" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0SlimThighs</Data>
+            <Data name="BaseShapeFullSlimThighs" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullSlimThighs</Data>
+        </Slider>
+        <Slider name="Top Slope" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullTop Slope" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullTop Slope</Data>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <Data name="dwemer_0Thighs" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0Thighs</Data>
+            <Data name="BaseShapeFullThighs" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullThighs</Data>
+        </Slider>
+        <Slider name="TummyTuck" invert="false" small="0" big="0">
+            <Data name="dwemer_0TummyTuck" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0TummyTuck</Data>
+            <Data name="BaseShapeFullTummyTuck" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullTummyTuck</Data>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="0">
+            <Data name="dwemer_0Waist" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0Waist</Data>
+            <Data name="BaseShapeFullWaist" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullWaist</Data>
+        </Slider>
+        <Slider name="WideWaistLine" invert="false" small="0" big="0">
+            <Data name="dwemer_0WideWaistLine" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0WideWaistLine</Data>
+            <Data name="BaseShapeFullWideWaistLine" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullWideWaistLine</Data>
+        </Slider>
+        <Slider name="WaistHeight" invert="false" small="0" big="0">
+            <Data name="dwemer_0WaistHeight" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0WaistHeight</Data>
+            <Data name="BaseShapeFullWaistHeight" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullWaistHeight</Data>
+        </Slider>
+        <Slider name="BreastsGone" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsGone" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastsGone</Data>
+        </Slider>
+        <Slider name="NipBGone" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNipBGone" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNipBGone</Data>
+        </Slider>
+        <Slider name="PussyPressed" invert="false" small="0" big="0">
+            <Data name="dwemer_0PussyPressed" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0PussyPressed</Data>
+            <Data name="BaseShapeFullPussyPressed" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullPussyPressed</Data>
+        </Slider>
+        <Slider name="BellyPressed" invert="false" small="0" big="0">
+            <Data name="dwemer_0BellyPressed" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BellyPressed</Data>
+            <Data name="BaseShapeFullBellyPressed" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyPressed</Data>
+        </Slider>
+        <Slider name="BreastsPressed" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBreastsPressed" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBreastsPressed</Data>
+        </Slider>
+        <Slider name="KneeSlim" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullKneeSlim" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullKneeSlim</Data>
+        </Slider>
+        <Slider name="ClitSpread" invert="false" small="0" big="0">
+            <Data name="dwemer_0ClitSpread" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0ClitSpread</Data>
+            <Data name="BaseShapeFullClitSpread" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullClitSpread</Data>
+        </Slider>
+        <Slider name="BellyObesity" invert="false" small="0" big="0">
+            <Data name="dwemer_0BellyObesity" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BellyObesity</Data>
+            <Data name="BaseShapeFullBellyObesity" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyObesity</Data>
+        </Slider>
+        <Slider name="NippleInverted" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleInverted" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleInverted</Data>
+        </Slider>
+        <Slider name="BellyLowerSwell1" invert="false" small="0" big="0">
+            <Data name="dwemer_0BellyLowerSwell1" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BellyLowerSwell1</Data>
+            <Data name="BaseShapeFullBellyLowerSwell1" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyLowerSwell1</Data>
+        </Slider>
+        <Slider name="BellyLowerSwell2" invert="false" small="0" big="0">
+            <Data name="dwemer_0BellyLowerSwell2" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BellyLowerSwell2</Data>
+            <Data name="BaseShapeFullBellyLowerSwell2" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyLowerSwell2</Data>
+        </Slider>
+        <Slider name="BellyLowerSwell3" invert="false" small="0" big="0">
+            <Data name="dwemer_0BellyLowerSwell3" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BellyLowerSwell3</Data>
+            <Data name="BaseShapeFullBellyLowerSwell3" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyLowerSwell3</Data>
+        </Slider>
+        <Slider name="BellyCenterProtrude" invert="false" small="0" big="0">
+            <Data name="dwemer_0BellyCenterProtrude" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BellyCenterProtrude</Data>
+            <Data name="BaseShapeFullBellyCenterProtrude" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyCenterProtrude</Data>
+        </Slider>
+        <Slider name="BellyBalls" invert="false" small="0" big="0">
+            <Data name="dwemer_0BellyBalls" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BellyBalls</Data>
+            <Data name="BaseShapeFullBellyBalls" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyBalls</Data>
+        </Slider>
+        <Slider name="BellyCenterUpperProtrude" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyCenterUpperProtrude" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyCenterUpperProtrude</Data>
+        </Slider>
+        <Slider name="NippleRightPinch" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleRightPinch" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleRightPinch</Data>
+        </Slider>
+        <Slider name="NippleLeftPinch" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleLeftPinch" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleLeftPinch</Data>
+        </Slider>
+        <Slider name="NippleRightPressed" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleRightPressed" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleRightPressed</Data>
+        </Slider>
+        <Slider name="NippleLeftPressed" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullNippleLeftPressed" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullNippleLeftPressed</Data>
+        </Slider>
+        <Slider name="BellyFatLower" invert="false" small="0" big="0">
+            <Data name="dwemer_0BellyFatLower" target="dwemer_0" local="true">OStrap_Dwemer_BHUNP.osd\dwemer_0BellyFatLower</Data>
+            <Data name="BaseShapeFullBellyFatLower" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyFatLower</Data>
+        </Slider>
+        <Slider name="BellyFatUpper" invert="false" small="0" big="0">
+            <Data name="BaseShapeFullBellyFatUpper" target="BaseShapeFull" local="true">OStrap_Dwemer_BHUNP.osd\BaseShapeFullBellyFatUpper</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>
