@@ -19,8 +19,8 @@ jobs:
       # Set these
       dist-path: ..\dist                                # Folder containing the output from the project files
       compiler-repo: Osmosis-Wrench/Papyrus-Compiler    # Github repository containing the papyrus compiler
-      compiler-token: ${{ secrets.OSTIM_TOKEN }}        # Just use ${{ github.token }} if the repo is not private
-      pyro-token: ${{ secrets.OSTIM_TOKEN }}
+      compiler-token: ${{ secrets.PRIVATE_TOKEN }}        # Just use ${{ github.token }} if the repo is not private
+      pyro-token: ${{ secrets.PRIVATE_TOKEN }}
       # Ignore these
       python-version: 3.x
       python-arch: x64
