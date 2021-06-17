@@ -79,5 +79,5 @@ jobs:
       if: success()
       uses: MrOctopus/upload-artifact@main
       with:
-        individual: false
+        individual: true
         path: ${{ env.build_paths }}
