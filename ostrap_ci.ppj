@@ -19,7 +19,7 @@
         <Variable Name="MeshPath" Value="Meshes\armor\skyrim_strapons"/>
         <Variable Name="ArmorPath" Value="armor\skyrim_strapons"/>
         <Variable Name="TexturePath" Value="textures\armor\skyrim_strapons"/>
-        <Variable Name="Version" Value="v1.2"/>
+        <Variable Name="Version" Value="v1_2"/>
     </Variables>
     <Imports>
         <Import>@MyProject\Scripts\Source</Import>
