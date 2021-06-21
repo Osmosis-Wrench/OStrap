@@ -5,10 +5,10 @@ on:
   push:
     # Set the push branches
     branches:
-    - main
+      - main
     # Set the push folders
     paths:
-    - 'main/**'
+      - 'main/**'
 
 jobs:
   build:
