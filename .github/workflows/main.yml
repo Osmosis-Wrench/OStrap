@@ -6,9 +6,6 @@ on:
     # Set the push branches
     branches:
       - main
-    # Set the push folders
-    paths:
-      - 'main/**'
 
 jobs:
   build:
