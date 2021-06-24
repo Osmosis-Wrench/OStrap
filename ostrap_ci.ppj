@@ -23,16 +23,16 @@
     </Variables>
     <Imports>
         <Import>@MyProject\Scripts\Source</Import>
-	    <Import>https://github.com/Osmosis-Wrench/random-loose-scripts/tree/main/scripts/source</Import>
+	<Import>https://github.com/Osmosis-Wrench/random-loose-scripts/tree/main/scripts/source</Import>
         <Import>https://github.com/MrOctopus/nl_online/tree/main/jcontainersse/source</Import>
         <Import>https://github.com/eeveelo/PapyrusUtil/tree/master/Scripts/Source</Import>
         <Import>https://github.com/MrOctopus/nl_mcm/tree/main/main/scripts/source</Import>
         <Import>https://github.com/MrOctopus/nl_util/tree/main/dist/scripts/source</Import>
-	    <Import>https://github.com/MrOctopus/nl_mcm/tree/main/main/scripts/source</Import>
+	<Import>https://github.com/MrOctopus/nl_mcm/tree/main/main/scripts/source</Import>
         <Import>https://github.com/Sairion350/OCum/tree/main/scripts/source</Import>
         <Import>https://github.com/Sairion350/OStim/tree/main/Scripts/Source</Import>
         <Import>https://github.com/CE0/OSA-SE/tree/master/Data/Scripts/Source</Import>
-        <Import>https://github.com/schlangster/skyui/tree/master/dist/Data/Scripts/Source</Import>
+        <Import>https://github.com/MrOctopus/nl_online/tree/main/skyui/source</Import>
         <Import>https://github.com/MrOctopus/nl_online/tree/main/skse64/source</Import>
         <Import>https://github.com/MrOctopus/nl_online/tree/main/sse/source</Import>
     </Imports>
@@ -60,9 +60,7 @@
         </ZipFile>
         <ZipFile Name="@ModName @Version - @Site1 @Body2" RootDir="@MyProject" Compression="deflate">
             <Include Path=".">@Site1/*.esp</Include>
-            <Match>*.pex</Match>
-            <Match>*.psc</Match>
-            <Match>*.json</Match>
+	    <Match>*.pex|*.psc|*.json</Match>
             <Include Path="@TexturePath">@Site1 skyrim_strapons/*.*</Include>
             <Include Path="@MeshPath">@Body2 Meshes/@ArmorPath/*.*</Include>
             <Include Path="@SliderSets">@Body2 @SliderSets/Ostrap_*</Include>
