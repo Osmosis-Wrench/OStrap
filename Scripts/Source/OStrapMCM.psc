@@ -234,7 +234,6 @@ function build_strapon_page()
         AddToggleOptionST("strapon_toggle_option___" + straponkey, straponkey, strapon_enabled)
         straponkey = Jmap.nextKey(straponJArray, straponkey)
     endwhile
-    jdb.writetofile(JContainers.UserDirectory() + "page.json")
 endFunction
 
 function build_strapon_data()
