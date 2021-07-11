@@ -11,7 +11,7 @@
  - MCM settings saving, and extra loading functionality for Modlist authors.
 ### Requirements
  - Skyrim: Special Edition (1.5.39+)
- - [Ostim SE](https://github.com/Sairion350/OStim) (and all its requirements.)
+ - [Ostim SE](https://github.com/Sairion350/OStim) (and all its' requirements.)
 ### Downloading
  Most recent version will be in the [Releases](https://github.com/Osmosis-Wrench/OStrap/releases) section of the GitHub page.
  Eventually it will be posted to LoversLab and ?Nexus?
