@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderGroups>
+    <Group name="BHUNP 3BBB">
+        <Member name="OStrap_Canine_BHUNP"/>
+        <Member name="OStrap_Dwemer_BHUNP"/>
+        <Member name="OStrap_GiantToe_BHUNP"/>
+        <Member name="OStrap_Hagraven_BHUNP"/>
+        <Member name="OStrap_Horker_BHUNP"/>
+        <Member name="OStrap_Horse_BHUNP"/>
+        <Member name="OStrap_SoulGemBlack_BHUNP"/>
+        <Member name="OStrap_SoulGemCommon_BHUNP"/>
+    </Group>
+    <Group name="OStrap">
+        <Member name="OStrap_Canine_BHUNP"/>
+        <Member name="OStrap_Dwemer_BHUNP"/>
+        <Member name="OStrap_GiantToe_BHUNP"/>
+        <Member name="OStrap_Hagraven_BHUNP"/>
+        <Member name="OStrap_Horker_BHUNP"/>
+        <Member name="OStrap_Horse_BHUNP"/>
+        <Member name="OStrap_SoulGemBlack_BHUNP"/>
+        <Member name="OStrap_SoulGemCommon_BHUNP"/>
+    </Group>
+    <Group name="UUNP 3BBB">
+        <Member name="OStrap_Canine_BHUNP"/>
+        <Member name="OStrap_Dwemer_BHUNP"/>
+        <Member name="OStrap_GiantToe_BHUNP"/>
+        <Member name="OStrap_Hagraven_BHUNP"/>
+        <Member name="OStrap_Horker_BHUNP"/>
+        <Member name="OStrap_Horse_BHUNP"/>
+        <Member name="OStrap_SoulGemBlack_BHUNP"/>
+        <Member name="OStrap_SoulGemCommon_BHUNP"/>
+    </Group>
+    <Group name="Unified UNP">
+        <Member name="OStrap_Canine_BHUNP"/>
+        <Member name="OStrap_Dwemer_BHUNP"/>
+        <Member name="OStrap_GiantToe_BHUNP"/>
+        <Member name="OStrap_Hagraven_BHUNP"/>
+        <Member name="OStrap_Horker_BHUNP"/>
+        <Member name="OStrap_Horse_BHUNP"/>
+        <Member name="OStrap_SoulGemBlack_BHUNP"/>
+        <Member name="OStrap_SoulGemCommon_BHUNP"/>
+    </Group>
+</SliderGroups>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderGroups>
+    <Group name="3BBB">
+        <Member name="OStrap_Canine_3BBB"/>
+        <Member name="OStrap_Dwemer_3BBB"/>
+        <Member name="OStrap_GiantToe_3BBB"/>
+        <Member name="OStrap_Hagraven_3BBB"/>
+        <Member name="OStrap_Horker_3BBB"/>
+        <Member name="OStrap_Horse_3BBB"/>
+        <Member name="OStrap_SoulGemBlack_3BBB"/>
+        <Member name="OStrap_SoulGemCommon_3BBB"/>
+    </Group>
+    <Group name="CBBE">
+        <Member name="OStrap_Canine_3BBB"/>
+        <Member name="OStrap_Dwemer_3BBB"/>
+        <Member name="OStrap_GiantToe_3BBB"/>
+        <Member name="OStrap_Hagraven_3BBB"/>
+        <Member name="OStrap_Horker_3BBB"/>
+        <Member name="OStrap_Horse_3BBB"/>
+        <Member name="OStrap_SoulGemBlack_3BBB"/>
+        <Member name="OStrap_SoulGemCommon_3BBB"/>
+    </Group>
+    <Group name="OStrap">
+        <Member name="OStrap_Canine_3BBB"/>
+        <Member name="OStrap_Dwemer_3BBB"/>
+        <Member name="OStrap_GiantToe_3BBB"/>
+        <Member name="OStrap_Hagraven_3BBB"/>
+        <Member name="OStrap_Horker_3BBB"/>
+        <Member name="OStrap_Horse_3BBB"/>
+        <Member name="OStrap_SoulGemBlack_3BBB"/>
+        <Member name="OStrap_SoulGemCommon_3BBB"/>
+    </Group>
+</SliderGroups>
