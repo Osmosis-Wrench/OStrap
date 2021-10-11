@@ -1,42 +1,42 @@
 {
   "Black SoulGem Strapon": {
     "Enabled": 0,
-    "Form": "__formData|OStrapOn.esp|0x5E68",
+    "Form": "__formData|OStrap.esp|0x1811",
     "OptID": 3
   },
   "Canine Strapon": {
     "Enabled": 0,
-    "Form": "__formData|OStrapOn.esp|0x5E61",
+    "Form": "__formData|OStrap.esp|0x180A",
     "OptID": 5
   },
   "Common SoulGem Strapon": {
     "Enabled": 0,
-    "Form": "__formData|OStrapOn.esp|0x5E69",
+    "Form": "__formData|OStrap.esp|0x1811",
     "OptID": 7
   },
   "Dwemer Strapon": {
     "Enabled": 1,
-    "Form": "__formData|OStrapOn.esp|0x5E63",
+    "Form": "__formData|OStrap.esp|0x180B",
     "OptID": 9
   },
   "Giant Toe Strapon": {
     "Enabled": 0,
-    "Form": "__formData|OStrapOn.esp|0x5E64",
+    "Form": "__formData|OStrap.esp|0x180C",
     "OptID": 11
   },
   "Hagraven Strapon": {
     "Enabled": 0,
-    "Form": "__formData|OStrapOn.esp|0x5E65",
+    "Form": "__formData|OStrap.esp|0x180D",
     "OptID": 13
   },
   "Horker Tusk Strapon": {
     "Enabled": 0,
-    "Form": "__formData|OStrapOn.esp|0x5E66",
+    "Form": "__formData|OStrap.esp|0x180E",
     "OptID": 15
   },
   "Stallion Strapon": {
     "Enabled": 0,
-    "Form": "__formData|OStrapOn.esp|0x5E67",
+    "Form": "__formData|OStrap.esp|0x180F",
     "OptID": 19
   }
 }
