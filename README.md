@@ -9,9 +9,12 @@
  - Supports modular, JSON based compatibility patches to allow for easily adding more options.
  - OCum support.
  - MCM settings saving, and extra loading functionality for Modlist authors.
+
 ### Requirements
  - Skyrim: Special Edition (1.5.39+)
  - [Ostim SE](https://github.com/Sairion350/OStim) (and all its' requirements.)
+ - [NL_MCM](https://www.nexusmods.com/skyrimspecialedition/mods/49127) (and all its' requirements.)
+
 ### Downloading
  Most recent version will be in the [Releases](https://github.com/Osmosis-Wrench/OStrap/releases) section of the GitHub page.
  Eventually it will be posted to LoversLab and ?Nexus?
