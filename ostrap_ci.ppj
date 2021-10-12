@@ -19,7 +19,7 @@
         <Variable Name="MeshPath" Value="Meshes\armor\skyrim_strapons"/>
         <Variable Name="ArmorPath" Value="armor\skyrim_strapons"/>
         <Variable Name="TexturePath" Value="textures\armor\skyrim_strapons"/>
-        <Variable Name="Version" Value="v1.2.4"/>
+        <Variable Name="Version" Value="v1.3"/>
     </Variables>
     <Imports>
         <Import>@MyProject\Scripts\Source</Import>
@@ -43,7 +43,7 @@
     <ZipFiles Output="@Dist">
         <ZipFile Name="@ModName @Version - @Site1 @Body1" RootDir="@MyProject" Compression="deflate">
             <Include Path=".">@Site1/*.esp</Include>
-	    <Match>*.pex|*.psc|*.json</Match>
+            <Match>*.pex|*.psc|*.json|*.lua</Match>
             <Include Path="@TexturePath">@Site1 skyrim_strapons/*.*</Include>
             <Include Path="@MeshPath">@Body1 Meshes/@ArmorPath/*.*</Include>
             <Include Path="@SliderSets">@Body1 @SliderSets/Ostrap_*</Include>
@@ -58,7 +58,7 @@
         </ZipFile>
         <ZipFile Name="@ModName @Version - @Site1 @Body2" RootDir="@MyProject" Compression="deflate">
             <Include Path=".">@Site1/*.esp</Include>
-	    <Match>*.pex|*.psc|*.json</Match>
+            <Match>*.pex|*.psc|*.json|*.lua</Match>
             <Include Path="@TexturePath">@Site1 skyrim_strapons/*.*</Include>
             <Include Path="@MeshPath">@Body2 Meshes/@ArmorPath/*.*</Include>
             <Include Path="@SliderSets">@Body2 @SliderSets/Ostrap_*</Include>
@@ -73,7 +73,7 @@
         </ZipFile>
         <ZipFile Name="@ModName @Version - @Site2 @Body1" RootDir="@MyProject" Compression="deflate">
             <Include Path=".">@Site2/*.esp</Include>
-	    <Match>*.pex|*.psc|*.json</Match>
+            <Match>*.pex|*.psc|*.json|*.lua</Match>
             <Include Path="@TexturePath">@Site2 skyrim_strapons/[!cgh]*.*</Include>
             <Include Path="@MeshPath">@Body1 Meshes/@ArmorPath/[!cgh]*.*</Include>
             <Include Path="@SliderSets">@Body1 @SliderSets/Ostrap_[!cgh]*</Include>
@@ -83,7 +83,7 @@
         </ZipFile>
         <ZipFile Name="@ModName @Version - @Site2 @Body2" RootDir="@MyProject" Compression="deflate">
             <Include Path=".">@Site2/*.esp</Include>
-	    <Match>*.pex|*.psc|*.json</Match>
+            <Match>*.pex|*.psc|*.json|*.lua</Match>
             <Include Path="@TexturePath">@Site2 skyrim_strapons/[!cgh]*.*</Include>
             <Include Path="@MeshPath">@Body2 Meshes/@ArmorPath/[!cgh]*.*</Include>
             <Include Path="@SliderSets">@Body2 @SliderSets/Ostrap_[!cgh]*</Include>

@@ -104,22 +104,11 @@ Function UnEquipStrapon(Actor target, form randStrap = None)
     endIf
 EndFunction
 
-; Returns a randomly chosen enabled strapon.
+; Returns a randomly chosen enabled strapon, uses JContainers lua to be faster.
 form Function ReturnRandomValidStrapon()
-    int enabledStrapons = JArray.Object()
-    string StraponNameKey = Jmap.NextKey(StraponJArray)
-    while StraponNameKey
-        bool straponEnabled = JValue.SolveInt(StraponJArray, "." + StraponNameKey + ".Enabled") as Bool
-        if (StraponEnabled == true)
-            Form straponForm = JValue.SolveForm(StraponJArray, "." + StraponNameKey + ".Form")
-            Jarray.AddForm(EnabledStrapons, straponForm)
-        endIf
-        StraponNameKey = Jmap.NextKey(StraponJArray, StraponNameKey)
-    endWhile
-    int Len = JValue.Count(EnabledStrapons)
-    int rand = Utility.RandomInt(0, (Len - 1))
-    return JArray.GetForm(EnabledStrapons, rand)
-endFunction
+    int randomValid = JValue.evalLuaObj(straponJArray, "return ostrap.getValidRandom(jobject)")
+    return (Jmap.GetForm(randomValid, "Form"))
+endfunction
 
 ; This just makes life easier sometimes.
 Function WriteLog(String OutputLog, bool error = false)

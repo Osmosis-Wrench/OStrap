@@ -18,6 +18,13 @@ string[] _shown_presets
 String Blue = "#6699ff"
 String Pink = "#ff3389"
 
+;
+;
+; HEY YOU! If you're reading this to try and work out how to do something, especially jcontainers stuff, look at one of my newer mods instead.
+; This stuff all works, but it's very inelegant. I have basically the same system for dynamically loading stuff in OJazz and it take up a quarter of the amount of space and is significantly faster.
+;
+;
+
 int property straponJArray
     int function get()
         return JDB.solveObj(".OStrap.strapons")
